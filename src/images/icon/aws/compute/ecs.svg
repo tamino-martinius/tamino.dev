@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/aws/compute/ecs</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 42 0 42 27.5 64 27.5 64 37 41 37 41 64 0 64"></polygon>
+        <polygon id="path-3" points="0 0 28.5 0 28.5 26.5 64 26.5 64 37.5 28.5 37.5 28.5 64 0 64"></polygon>
+        <polygon id="path-5" points="64 0 52.5 0 52.5 26.25 59 26 0 26.25 0 64 64 64"></polygon>
+        <polygon id="path-7" points="64 64 64 0 1 0 0 38 52.5 38 52.5 64"></polygon>
+        <polygon id="path-9" points="0 64 7 64 7 0 0 0"></polygon>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/aws/compute/ecs">
+            <g id="outline">
+                <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="52.5 13 44.5 10.5 28.5 14 28.5 26.25 36 26.75 52.5 25.75"></polygon>
+                <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="52.5 38.5 36 37.5 28.75 38 28.75 50.25 44 54 52.5 51.5"></polygon>
+                <g id="masked">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="mask"></g>
+                    <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="47 12.5 11.5 2.25 7 4.5 7 60 11 62 47 51.75"></polygon>
+                </g>
+                <g id="masked">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="mask"></g>
+                    <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-4)" points="36 45.25 36 18.75 19.75 16 19.75 48"></polygon>
+                </g>
+                <g id="masked">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="mask"></g>
+                    <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-6)" points="64 16.25 58.75 14.75 43.25 17.25 43.25 27.25 48.5 27.5 64 26.75"></polygon>
+                </g>
+                <g id="masked">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <g id="mask"></g>
+                    <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-8)" points="64 37.5 49 36.75 43 37 43 47 58.75 49.75 64 48"></polygon>
+                </g>
+                <g id="masked">
+                    <mask id="mask-10" fill="white">
+                        <use xlink:href="#path-9"></use>
+                    </mask>
+                    <g id="mask"></g>
+                    <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-10)" points="11 56 11 8 3.5 6.25 0 8 0 56 3.5 57.75"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

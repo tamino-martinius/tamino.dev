@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/frontend/style/css</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-opacity="0.4" stroke-linejoin="round">
+        <g id="icon/frontend/style/css" stroke="#000000" stroke-width="0.5">
+            <g id="outline" transform="translate(4.000000, 0.000000)">
+                <polygon id="line" points="5.07827663 57.5057482 0.0132841221 0.698351909 55.6662715 0.698351909 50.5966015 57.4965803 27.8057256 63.8149578"></polygon>
+                <polygon id="line" points="10 12 45 12 42 47 28 51 14 47 13 37 20 37 20 42 28 44 36 42 37 33 20 33 19 26 37 26 38 19 12 19"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+<ul class="skills">
+  {{skillTitle}}
+  <li v-for="(value, key) in skills" class="skill">
+    <skill :skill-key="key" :skill-title="value.title" :skill-level="value.level"></skill>
+  </li>
+</ul>

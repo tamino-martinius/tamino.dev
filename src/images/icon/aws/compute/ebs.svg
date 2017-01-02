@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/aws/compute/ebs</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 64 0 64 12 32 12 32 25 64 25 64 64 0 64 0 53 32 52 32 39 0 39"></polygon>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/aws/compute/ebs">
+            <g id="outline">
+                <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="55 24 55 11.5 51 9.5 36.5 13.5 36.5 24.5 41 25"></polygon>
+                <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" points="28 50.5 28 39.5 23 39 9 40 9 52.5 13 54.5"></polygon>
+                <g id="masked">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="mask"></g>
+                    <polygon id="line" stroke-opacity="0.4" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="21 32 24 32 24 4 32 0 43 6 43 32 40 32 40 60 32 64 21 58"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

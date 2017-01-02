@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/frontend/markup/haml</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-opacity="0.4" stroke-linejoin="round">
+        <g id="icon/frontend/markup/haml" stroke="#000000" stroke-width="0.5">
+            <g id="outline" transform="translate(6.000000, 1.000000)">
+                <path d="M24.2592405,31.0755443 L19.8829367,62.3269873 C19.8829367,62.3269873 12.7479494,64.9432911 6.27888608,59.4731139 L13.3662785,29.1727595 L0,2.05964557 C0,2.05964557 5.28,-0.176101266 8.65721519,0.585012658 L20.4062785,22.7512911 L40.764962,5.43686076 C40.764962,5.43686076 47.6145823,7.81518987 48.2329114,10.0983291 L24.2592405,31.0755443 Z" id="line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

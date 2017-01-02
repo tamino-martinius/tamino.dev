@@ -1,0 +1,86 @@
+// variables
+
+$hero-bg = #666
+$hero-fg = #eee
+
+
+// reset
+
+html
+  font-family -apple-system, BlinkMacSystemFont, Geneva, Verdana, sans-serif
+  font-size 16px
+  font-weight 200
+
+html, body, h1, h2, h3, h4, h5, h6, ul, li
+  margin 0
+  padding 0
+
+h1, h2, h3, h4, h5, h6
+  font-weight 200
+
+li
+  list-style none
+
+// defaults
+
+h1
+  font-size 2rem
+
+h4
+  font-size 1.7rem
+
+body
+html
+.container
+  height 100%
+
+.meta
+  display none
+
+
+// mixins
+
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both
+
+center()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+
+// hero
+
+.hero
+  background $hero-bg
+  color $hero-fg
+  height 300px //fallback
+  height 50vh
+  position relative
+
+.hero-content
+  center()
+
+.hero-avatar
+  display inline-block
+  padding-right 1rem
+  width 5rem
+  height 5rem
+  img
+    width 100%
+
+.hero-text
+  float right
+  clearfix()
+  h1
+    margin-top 0.2rem
+    margin-bottom 0.5rem
+
+// nav

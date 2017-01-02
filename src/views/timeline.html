@@ -1,0 +1,28 @@
+<ul class="timeline">
+  <li v-for="entry of timeline">
+    <div class="timeline-where">
+      {{entry.company || entry.university}}
+    </div>
+    <div class="timeline-when">
+      <span class="timeline-when-from">
+        {{entry.startsAt}}
+      </span>
+      <span v-if="entry.endsAt" class="timeline-when-divider">
+        -
+      </span>
+      <span class="timeline-when-until">
+        {{entry.endsAt}}
+      </span>
+    </div>
+    <ul class="timeline-how">
+      <li v-for="how of entry.position || entry.graduiation">
+        {{how}}
+      </li>
+    </ul>
+    <ul class="timeline-what">
+      <li v-for="(skill, key) in entry.skills">
+        {{key}}
+      </li>
+    </ul>
+  </li>
+</ul>

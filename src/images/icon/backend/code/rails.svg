@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/backend/code/rails</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-opacity="0.4" stroke-linejoin="round">
+        <g id="icon/backend/code/rails" stroke="#000000" stroke-width="0.5">
+            <g id="outline" transform="translate(1.000000, 0.000000)">
+                <path d="M5,64 C5,60 6,54 6,54 L0,53 L1,47 C1,47 7,48 7,48 C8,42 10,36 10,36 L4,34 L6,28 C6,28 12,30 12,30 C14,25 18,20 18,20 L14,17 L17,13 C17,13 21,16 21,16 C25,10 29,8 29,8 L26,4 L30,2 C30,2 33,6 33,6 C36,4 40,4 40,4 L39,0 L44,0 C44,0 45,4 45,4 C51,4 55,7 55,7 L56,5 L59,7 L58,9 C58,9 60.9220289,10.8440577 62,13 C62,13 61,15 61,15 C58,12 57,12 57,12 L56,14 L53,13 C53,13 54,11 54,11 C49,11 47,13 47,13 L48,16 L44,18 C44,18 43,15 43,15 C41,16 40,17 40,17 L42,20 L39,23 C39,23 37,20 37,20 C35,22 34,25 34,25 L37,27 L35,31 C35,31 32,29 32,29 C31,32 31,36 31,36 L36,38 L36,44 C36,44 31,42 31,42 C31,49 33,52 33,52 L38,53 L39,59 C39,59 34,58 34,58 C35,62 37,64 37,64 C37,64 5,64 5,64 Z" id="line"></path>
+            </g>
+        </g>
+    </g>
+</svg>
