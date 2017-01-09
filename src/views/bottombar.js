@@ -5,5 +5,4 @@ const template = require('fs').readFileSync(templatePath, 'utf8');
 
 module.exports = {
   template,
-  props: [],
 };

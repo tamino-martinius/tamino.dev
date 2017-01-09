@@ -43,7 +43,7 @@ module.exports = [
     endsAt: null,
     position: [
       'Head of Code',
-      'Head of Mobile',
+      'Head of Mobile Developement',
     ],
     skills: {
       lambda,
@@ -63,11 +63,11 @@ module.exports = [
   {
     type: 'job',
     company: 'shyftplan GmbH',
-    startsAt: '01.12.2014',
+    startsAt: '01.08.2015',
     endsAt: '30.11.2016',
     position: [
+      'Head of Mobile Developement',
       'Backend Developer',
-      'Head of Mobile',
     ],
     skills: {
       nodejs,
@@ -85,7 +85,7 @@ module.exports = [
     type: 'job',
     company: 'shyftplan GmbH',
     startsAt: '01.02.2015',
-    endsAt: '01.07.2015',
+    endsAt: '30.07.2015',
     position: [ 'Backend Developer' ],
     skills: {
       rails,
@@ -165,6 +165,21 @@ module.exports = [
     },
   },
   {
+    type: 'study',
+    university: 'Philipps-Universität Marburg',
+    startsAt: '2004',
+    endsAt: '2015',
+    graduiation: [ 'Intermediate diploma' ],
+    skills: {
+      imageprocessing,
+      numeric,
+      math,
+      parallelexec,
+      neuronalnetwork,
+      distributedsys,
+    },
+  },
+  {
     type: 'job',
     company: 'Freelancer',
     startsAt: '2002',
@@ -184,19 +199,4 @@ module.exports = [
       svg,
     },
   },
-  {
-    type: 'study',
-    university: 'Philipps-Universität Marburg',
-    startsAt: '2004',
-    endsAt: '2015',
-    graduiation: [ 'Intermediate diploma' ],
-    skills: {
-      imageprocessing,
-      numeric,
-      math,
-      parallelexec,
-      neuronalnetwork,
-      distributedsys,
-    },
-  }
 ];

@@ -4,7 +4,7 @@
   "private": true,
   "main": "./src/index.js",
   "config": {
-    "awsBucketName": "www-taminomartinius-de",
+    "awsBucketName": "taminomartinius.de",
     "awsRegion": "eu-central-1",
     "awsProfile": "nextcode"
   },
@@ -12,13 +12,15 @@
     "start": "node src/watch.js",
     "create-bucket": "aws s3 mb s3://$npm_package_config_awsBucketName --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile",
     "delete-bucket": "aws s3 rb s3://$npm_package_config_awsBucketName --region $npm_package_config_awsRegion --force --profile $npm_package_config_awsProfile",
-    "upload": "aws s3 cp ./lib s3://$npm_package_config_awsBucketName --recursive --acl public-read --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile"
+    "upload": "aws s3 cp ./lib s3://$npm_package_config_awsBucketName --recursive --acl public-read --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile",
+    "deploy": "npm run upload"
   },
   "dependencies": {
     "child-process-promise": "^2.2.0",
     "clean-css": "^3.4.23",
     "datauri": "^1.0.5",
     "fs-then-native": "^1.0.2",
+    "html-minifier": "^3.2.3",
     "node-watch": "^0.4.1",
     "stylus": "^0.54.5",
     "svgo": "^0.7.1",
