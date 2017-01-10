@@ -24,14 +24,7 @@
     <div class="divider"></div>
     <div class="right">
       <div>
-        <ul class="position show-only-collapsed">
-          <li>
-            {{(entry.position || entry.graduiation)[0]}}
-          </li>
-        </ul>
-        <ul class="position show-only-full">
-          <li v-for="how of entry.position || entry.graduiation">{{how}}</li>
-        </ul>
+        {{(entry.position || entry.graduiation)[0]}}
       </div>
       <div class="skills show-only-full">
         <ul>

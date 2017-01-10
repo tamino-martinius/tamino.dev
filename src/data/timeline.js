@@ -142,7 +142,7 @@ module.exports = [
     company: 'Volkswagen AG',
     startsAt: '01.02.2014',
     endsAt: '31.01.2015',
-    position: [ 'Developer (Research - NDA)' ],
+    position: [ 'Developer (Research)' ],
     skills: {
       node,
       mongodb,
