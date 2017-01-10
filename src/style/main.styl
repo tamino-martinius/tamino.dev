@@ -9,8 +9,14 @@ $timeline-color = $primary-color
 
 html
   font-family -apple-system, BlinkMacSystemFont, Geneva, Verdana, sans-serif
-  font-size 16px
   font-weight 200
+  font-size 20px
+  @media(max-width 768px)
+    font-size 20px
+  @media(max-width 375px)
+    font-size 16px
+  @media(max-width 320px)
+    font-size 14px
 
 html, body, h1, h2, h3, h4, h5, h6, ul, li
   margin 0
@@ -106,9 +112,6 @@ center()
       padding 0 2rem
   .left
     text-align right
-  .duration.show-only-collapsed
-    display inline-block
-    width 3rem
   .duration
     font-weight 500
     opacity 0.7
@@ -196,6 +199,9 @@ center()
     color $primary-color
     &:hover
       color #000
+    &:focus
+    &:active
+      color $primary-color
   .impress-text
     margin-top 1rem
     margin-bottom -1rem

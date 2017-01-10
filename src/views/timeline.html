@@ -18,15 +18,12 @@
         </template>
       </div>
       <div class="remote" v-if="entry.remote">
-        Freelancer
+        worked remotely
       </div>
     </div>
     <div class="divider"></div>
     <div class="right">
       <div>
-        <span class="duration show-only-collapsed">
-          {{entry.startsAt.substr(-4)}}
-        </span>
         <ul class="position show-only-collapsed">
           <li>
             {{(entry.position || entry.graduiation)[0]}}

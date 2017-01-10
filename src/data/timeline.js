@@ -181,7 +181,7 @@ module.exports = [
   },
   {
     type: 'job',
-    company: 'Freelancer',
+    company: 'Self Employed',
     startsAt: '2002',
     endsAt: '2013',
     position: [ 'Full Stack Developer' ],
