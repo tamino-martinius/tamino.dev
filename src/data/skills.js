@@ -1,7 +1,7 @@
 'use strict';
 
 // AWS / Compute
-const ebs =            { level: 0.9, name: 'Elastic Beanstalk' };
+const beanstalk =      { level: 0.9, name: 'Elastic Beanstalk' };
 const ec2 =            { level: 0.9, name: 'Elastic Compute Cloud' };
 const ecs =            { level: 0.8, name: 'Elastic Container Service' };
 const lambda =         { level: 1.0, name: 'Lambda' };
@@ -68,6 +68,9 @@ const less =           { level: 0.9, name: 'less' };
 const sass =           { level: 0.9, name: 'Sass' };
 const stylus =         { level: 1.0, name: 'Stylus' };
 const svg =            { level: 1.0, name: 'SVG' };
+// Soft Skills / Misc
+const teamlead =       { level: 0.9, name: 'Team Lead' };
+const security =       { level: 0.9, name: 'Security' };
 // Study
 const distributedsys = { level: 0.7, name: 'Distributed Systems' };
 const imageprocessing ={ level: 0.7, name: 'Image Processing' };
@@ -77,7 +80,7 @@ const numeric =        { level: 0.7, name: 'Numeric' };
 const parallelexec =   { level: 0.7, name: 'Parallel Execution' };
 
 const all = {
-  ebs, ec2, ecs, lambda,
+  beanstalk, ec2, ecs, lambda,
   dynamodb, rds, s3,
   apigateway, cloudfront, r53, sns,
   cloudformation, cloudtrail, cloudwatch, iam,
@@ -88,6 +91,7 @@ const all = {
   backbone, browserify, jquery, js,
   haml, handlebars, html, php, markdown, react, vuejs,
   css, less, sass, stylus, svg,
+  teamlead, security,
   distributedsys, imageprocessing, math, neuronalnetwork, numeric,
 };
 
@@ -97,7 +101,7 @@ const tree = {
     skills: {
       compute: {
         name: 'Compute',
-        skills: { ebs, ec2, ecs, lambda },
+        skills: { beanstalk, ec2, ecs, lambda },
       },
       data: {
         name: 'Data',

@@ -9,6 +9,7 @@ watch([
   'src/script',
   'src/style',
   'src/views',
+  'src/public',
 ], function(filename) {
   console.time('build');
   build
