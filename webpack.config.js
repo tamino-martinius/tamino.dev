@@ -113,7 +113,7 @@ var minifyOptions = {
 };
 
 /// Export
-const title = '/dev/internet/taminomartinius/index.html';
+const title = '~/taminomartinius.de/index.html';
 const path = '/';
 
 const transform = (content, filePath) => {

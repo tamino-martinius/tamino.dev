@@ -21,25 +21,49 @@
 
   <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
   <meta name="keywords" content="<%= htmlWebpackPlugin.options.title %>">
+
   <style>
     .loader {
-      /* opacity: 0; */
+      color: #819496;
+      font-size: 0;
+    }
+
+    .loader span {
+      font-size: 1.5vw;
+    }
+
+    .loader .path {
+      background-color: #2E8CCF;
+      color: #000;
+    }
+
+    .loader .branch {
+      background-color: #85981C;
+      color: #000;
     }
 
     .loader.hidden {
-      /* opacity: 0; */
     }
   </style>
-</head>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro"
+  rel="stylesheet">
 <body>
   <noscript>
     Please enable JavaScript to see this page!
   </noscript>
   <div class="loader hidden">
-     <span class="path">/dev/internet/taminomartinius</span>
-     <span class="branch"> master</span>
-     <span class="command">cat</span>
-     <span class="args">index.html</span>
+    <div class="line">
+      <span>
+        Last login: Fri Feb 9 11:10:11 on ttys007
+      </span>
+    </div>
+    <div class="line">
+      <span class="path">/dev/internet/taminomartinius</span>
+      <span class="branch"> master</span>
+      <span class="command">cat</span>
+      <span class="args">index.html</span>
+    </div>
   </div>
   <script type="text/javascript">
     document.querySelector('.loader').classList.remove('hidden');
