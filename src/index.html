@@ -24,12 +24,23 @@
 
   <style>
     .loader {
-      color: #819496;
+      transition: margin-top 0.5s ease-in-out;
+      color: #899;
       font-size: 0;
     }
 
     .loader span {
-      font-size: 1.5vw;
+      font-size: 1rem;
+    }
+
+    .loader .branch:before,
+    .loader .command:before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: 0.55rem solid transparent;
+      vertical-align: -0.25rem;
     }
 
     .loader .path {
@@ -42,12 +53,30 @@
       color: #000;
     }
 
+    .loader .branch:before {
+      border-left-color: #2E8CCF;
+    }
+
+    .loader .command {
+      color: #85981C;
+    }
+
+    .loader .command:before {
+      border-left-color: #85981C;
+    }
+
+    .loader .args {
+      padding-left: 1rem;
+      color: #cdd;
+    }
+
     .loader.hidden {
+      margin-top: -3rem;
     }
   </style>
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro"
-  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css">
+</head>
 <body>
   <noscript>
     Please enable JavaScript to see this page!
@@ -59,7 +88,7 @@
       </span>
     </div>
     <div class="line">
-      <span class="path">/dev/internet/taminomartinius</span>
+      <span class="path">~/taminomartinius.de</span>
       <span class="branch"> master</span>
       <span class="command">cat</span>
       <span class="args">index.html</span>

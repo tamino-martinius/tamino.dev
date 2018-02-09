@@ -2,11 +2,11 @@
 * Header *
 *********/
 
-const myName = "Tamino Martinius";
-const profession = "I speak Code";
+export const myName = "Tamino Martinius";
+export const profession = "I speak Code";
 
 // Types
-enum Section {
+export enum Section {
   Home,
   Skills,
   CurriculumVitae,
@@ -17,31 +17,31 @@ enum Section {
   Misc,
 };
 
-interface Stage {
+export interface Stage {
   startsAt: Date,
   endsAt?: Date,
   skills: Skill[],
 };
 
-interface Job extends Stage {
+export interface Job extends Stage {
   company: string,
   remote: boolean,
   position: string | string[],
 };
 
-interface Education extends Stage {
+export interface Education extends Stage {
   university: string,
   graduiation: string,
 };
 
-interface ShowCase extends Stage {
+export interface ShowCase extends Stage {
   name: string,
   description: string,
   urls: string[],
   media: string[],
 };
 
-interface Skill {
+export interface Skill {
   level: number,
   name: string,
 };
@@ -53,111 +53,111 @@ interface Skill {
 
 // AWS
 // AWS / Compute
-const beanstalk: Skill = { level: 0.9, name: 'Elastic Beanstalk' };
-const ec2: Skill = { level: 0.9, name: 'Elastic Compute Cloud' };
-const ecs: Skill = { level: 0.8, name: 'Elastic Container Service' };
-const lambda: Skill = { level: 1.0, name: 'Lambda' };
+export const beanstalk: Skill = { level: 0.9, name: 'Elastic Beanstalk' };
+export const ec2: Skill = { level: 0.9, name: 'Elastic Compute Cloud' };
+export const ecs: Skill = { level: 0.8, name: 'Elastic Container Service' };
+export const lambda: Skill = { level: 1.0, name: 'Lambda' };
 
 // AWS / Data
-const dynamodb: Skill = { level: 0.8, name: 'DynamoDB' };
-const rds: Skill = { level: 1.0, name: 'Relational Database Service' };
-const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
-const s3: Skill = { level: 1.0, name: 'Simple Storage Service' };
+export const dynamodb: Skill = { level: 0.8, name: 'DynamoDB' };
+export const rds: Skill = { level: 1.0, name: 'Relational Database Service' };
+export const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
+export const s3: Skill = { level: 1.0, name: 'Simple Storage Service' };
 
 // AWS / Flow
-const apigateway: Skill = { level: 0.9, name: 'API Gateway' };
-const cloudfront: Skill = { level: 1.0, name: 'CloudFront' };
-const r53: Skill = { level: 1.0, name: 'Route 53' };
-const sns: Skill = { level: 0.9, name: 'Simple Notification Service' };
+export const apigateway: Skill = { level: 0.9, name: 'API Gateway' };
+export const cloudfront: Skill = { level: 1.0, name: 'CloudFront' };
+export const r53: Skill = { level: 1.0, name: 'Route 53' };
+export const sns: Skill = { level: 0.9, name: 'Simple Notification Service' };
 
 // AWS / Management
-const cloudformation: Skill = { level: 0.9, name: 'CloudFormation' };
-const cloudtrail: Skill = { level: 0.8, name: 'CloudTrail' };
-const cloudwatch: Skill = { level: 1.0, name: 'CloudWatch' };
-const iam: Skill = { level: 0.9, name: 'Identity and Access Management' };
+export const cloudformation: Skill = { level: 0.9, name: 'CloudFormation' };
+export const cloudtrail: Skill = { level: 0.8, name: 'CloudTrail' };
+export const cloudwatch: Skill = { level: 1.0, name: 'CloudWatch' };
+export const iam: Skill = { level: 0.9, name: 'Identity and Access Management' };
 
 // Backend / CI
-const circleci: Skill = { level: 0.8, name: 'CircleCI' };
-const jasmine: Skill = { level: 0.9, name: 'Jasmine' };
-const jenkins: Skill = { level: 0.9, name: 'Jenkins' };
-const mocha: Skill = { level: 1.0, name: 'Mocha' };
-const rspec: Skill = { level: 1.0, name: 'RSpec' };
-const travis: Skill = { level: 0.9, name: 'Travis CI' };
+export const circleci: Skill = { level: 0.8, name: 'CircleCI' };
+export const jasmine: Skill = { level: 0.9, name: 'Jasmine' };
+export const jenkins: Skill = { level: 0.9, name: 'Jenkins' };
+export const mocha: Skill = { level: 1.0, name: 'Mocha' };
+export const rspec: Skill = { level: 1.0, name: 'RSpec' };
+export const travis: Skill = { level: 0.9, name: 'Travis CI' };
 
 // Backend / Code
-const asp: Skill = { level: 0.8, name: 'ASP.net' };
-const meteor: Skill = { level: 1.0, name: 'Meteor' };
-const nodejs: Skill = { level: 1.0, name: 'Node.js' };
-const rails: Skill = { level: 1.0, name: 'Ruby on Rails' };
-const ruby: Skill = { level: 1.0, name: 'Ruby' };
+export const asp: Skill = { level: 0.8, name: 'ASP.net' };
+export const meteor: Skill = { level: 1.0, name: 'Meteor' };
+export const nodejs: Skill = { level: 1.0, name: 'Node.js' };
+export const rails: Skill = { level: 1.0, name: 'Ruby on Rails' };
+export const ruby: Skill = { level: 1.0, name: 'Ruby' };
 
 // Backend / Data
-const api: Skill = { level: 1.0, name: 'API' };
-const apollo: Skill = { level: 1.0, name: 'Apollo GraphQL' };
-const elasticsearch: Skill = { level: 0.7, name: 'elasticsearch' };
-const gql: Skill = { level: 1.0, name: 'GraphQL' };
-const mariadb: Skill = { level: 0.8, name: 'MariaDB' };
-const mysql: Skill = { level: 0.8, name: 'MySQL' };
-const mongodb: Skill = { level: 0.9, name: 'MongoDB' };
-const mssql: Skill = { level: 0.9, name: 'Microsoft SQL' };
-const psql: Skill = { level: 1.0, name: 'PostgreSQL' };
-const redis: Skill = { level: 0.8, name: 'Redis' };
+export const api: Skill = { level: 1.0, name: 'API' };
+export const apollo: Skill = { level: 1.0, name: 'Apollo GraphQL' };
+export const elasticsearch: Skill = { level: 0.7, name: 'elasticsearch' };
+export const gql: Skill = { level: 1.0, name: 'GraphQL' };
+export const mariadb: Skill = { level: 0.8, name: 'MariaDB' };
+export const mysql: Skill = { level: 0.8, name: 'MySQL' };
+export const mongodb: Skill = { level: 0.9, name: 'MongoDB' };
+export const mssql: Skill = { level: 0.9, name: 'Microsoft SQL' };
+export const psql: Skill = { level: 1.0, name: 'PostgreSQL' };
+export const redis: Skill = { level: 0.8, name: 'Redis' };
 
 // Backend / Deploy
-const android: Skill = { level: 0.8, name: 'Android' };
-const cordova: Skill = { level: 0.9, name: 'Apache Cordova' };
-const docker: Skill = { level: 0.9, name: 'Docker' };
-const git: Skill = { level: 1.0, name: 'Git' };
-const heroku: Skill = { level: 0.9, name: 'Heroku' };
-const ios: Skill = { level: 0.9, name: 'iOS' };
+export const android: Skill = { level: 0.8, name: 'Android' };
+export const cordova: Skill = { level: 0.9, name: 'Apache Cordova' };
+export const docker: Skill = { level: 0.9, name: 'Docker' };
+export const git: Skill = { level: 1.0, name: 'Git' };
+export const heroku: Skill = { level: 0.9, name: 'Heroku' };
+export const ios: Skill = { level: 0.9, name: 'iOS' };
 
 // Frontend / Logic
-const backbone: Skill = { level: 0.7, name: 'Backbone.js' };
-const browserify: Skill = { level: 0.8, name: 'Browserify' };
-const jquery: Skill = { level: 1.0, name: 'jQuery' };
-const js: Skill = { level: 1.0, name: 'JavaScript' };
+export const backbone: Skill = { level: 0.7, name: 'Backbone.js' };
+export const browserify: Skill = { level: 0.8, name: 'Browserify' };
+export const jquery: Skill = { level: 1.0, name: 'jQuery' };
+export const js: Skill = { level: 1.0, name: 'JavaScript' };
 
 // Frontend / Markup
-const haml: Skill = { level: 0.9, name: 'Haml' };
-const handlebars: Skill = { level: 1.0, name: 'Handlebars' };
-const html: Skill = { level: 1.0, name: 'HyperText Markup Language' };
-const php: Skill = { level: 0.7, name: 'PHP' };
-const markdown: Skill = { level: 0.9, name: 'Markdown' };
-const react: Skill = { level: 0.8, name: 'React' };
-const vuejs: Skill = { level: 1.0, name: 'Vue.js' };
+export const haml: Skill = { level: 0.9, name: 'Haml' };
+export const handlebars: Skill = { level: 1.0, name: 'Handlebars' };
+export const html: Skill = { level: 1.0, name: 'HyperText Markup Language' };
+export const php: Skill = { level: 0.7, name: 'PHP' };
+export const markdown: Skill = { level: 0.9, name: 'Markdown' };
+export const react: Skill = { level: 0.8, name: 'React' };
+export const vuejs: Skill = { level: 1.0, name: 'Vue.js' };
 
 // Frontend / Style
-const css: Skill = { level: 1.0, name: 'Cascading Style Sheets' };
-const less: Skill = { level: 0.9, name: 'less' };
-const sass: Skill = { level: 0.9, name: 'Sass' };
-const stylus: Skill = { level: 1.0, name: 'Stylus' };
-const svg: Skill = { level: 1.0, name: 'SVG / SVG Animations' };
+export const css: Skill = { level: 1.0, name: 'Cascading Style Sheets' };
+export const less: Skill = { level: 0.9, name: 'less' };
+export const sass: Skill = { level: 0.9, name: 'Sass' };
+export const stylus: Skill = { level: 1.0, name: 'Stylus' };
+export const svg: Skill = { level: 1.0, name: 'SVG / SVG Animations' };
 
 // Frontend / Design
-const sketch: Skill = { level: 1.0, name: 'Sketch' };
-const afterEffects: Skill = { level: 0.7, name: 'After Effects' };
-const ui: Skill = { level: 0.8, name: 'User Interface' };
-const ux: Skill = { level: 0.8, name: 'User Experience' };
+export const sketch: Skill = { level: 1.0, name: 'Sketch' };
+export const afterEffects: Skill = { level: 0.7, name: 'After Effects' };
+export const ui: Skill = { level: 0.8, name: 'User Interface' };
+export const ux: Skill = { level: 0.8, name: 'User Experience' };
 
 // Soft Skills / Misc
-const teamlead: Skill = { level: 0.9, name: 'Team Lead' };
-const security: Skill = { level: 0.9, name: 'Security' };
+export const teamlead: Skill = { level: 0.9, name: 'Team Lead' };
+export const security: Skill = { level: 0.9, name: 'Security' };
 
 // Study
-const logic: Skill = { level: 0.9, name: 'Logic' };
-const distributedSys: Skill = { level: 0.7, name: 'Distributed Systems' };
-const imageProcessing: Skill = { level: 0.7, name: 'Image Processing' };
-const math: Skill = { level: 0.8, name: 'Math' };
-const neuronalNetwork: Skill = { level: 0.7, name: 'Neuronal Networks' };
-const numeric: Skill = { level: 0.7, name: 'Numeric' };
-const parallelExec: Skill = { level: 0.7, name: 'Parallel Execution' };
+export const logic: Skill = { level: 0.9, name: 'Logic' };
+export const distributedSys: Skill = { level: 0.7, name: 'Distributed Systems' };
+export const imageProcessing: Skill = { level: 0.7, name: 'Image Processing' };
+export const math: Skill = { level: 0.8, name: 'Math' };
+export const neuronalNetwork: Skill = { level: 0.7, name: 'Neuronal Networks' };
+export const numeric: Skill = { level: 0.7, name: 'Numeric' };
+export const parallelExec: Skill = { level: 0.7, name: 'Parallel Execution' };
 
 
 /*******************
 * Curriculum Vitae *
 *******************/
 
-const curriculumVitae: (Job | Education)[] = [
+export const curriculumVitae: (Job | Education)[] = [
   {
     company: 'shyftplan GmbH',
     startsAt: new Date('01.07.2017'),
@@ -350,7 +350,7 @@ const curriculumVitae: (Job | Education)[] = [
 * Experiments *
 **************/
 
-const experiments: ShowCase[] = [
+export const experiments: ShowCase[] = [
   {
     name: 'Button Animations',
     description: '',
@@ -430,7 +430,7 @@ const experiments: ShowCase[] = [
 * Projects *
 ***********/
 
-const projects: ShowCase[] = [
+export const projects: ShowCase[] = [
   {
     name: 'Squoint',
     description: '',
@@ -525,7 +525,7 @@ const projects: ShowCase[] = [
 * Talks *
 ********/
 
-const talks: ShowCase[] = [
+export const talks: ShowCase[] = [
   {
     name: 'Lets talk about TypeScript',
     description: '',
@@ -556,7 +556,7 @@ const talks: ShowCase[] = [
 * Packages *
 ***********/
 
-const packages: ShowCase[] = [
+export const packages: ShowCase[] = [
   {
     name: 'Next Model',
     description: '',
@@ -641,7 +641,7 @@ const packages: ShowCase[] = [
 * Misc *
 *******/
 
-const misc: ShowCase[] = [
+export const misc: ShowCase[] = [
   {
     name: 'RVM Docker Images',
     description: '',
