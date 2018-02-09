@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= htmlWebpackPlugin.options.path %>/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#292a38">
+
+  <link rel="icon" type="image/png" href="<%= htmlWebpackPlugin.options.path %>/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="<%= htmlWebpackPlugin.options.path %>/favicon-16x16.png" sizes="16x16">
+
+  <link rel="manifest" href="<%= htmlWebpackPlugin.options.path %>/manifest.json">
+  <meta name="theme-color" content="#181743">
+  <meta name="application-name" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta name="msapplication-config" content="<%= htmlWebpackPlugin.options.path %>/browserconfig.xml">
+
+  <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta name="keywords" content="<%= htmlWebpackPlugin.options.title %>">
+  <style>
+    .loader {
+      /* opacity: 0; */
+    }
+
+    .loader.hidden {
+      /* opacity: 0; */
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    Please enable JavaScript to see this page!
+  </noscript>
+  <div class="loader hidden">
+     <span class="path">/dev/internet/taminomartinius</span>
+     <span class="branch"> master</span>
+     <span class="command">cat</span>
+     <span class="args">index.html</span>
+  </div>
+  <script type="text/javascript">
+    document.querySelector('.loader').classList.remove('hidden');
+  </script>
+</body>
+</html>
