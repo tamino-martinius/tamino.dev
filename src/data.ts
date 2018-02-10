@@ -1,3 +1,12 @@
+import {
+  Stage,
+  Job,
+  Education,
+  ShowCase,
+  Skill,
+  SkillSet,
+} from './data_types';
+
 /*********
 * Header *
 *********/
