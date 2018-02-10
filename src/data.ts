@@ -27,9 +27,9 @@ export const ecs: Skill = { level: 0.8, name: 'Elastic Container Service' };
 export const lambda: Skill = { level: 1.0, name: 'Lambda' };
 
 // AWS / Data
+export const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
 export const dynamodb: Skill = { level: 0.8, name: 'DynamoDB' };
 export const rds: Skill = { level: 1.0, name: 'Relational Database Service' };
-export const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
 export const s3: Skill = { level: 1.0, name: 'Simple Storage Service' };
 
 // AWS / Flow
@@ -44,10 +44,12 @@ export const cloudtrail: Skill = { level: 0.8, name: 'CloudTrail' };
 export const cloudwatch: Skill = { level: 1.0, name: 'CloudWatch' };
 export const iam: Skill = { level: 0.9, name: 'Identity and Access Management' };
 
+// Backend
 // Backend / CI
-export const circleci: Skill = { level: 0.8, name: 'CircleCI' };
+export const circleCI: Skill = { level: 0.8, name: 'CircleCI' };
 export const jasmine: Skill = { level: 0.9, name: 'Jasmine' };
 export const jenkins: Skill = { level: 0.9, name: 'Jenkins' };
+export const jest: Skill = { level: 1.0, name: 'Jest' };
 export const mocha: Skill = { level: 1.0, name: 'Mocha' };
 export const rspec: Skill = { level: 1.0, name: 'RSpec' };
 export const travis: Skill = { level: 0.9, name: 'Travis CI' };
@@ -79,6 +81,7 @@ export const git: Skill = { level: 1.0, name: 'Git' };
 export const heroku: Skill = { level: 0.9, name: 'Heroku' };
 export const ios: Skill = { level: 0.9, name: 'iOS' };
 
+// Frontend
 // Frontend / Logic
 export const backbone: Skill = { level: 0.7, name: 'Backbone.js' };
 export const browserify: Skill = { level: 0.8, name: 'Browserify' };
@@ -102,12 +105,12 @@ export const stylus: Skill = { level: 1.0, name: 'Stylus' };
 export const svg: Skill = { level: 1.0, name: 'SVG / SVG Animations' };
 
 // Frontend / Design
-export const sketch: Skill = { level: 1.0, name: 'Sketch' };
 export const afterEffects: Skill = { level: 0.7, name: 'After Effects' };
+export const sketch: Skill = { level: 1.0, name: 'Sketch' };
 export const ui: Skill = { level: 0.8, name: 'User Interface' };
 export const ux: Skill = { level: 0.8, name: 'User Experience' };
 
-// Soft Skills / Misc
+// Misc
 export const teamlead: Skill = { level: 0.9, name: 'Team Lead' };
 export const security: Skill = { level: 0.9, name: 'Security' };
 
@@ -202,13 +205,14 @@ export const skills: SkillSet[] = [
 export const curriculumVitae: (Job | Education)[] = [
   {
     company: 'shyftplan GmbH',
-    startsAt: new Date('01.07.2017'),
+    startsAt: new Date('2017-07-01'),
     endsAt: undefined,
     remote: false,
     position: [
       'Head of Development',
+      'Tech Lead',
     ],
-    skills: [
+    skills: {
       lambda,
       beanstalk,
       rds,
@@ -221,19 +225,19 @@ export const curriculumVitae: (Job | Education)[] = [
       rails,
       psql,
       redis,
-    ],
+    },
   },
 
   {
     company: 'shyftplan GmbH',
-    startsAt: new Date('01.12.2016'),
-    endsAt: new Date('30.06.2017'),
+    startsAt: new Date('2016-12-01'),
+    endsAt: new Date('2017-06-30'),
     remote: false,
     position: [
       'Head of Code',
       'Head of Mobile',
     ],
-    skills: [
+    skills: {
       lambda,
       beanstalk,
       rds,
@@ -245,19 +249,19 @@ export const curriculumVitae: (Job | Education)[] = [
       rails,
       psql,
       redis,
-    ],
+    },
   },
 
   {
     company: 'shyftplan GmbH',
-    startsAt: new Date('01.12.2014'),
-    endsAt: new Date('30.11.2016'),
+    startsAt: new Date('2014-12-01'),
+    endsAt: new Date('2016-11-30'),
     remote: false,
     position: [
       'Backend Developer',
       'Head of Mobile',
     ],
-    skills: [
+    skills: {
       nodejs,
       mongodb,
       android,
@@ -266,88 +270,88 @@ export const curriculumVitae: (Job | Education)[] = [
       rails,
       psql,
       redis,
-    ],
+    },
   },
 
   {
     company: 'shyftplan GmbH',
-    startsAt: new Date('01.02.2015'),
-    endsAt: new Date('01.07.2015'),
+    startsAt: new Date('2015-02-01'),
+    endsAt: new Date('2015-07-01'),
     remote: false,
     position: 'Backend Developer',
-    skills: [
+    skills: {
       rails,
       psql,
       redis,
       elasticsearch,
-    ],
+    },
   },
 
   {
     company: 'shyftplan GmbH',
-    startsAt: new Date('01.12.2014'),
-    endsAt: new Date('31.01.2015'),
+    startsAt: new Date('2014-12-01'),
+    endsAt: new Date('2015-01-31'),
     remote: true,
     position: 'Backend Developer',
-    skills: [
+    skills: {
       rails,
       psql,
       redis,
       elasticsearch,
-    ],
+    },
   },
 
   {
     company: 'Nutanix',
-    startsAt: new Date('01.11.2014'),
-    endsAt: new Date('31.01.2015'),
+    startsAt: new Date('2014-11-01'),
+    endsAt: new Date('2015-01-31'),
     remote: true,
     position: 'Frontend Developer',
-    skills: [
+    skills: {
       nodejs,
       less,
       backbone,
-    ],
+    },
   },
 
   {
     company: 'Nutanix',
-    startsAt: new Date('01.08.2014'),
-    endsAt: new Date('31.10.2014'),
+    startsAt: new Date('2014-08-01'),
+    endsAt: new Date('2014-10-31'),
     remote: true,
     position: 'Frontend Developer',
-    skills: [
+    skills: {
       php,
       js,
       less,
       svg,
-    ],
+    },
   },
 
   {
     company: 'Volkswagen AG',
-    startsAt: new Date('01.02.2014'),
-    endsAt: new Date('31.01.2015'),
+    startsAt: new Date('2014-02-01'),
+    endsAt: new Date('2015-01-31'),
     remote: false,
     position: 'Developer (Research - NDA)',
-    skills: [
+    skills: {
       nodejs,
       mongodb,
       imageProcessing,
-    ],
+    },
   },
 
   {
-    company: 'Novotrand GmbH',
-    startsAt: new Date('01.04.2010'),
-    endsAt: new Date('31.12.2013'),
+    company: 'Novotrend GmbH',
+    startsAt: new Date('2010-04-01'),
+    endsAt: new Date('2013-12-31'),
     remote: false,
     position: 'Head of Code',
-    skills: [
+    skills: {
       asp,
       nodejs,
       mssql,
-    ],
+    },
   },
 
   {
@@ -356,7 +360,7 @@ export const curriculumVitae: (Job | Education)[] = [
     endsAt: undefined,
     remote: true,
     position: 'Full Stack Developer',
-    skills: [
+    skills: {
       nodejs,
       rails,
       react,
@@ -368,22 +372,22 @@ export const curriculumVitae: (Job | Education)[] = [
       less,
       sass,
       svg,
-    ],
+    },
   },
 
   {
     university: 'Philipps-Universität Marburg',
     startsAt: new Date('2004'),
     endsAt: new Date('2015'),
-    graduiation: ' Intermediate diploma',
-    skills: [
+    graduiation: 'Intermediate diploma',
+    skills: {
       numeric,
       logic,
       math,
       parallelExec,
       neuronalNetwork,
       distributedSys,
-    ],
+    },
   },
 ];
 
@@ -396,34 +400,34 @@ export const experiments: ShowCase[] = [
   {
     name: 'Button Animations',
     description: '',
-    startsAt: new Date('05.08.2014'),
-    endsAt: new Date('02.07.2017'),
+    startsAt: new Date('2014-08-05'),
+    endsAt: new Date('2017-07-02'),
     urls: [
       'https://dribbble.com/shots/3545734-Liquid-button-v2',
       'https://dribbble.com/shots/2629106-Button-Group',
       'https://dribbble.com/shots/1673204-Submit-Button',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
     name: 'Particle Effects',
     description: '',
-    startsAt: new Date('05.08.2014'),
-    endsAt: new Date('02.07.2017'),
+    startsAt: new Date('2014-08-05'),
+    endsAt: new Date('2017-07-02'),
     urls: [
       'https://dribbble.com/shots/2649284-Dusty-Particle-Sphere',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
     name: 'Hamburder Icon Animations',
     description: '',
-    startsAt: new Date('05.08.2014'),
-    endsAt: new Date('02.07.2017'),
+    startsAt: new Date('2014-08-05'),
+    endsAt: new Date('2017-07-02'),
     urls: [
       'https://dribbble.com/shots/3539398--version-3',
       'https://dribbble.com/shots/3529235--version-2',
@@ -431,14 +435,14 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1671182--version-1',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
     name: 'Icon Animations',
     description: '',
-    startsAt: new Date('15.08.2014'),
-    endsAt: new Date('15.04.2016'),
+    startsAt: new Date('2014-08-15'),
+    endsAt: new Date('2016-04-15'),
     urls: [
       'https://dribbble.com/shots/2654081-Download-icon-progress',
       'https://dribbble.com/shots/1989179-Animated-search-progress-icon',
@@ -446,14 +450,14 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1684424-SVG-Path-Animation-Experiment',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
     name: 'After Effects Render',
     description: '',
-    startsAt: new Date('30.05.2014'),
-    endsAt: new Date('01.07.2017'),
+    startsAt: new Date('2014-05-30'),
+    endsAt: new Date('2017-07-01'),
     urls: [
       'https://dribbble.com/shots/3536783-Rendered-cubes-landsape',
       'https://dribbble.com/shots/1625077-fluid-5',
@@ -463,7 +467,7 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1575639-hello-dribbble',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 ];
 
@@ -483,7 +487,7 @@ export const projects: ShowCase[] = [
       'https://github.com/tamino-martinius/colourco.de',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -496,7 +500,7 @@ export const projects: ShowCase[] = [
       'https://github.com/tamino-martinius/colourco.de',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -508,7 +512,7 @@ export const projects: ShowCase[] = [
       'https://nextparticle.nextco.de/',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -522,7 +526,7 @@ export const projects: ShowCase[] = [
       'https://github.com/tamino-martinius/api.getshar.es',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -534,7 +538,7 @@ export const projects: ShowCase[] = [
       'http://particleslider.de/',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -546,7 +550,7 @@ export const projects: ShowCase[] = [
       '',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -558,7 +562,7 @@ export const projects: ShowCase[] = [
       '',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 ];
 
@@ -577,7 +581,7 @@ export const talks: ShowCase[] = [
       'https://github.com/tamino-martinius/lets-talk-about---typescript',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -589,7 +593,7 @@ export const talks: ShowCase[] = [
       'https://github.com/tamino-martinius/lets-talk-about---graphql',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 ];
 
@@ -613,7 +617,7 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/node-next-model-api-client-connector',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -627,7 +631,7 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-smart-form-delete-button',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -639,7 +643,7 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-ics',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -651,7 +655,7 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-lazy-analytics',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -663,7 +667,7 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-method-pagination',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
   {
     name: 'Meteor lazy Analytics',
@@ -674,7 +678,7 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-lazy-analytics',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 ];
 
@@ -694,7 +698,7 @@ export const misc: ShowCase[] = [
       'https://github.com/tamino-martinius/docker-rvm',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 
   {
@@ -706,6 +710,6 @@ export const misc: ShowCase[] = [
       'https://github.com/tamino-martinius/atom-language-spacebars',
     ],
     media: [],
-    skills: [],
+    skills: {},
   },
 ];
