@@ -120,6 +120,80 @@ export const neuronalNetwork: Skill = { level: 0.7, name: 'Neuronal Networks' };
 export const numeric: Skill = { level: 0.7, name: 'Numeric' };
 export const parallelExec: Skill = { level: 0.7, name: 'Parallel Execution' };
 
+export const skills: SkillSet[] = [
+  {
+    title: 'AWS',
+    data: [
+      {
+        title: 'Compute',
+        data: { beanstalk, ec2, ecs, lambda },
+      },
+      {
+        title: 'Data',
+        data: { aurora, dynamodb, rds, s3 },
+      },
+      {
+        title: 'Flow',
+        data: { apigateway, cloudfront, r53, sns },
+      },
+      {
+        title: 'Management',
+        data: { cloudformation, cloudtrail, cloudwatch, iam },
+      },
+    ],
+  },
+  {
+    title: 'Backend',
+    data: [
+      {
+        title: 'CI',
+        data: { circleCI, jasmine, jenkins, jest, mocha, rspec, travis },
+      },
+      {
+        title: 'Code',
+        data: { asp, meteor, nodejs, rails, ruby },
+      },
+      {
+        title: 'Data',
+        data: { api, apollo, elasticsearch, gql, mariadb, mysql, mongodb, mssql, psql, redis },
+      },
+      {
+        title: 'Deploy',
+        data: { android, cordova, docker, git, heroku, ios },
+      },
+    ],
+  },
+  {
+    title: 'Frontend',
+    data: [
+      {
+        title: 'Logic',
+        data: { backbone, browserify, jquery, js },
+      },
+      {
+        title: 'Markup',
+        data: { haml, handlebars, html, php, markdown, react, vuejs },
+      },
+      {
+        title: 'Style',
+        data: { css, less, sass, stylus, svg },
+      },
+      {
+        title: 'Design',
+        data: { afterEffects, sketch, ui, ux },
+      },
+    ],
+  },
+  {
+    title: 'Misc',
+    data: { teamlead, security },
+  },
+  {
+    title: 'Study',
+    data: { logic, distributedSys, imageProcessing, math, neuronalNetwork, numeric, parallelExec },
+  },
+];
+
 
 /*******************
 * Curriculum Vitae *
