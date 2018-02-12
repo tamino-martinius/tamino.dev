@@ -205,6 +205,11 @@ export const skills: SkillSet[] = [
 export const curriculumVitae: (Job | Education)[] = [
   {
     company: 'shyftplan GmbH',
+    description: `
+      I lead shyftplans Front- and Backend Developers. I'm responsible to
+      design, manage and build the Infrastructure for thousands of concurrent
+      Users at Germanys best shift planning and accounting Web Application.
+    `,
     startsAt: new Date('2017-07-01'),
     endsAt: undefined,
     remote: false,
@@ -230,6 +235,11 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'shyftplan GmbH',
+    description: `
+      I lead shyftplans Front- and Backend Developers. I'm responsible for
+      the Web and Mobile Infrastructure for Germanys best shift planning and
+      accounting Web Application.
+    `,
     startsAt: new Date('2016-12-01'),
     endsAt: new Date('2017-06-30'),
     remote: false,
@@ -254,6 +264,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'shyftplan GmbH',
+    description: `
+      I plan and build the Mobile App and Infrastructure for Germanys best
+      shift planning and accounting Web Application.
+    `,
     startsAt: new Date('2014-12-01'),
     endsAt: new Date('2016-11-30'),
     remote: false,
@@ -275,6 +289,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'shyftplan GmbH',
+    description: `
+      I plan and build the Infrastructure pre and post launch for Germanys best
+      shift planning and accounting Web Application.
+    `,
     startsAt: new Date('2015-02-01'),
     endsAt: new Date('2015-07-01'),
     remote: false,
@@ -289,6 +307,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'shyftplan GmbH',
+    description: `
+      I remotely plan and build the Infrastructure pre and post launch for
+      Germanys best shift planning and accounting Web Application.
+    `,
     startsAt: new Date('2014-12-01'),
     endsAt: new Date('2015-01-31'),
     remote: true,
@@ -303,6 +325,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'Nutanix',
+    description: `
+      I remotely worked as Frontend Developer on the Server Admin Interface of
+      Nutanix Cloud Infrastructure.
+    `,
     startsAt: new Date('2014-11-01'),
     endsAt: new Date('2015-01-31'),
     remote: true,
@@ -316,6 +342,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'Nutanix',
+    description: `
+      I remotely implemented a complete redesign of Nutanix website with
+      PHP and less.
+    `,
     startsAt: new Date('2014-08-01'),
     endsAt: new Date('2014-10-31'),
     remote: true,
@@ -330,6 +360,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'Volkswagen AG',
+    description: `
+      I researched a live video processing solution at Volkswagens destruction
+      free analysis Team.
+    `,
     startsAt: new Date('2014-02-01'),
     endsAt: new Date('2015-01-31'),
     remote: false,
@@ -343,6 +377,11 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'Novotrend GmbH',
+    description: `
+      I designed and planned build the Infrastructure of the most common Web
+      Application to manage the process for pivate job adviser. I was also
+      involved in creating a CRM for customer Websites.
+    `,
     startsAt: new Date('2010-04-01'),
     endsAt: new Date('2013-12-31'),
     remote: false,
@@ -356,6 +395,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     university: 'Philipps-Universität Marburg',
+    description: `
+      I studied IT with secondary subject Math. My focus was on Numeric,
+      Parralel Execution, Neural Networks and functional programming languages.
+    `,
     startsAt: new Date('2004'),
     endsAt: new Date('2015'),
     graduiation: 'Intermediate diploma',
@@ -371,6 +414,10 @@ export const curriculumVitae: (Job | Education)[] = [
 
   {
     company: 'Freelancer',
+    description: `
+      I created Websites for small and medium sized companies and worked
+      remotely for enterprise customers.
+    `,
     startsAt: new Date('2002'),
     endsAt: undefined,
     remote: true,
@@ -399,7 +446,11 @@ export const curriculumVitae: (Job | Education)[] = [
 export const experiments: ShowCase[] = [
   {
     name: 'Button Animations',
-    description: '',
+    description: `
+      I created a couple of different Buttons which are planned to be the main
+      call to action buttons on a website. All buttons are previewed on dribbble
+      and the code is available Open Source at CodePen.
+    `,
     startsAt: new Date('2014-08-05'),
     endsAt: new Date('2017-07-02'),
     urls: [
@@ -408,24 +459,45 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1673204-Submit-Button',
     ],
     media: [],
-    skills: {},
+    skills: {
+      svg,
+      ui,
+      ux,
+      css,
+      stylus,
+      html,
+      js,
+      sketch,
+    },
   },
 
   {
     name: 'Particle Effects',
-    description: '',
+    description: `
+      I experimented a lot to find a the best way to create performant three
+      dimensional particle effects on a 2d canvas before WebGL was available at
+      Browsers.
+    `,
     startsAt: new Date('2014-08-05'),
     endsAt: new Date('2017-07-02'),
     urls: [
       'https://dribbble.com/shots/2649284-Dusty-Particle-Sphere',
     ],
     media: [],
-    skills: {},
+    skills: {
+      html,
+      js,
+    },
   },
 
   {
     name: 'Hamburder Icon Animations',
-    description: '',
+    description: `
+      I created a couple of different hamburger menu icon animations to open
+      and close a menu. All icons are planned with sketch. The base svgs are all
+      hand written with basic svg path commands. The icons are previewed on
+      dribbble and the code is available Open Source at CodePen.
+    `,
     startsAt: new Date('2014-08-05'),
     endsAt: new Date('2017-07-02'),
     urls: [
@@ -435,12 +507,26 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1671182--version-1',
     ],
     media: [],
-    skills: {},
+    skills: {
+      svg,
+      ui,
+      ux,
+      css,
+      stylus,
+      html,
+      js,
+      sketch,
+    },
   },
 
   {
     name: 'Icon Animations',
-    description: '',
+    description: `
+      I created a couple of different icon transitions which are based on
+      svg paths. All icons are planned with sketch. The base svgs are all
+      hand written with basic svg path commands. The icons are previewed on
+      dribbble and the code is available Open Source at CodePen.
+    `,
     startsAt: new Date('2014-08-15'),
     endsAt: new Date('2016-04-15'),
     urls: [
@@ -450,12 +536,23 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1684424-SVG-Path-Animation-Experiment',
     ],
     media: [],
-    skills: {},
+    skills: {
+      svg,
+      ui,
+      ux,
+      css,
+      stylus,
+      html,
+      js,
+      sketch,
+    },
   },
 
   {
-    name: 'After Effects Render',
-    description: '',
+    name: 'After Effects/Blender Render',
+    description: `
+      Some of my dribbble shots are rendered with Blender and After Effects.
+    `,
     startsAt: new Date('2014-05-30'),
     endsAt: new Date('2017-07-01'),
     urls: [
@@ -467,7 +564,9 @@ export const experiments: ShowCase[] = [
       'https://dribbble.com/shots/1575639-hello-dribbble',
     ],
     media: [],
-    skills: {},
+    skills: {
+      afterEffects,
+    },
   },
 ];
 
@@ -479,20 +578,24 @@ export const experiments: ShowCase[] = [
 export const projects: ShowCase[] = [
   {
     name: 'Squoint',
-    description: '',
+    description: `
+      Squoint is a puzzle game which is optimized for mobile devices and touch
+      gestures. The game is currently in closed beta and will be launched soon.
+    `,
     startsAt: new Date('2017'),
     endsAt: undefined,
-    urls: [
-      'https://colourco.de/',
-      'https://github.com/tamino-martinius/colourco.de',
-    ],
+    urls: [],
     media: [],
     skills: {},
   },
 
   {
     name: 'Colourcode',
-    description: '',
+    description: `
+      Colourcode was created to make my life easier to create Websites for my
+      customers. With colourcode i was able to find quickly new color schemes
+      which match to the corporate identity of my clients.
+    `,
     startsAt: new Date('2013'),
     endsAt: undefined,
     urls: [
@@ -505,7 +608,12 @@ export const projects: ShowCase[] = [
 
   {
     name: 'NextParticle',
-    description: '',
+    description: `
+      NextParticle is the evolution of ParticleSlider. It's a complete rewrite
+      of the code to improve the performance and make it easier to customize for
+      the customers. The markup based initialization made it easier to create
+      a wordpress plugin.
+    `,
     startsAt: new Date('2017'),
     endsAt: undefined,
     urls: [
@@ -517,7 +625,11 @@ export const projects: ShowCase[] = [
 
   {
     name: 'GetShares',
-    description: '',
+    description: `
+      GetShares is created to track you social media counts on all common
+      social networks around the globe. It is also possible to create a unified
+      look of all social media buttons.
+    `,
     startsAt: new Date('2014'),
     endsAt: new Date('2017'),
     urls: [
@@ -531,7 +643,13 @@ export const projects: ShowCase[] = [
 
   {
     name: 'ParticleSlider',
-    description: '',
+    description: `
+      ParticleSlider is created based on my research of Particle effect
+      rendering on a 2d canvas. It's possible to create amazing Particle
+      Effects based on simple png images. ParticleSlider is discontinued
+      since NextParticle is now available. All customers of ParticleSlider
+      a version of NextParticle for free.
+    `,
     startsAt: new Date('2014'),
     endsAt: new Date('2017'),
     urls: [
@@ -543,7 +661,11 @@ export const projects: ShowCase[] = [
 
   {
     name: 'Iary',
-    description: '',
+    description: `
+      Iary is a time tracking and reporting solution build as Web Application.
+      It was discontinued in favor of my work at shyftplan. All customers got
+      a complete refund.
+    `,
     startsAt: new Date('2014'),
     endsAt: new Date('2017'),
     urls: [
@@ -555,6 +677,11 @@ export const projects: ShowCase[] = [
 
   {
     name: 'Butlr',
+    description: `
+      Butlr is a automatically generated city guide for all cities in Germany.
+      It shows all Points of Interrest, Restaurants, etc. based on a enriched
+      database build on GeoDB. This project is discontinued with GeoDB.
+    `,
     startsAt: new Date('2013'),
     endsAt: new Date('2014'),
     urls: [
@@ -566,7 +693,12 @@ export const projects: ShowCase[] = [
 
   {
     name: 'GeoDB',
-    description: '',
+    description: `
+      GeoDB is a web scraper which is searching for all addresses and their
+      geo coordinates in germany. The data is used on auto completes for
+      Webpages. This project is discontinued becasue it has too high costs
+      for a Website which generates no income.
+    `,
     startsAt: new Date('2012'),
     endsAt: new Date('2014'),
     urls: [
@@ -584,8 +716,13 @@ export const projects: ShowCase[] = [
 
 export const talks: ShowCase[] = [
   {
-    description: '',
     name: 'Lets talk about ... SQL Query Performance',
+    description: `
+      A small guide in writing good and performant SQL Queries which give very
+      responsed even with millions of records. I also explain why/when a database
+      index is useful and which one i should use.
+      This Talk was a internal presentation for shyftplan.
+    `,
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
@@ -597,6 +734,11 @@ export const talks: ShowCase[] = [
 
   {
     name: 'Lets talk about ... GraphQL',
+    description: `
+      When should i use GraphlQL and what are the differences to REST and how
+      does a GraphQL API look like from the Consumers and Developers perspective.
+      This Talk was a internal presentation for shyftplan.
+    `,
     startsAt: new Date('2017'),
     endsAt: new Date('2017'),
     urls: [
@@ -607,8 +749,10 @@ export const talks: ShowCase[] = [
   },
 
   {
-    description: '',
     name: 'Lets talk about ... TypeScript',
+    description: `
+      A quick introduction to TypeScript and its differenced to JavaScript.
+      This Talk was a internal presentation for shyftplan.
     `,
     startsAt: new Date('2017'),
     endsAt: new Date('2017'),
@@ -628,7 +772,11 @@ export const talks: ShowCase[] = [
 export const packages: ShowCase[] = [
   {
     name: 'Next Model',
-    description: '',
+    description: `
+      Next Model is the evolution of Meteor Smart Record. With this package
+      you are able to define Model relations and write database independend
+      queries to fetch data.
+    `,
     startsAt: new Date('2016'),
     endsAt: undefined,
     urls: [
@@ -645,7 +793,13 @@ export const packages: ShowCase[] = [
 
   {
     name: 'Meteor Smart Record',
-    description: '',
+    description: `
+      Meteor Smart Record is a package to define Model relations and write
+      MongoDB queries in a simple and object orientated way. It's a dependency
+      for Meteor Smart Form which is a simple way to create forms based on models.
+      This pacakge is discontinued on favor of Next Model which is a Meteor
+      independent solution.
+    `,
     startsAt: new Date('2015'),
     endsAt: new Date('2017'),
     urls: [
@@ -659,7 +813,9 @@ export const packages: ShowCase[] = [
 
   {
     name: 'Meteor ics',
-    description: '',
+    description: `
+      A iCalendar .ics export which also enabled to integrate recurring events.
+    `,
     startsAt: new Date('2015'),
     endsAt: new Date('2015'),
     urls: [
@@ -671,7 +827,10 @@ export const packages: ShowCase[] = [
 
   {
     name: 'Meteor lazy Analytics',
-    description: '',
+    description: `
+      This pacakge provides a non blocking way to integrate Google Analytics
+      where the credentials are dynamically fetched from the Server.
+    `,
     startsAt: new Date('2015'),
     endsAt: new Date('2015'),
     urls: [
@@ -683,7 +842,10 @@ export const packages: ShowCase[] = [
 
   {
     name: 'Meteor Method Pagination',
-    description: '',
+    description: `
+      This pacakge is a easy way to integrate pagination of data with Meteor
+      Server side methods..
+    `,
     startsAt: new Date('2014'),
     endsAt: new Date('2014'),
     urls: [
@@ -702,7 +864,11 @@ export const packages: ShowCase[] = [
 export const misc: ShowCase[] = [
   {
     name: 'RVM Docker Images',
-    description: '',
+    description: `
+      This repository generates a rainbow table of Ubuntu versions and Ruby
+      versions. The source is available on GitHub and the prebuild images
+      are available on Docker Hub.
+    `,
     startsAt: new Date('2017'),
     endsAt: new Date('2018'),
     urls: [
@@ -715,7 +881,10 @@ export const misc: ShowCase[] = [
 
   {
     name: 'Atom Spacebars language',
-    description: '',
+    description: `
+      This Atom package enables syntax highlighting of Meteors Spacebars language.
+      Currently not maintained because i use VS Code now as main Editor.
+    `,
     startsAt: new Date('2016'),
     endsAt: new Date('2016'),
     urls: [
