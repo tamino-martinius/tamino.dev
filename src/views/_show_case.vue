@@ -15,14 +15,6 @@
     </CodeLine>
     <CodeLine>
       <Tab/><Tab/>
-      <span class="variable">description</span>
-      <span class="expression">:</span>
-      <span class="white-space space"></span>
-      <String :value="data.description"></String>
-      <span class="expression">,</span>
-    </CodeLine>
-    <CodeLine>
-      <Tab/><Tab/>
       <span class="variable">urls</span>
       <span class="expression">:</span>
       <span class="white-space space"></span>
