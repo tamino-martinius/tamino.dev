@@ -16,10 +16,10 @@
       <span class="expression">[</span>
     </CodeLine>
     <template v-for="(entry, index) in data">
-      <CodeLine v-if="index !== 0" :key="index"/>
       <ShowCase
-        :key="index"
+        :key="`show-case-${index}`"
         :data="entry"
+        :isLast="index === data.length - 1"
       />
     </template>
     <CodeLine>
