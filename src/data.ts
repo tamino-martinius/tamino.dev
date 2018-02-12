@@ -669,17 +669,6 @@ export const packages: ShowCase[] = [
     media: [],
     skills: {},
   },
-  {
-    name: 'Meteor lazy Analytics',
-    description: '',
-    startsAt: new Date('2015'),
-    endsAt: new Date('2015'),
-    urls: [
-      'https://github.com/tamino-martinius/meteor-lazy-analytics',
-    ],
-    media: [],
-    skills: {},
-  },
 ];
 
 
