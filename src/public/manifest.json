@@ -3,18 +3,18 @@
   "short_name": "#{title}",
   "icons": [
     {
-      "src": "#{path}>/android-chrome-192x192.png",
+      "src": "#{path}>/logo@192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "#{path}>/android-chrome-512x512.png",
+      "src": "#{path}>/logo@512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "theme_color": "#292A38",
-  "background_color": "#292A38",
+  "theme_color": "#272822",
+  "background_color": "#272822",
   "start_url": ".",
   "display": "standalone"
 }
