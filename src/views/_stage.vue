@@ -13,14 +13,24 @@
         <span class="expression">{</span>
       </CodeLine>
       <slot/>
-      <CodeLine v-if="data.description">
-        <Tab/><Tab/>
-        <span class="variable">description</span>
-        <span class="expression">:</span>
-        <span class="white-space space"></span>
-        <String :value="data.description"></String>
-        <span class="expression">,</span>
-      </CodeLine>
+      <template v-if="data.description">
+        <CodeLine>
+          <Tab/><Tab/>
+          <span class="variable">description</span>
+          <span class="expression">:</span>
+          <span class="white-space space"></span>
+          <span class="string">&#96;</span>
+        </CodeLine>
+        <MultiLineString
+          :value="data.description.trim()"
+          :indentation="3"
+        />
+        <CodeLine>
+          <Tab/><Tab/>
+          <span class="string">&#96;</span>
+          <span class="expression">,</span>
+        </CodeLine>
+      </template>
       <CodeLine>
         <Tab/><Tab/>
         <span class="variable">startsAt</span>
@@ -66,6 +76,7 @@
   import Comment from './_comment.vue';
   import Tab from './_tab.vue';
   import String from './_string.vue';
+  import MultiLineString from './_multi_line_string.vue';
   import Date from './_date.vue';
   import Collapsed from './_collapsed.vue';
 
@@ -90,6 +101,7 @@
       Comment,
       Tab,
       String,
+      MultiLineString,
       Date,
       Collapsed,
     },
