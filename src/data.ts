@@ -554,6 +554,17 @@ export const projects: ShowCase[] = [
   },
 
   {
+    name: 'Butlr',
+    startsAt: new Date('2013'),
+    endsAt: new Date('2014'),
+    urls: [
+      '',
+    ],
+    media: [],
+    skills: {},
+  },
+
+  {
     name: 'GeoDB',
     description: '',
     startsAt: new Date('2012'),
