@@ -1,5 +1,10 @@
 <template>
-  <Stage class="education" :data="data">
+  <Stage
+    class="education"
+    :abbreviation="`${year} - ${data.university} - ${data.graduiation}`"
+    :data="data"
+    :isLast="isLast"
+  >
     <CodeLine>
       <Tab/><Tab/>
       <span class="variable">university</span>
@@ -28,7 +33,13 @@
   export default {
     props: [
       'data',
+      'isLast',
     ],
+    computed: {
+      year() {
+        return this.data.startsAt.getFullYear();
+      },
+    },
     components: {
       CodeLine,
       Tab,

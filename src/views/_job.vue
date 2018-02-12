@@ -1,5 +1,10 @@
 <template>
-  <Stage class="job" :data="data">
+  <Stage
+    class="job"
+    :abbreviation="`${year} - ${data.company} - ${mainPosition}`"
+    :data="data"
+    :isLast="isLast"
+  >
     <CodeLine>
       <Tab/><Tab/>
       <span class="variable">company</span>
@@ -57,6 +62,7 @@
   export default {
     props: [
       'data',
+      'isLast',
     ],
     components: {
       CodeLine,
@@ -64,6 +70,19 @@
       String,
       Boolean,
       Stage,
+    },
+    computed: {
+      year() {
+        return this.data.startsAt.getFullYear();
+      },
+      mainPosition() {
+        const position = Array.isArray(this.data.position)
+          ? this.data.position[0]
+          : this.data.position
+        ;
+        const remote = this.data.remote ? '(remote) ' : '';
+        return remote + position;
+      },
     },
   };
 </script>
