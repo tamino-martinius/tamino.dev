@@ -56,10 +56,12 @@ export const travis: Skill = { level: 0.9, name: 'Travis CI' };
 
 // Backend / Code
 export const asp: Skill = { level: 0.8, name: 'ASP.net' };
+export const coffeescript: Skill = { level: 0.9, name: 'CoffeeScript' };
 export const meteor: Skill = { level: 1.0, name: 'Meteor' };
 export const nodejs: Skill = { level: 1.0, name: 'Node.js' };
 export const rails: Skill = { level: 1.0, name: 'Ruby on Rails' };
 export const ruby: Skill = { level: 1.0, name: 'Ruby' };
+export const typescript: Skill = { level: 1.0, name: 'TypeScript' };
 
 // Backend / Data
 export const api: Skill = { level: 1.0, name: 'API' };
@@ -87,6 +89,7 @@ export const backbone: Skill = { level: 0.7, name: 'Backbone.js' };
 export const browserify: Skill = { level: 0.8, name: 'Browserify' };
 export const jquery: Skill = { level: 1.0, name: 'jQuery' };
 export const js: Skill = { level: 1.0, name: 'JavaScript' };
+export const websockets: Skill = { level: 0.8, name: 'WebSockets' };
 
 // Frontend / Markup
 export const haml: Skill = { level: 0.9, name: 'Haml' };
@@ -106,6 +109,7 @@ export const svg: Skill = { level: 1.0, name: 'SVG / SVG Animations' };
 
 // Frontend / Design
 export const afterEffects: Skill = { level: 0.3, name: 'After Effects' };
+export const blender: Skill = { level: 0.5, name: 'Blender' };
 export const sketch: Skill = { level: 0.8, name: 'Sketch' };
 export const ui: Skill = { level: 0.7, name: 'User Interface' };
 export const ux: Skill = { level: 0.6, name: 'User Experience' };
@@ -154,7 +158,7 @@ export const skills: SkillSet[] = [
       },
       {
         title: 'Code',
-        data: { asp, meteor, nodejs, rails, ruby },
+        data: { asp, meteor, nodejs, rails, ruby, typescript },
       },
       {
         title: 'Data',
@@ -171,7 +175,7 @@ export const skills: SkillSet[] = [
     data: [
       {
         title: 'Logic',
-        data: { backbone, browserify, jquery, js },
+        data: { backbone, browserify, jquery, js, websockets },
       },
       {
         title: 'Markup',
@@ -183,7 +187,7 @@ export const skills: SkillSet[] = [
       },
       {
         title: 'Design',
-        data: { afterEffects, sketch, ui, ux },
+        data: { afterEffects, blender, sketch, ui, ux },
       },
     ],
   },
@@ -566,6 +570,7 @@ export const experiments: ShowCase[] = [
     media: [],
     skills: {
       afterEffects,
+      blender,
     },
   },
 ];
@@ -586,7 +591,17 @@ export const projects: ShowCase[] = [
     endsAt: undefined,
     urls: [],
     media: [],
-    skills: {},
+    skills: {
+      s3,
+      cloudfront,
+      nodejs,
+      ec2,
+      lambda,
+      typescript,
+      stylus,
+      html,
+      vuejs,
+    },
   },
 
   {
@@ -603,7 +618,17 @@ export const projects: ShowCase[] = [
       'https://github.com/tamino-martinius/colourco.de',
     ],
     media: [],
-    skills: {},
+    skills: {
+      s3,
+      cloudfront,
+      typescript,
+      coffeescript,
+      nodejs,
+      stylus,
+      html,
+      handlebars,
+      vuejs,
+    },
   },
 
   {
@@ -620,7 +645,17 @@ export const projects: ShowCase[] = [
       'https://nextparticle.nextco.de/',
     ],
     media: [],
-    skills: {},
+    skills: {
+      s3,
+      cloudfront,
+      lambda,
+      nodejs,
+      psql,
+      typescript,
+      html,
+      stylus,
+      vuejs,
+    },
   },
 
   {
@@ -638,7 +673,15 @@ export const projects: ShowCase[] = [
       'https://github.com/tamino-martinius/api.getshar.es',
     ],
     media: [],
-    skills: {},
+    skills: {
+      s3,
+      cloudfront,
+      nodejs,
+      js,
+      html,
+      stylus,
+      handlebars,
+    },
   },
 
   {
@@ -656,7 +699,13 @@ export const projects: ShowCase[] = [
       'http://particleslider.de/',
     ],
     media: [],
-    skills: {},
+    skills: {
+      ec2,
+      coffeescript,
+      js,
+      html,
+      css,
+    },
   },
 
   {
@@ -672,7 +721,18 @@ export const projects: ShowCase[] = [
       '',
     ],
     media: [],
-    skills: {},
+    skills: {
+      ec2,
+      s3,
+      cloudfront,
+      js,
+      html,
+      nodejs,
+      handlebars,
+      meteor,
+      stylus,
+      websockets,
+    },
   },
 
   {
@@ -688,7 +748,16 @@ export const projects: ShowCase[] = [
       '',
     ],
     media: [],
-    skills: {},
+    skills: {
+      s3,
+      cloudfront,
+      nodejs,
+      js,
+      html,
+      stylus,
+      psql,
+      api,
+    },
   },
 
   {
@@ -705,7 +774,14 @@ export const projects: ShowCase[] = [
       '',
     ],
     media: [],
-    skills: {},
+    skills: {
+      nodejs,
+      js,
+      html,
+      stylus,
+      psql,
+      api,
+    },
   },
 ];
 
@@ -729,7 +805,12 @@ export const talks: ShowCase[] = [
       'https://github.com/tamino-martinius/lets-talk-about---sql-query-performance',
     ],
     media: [],
-    skills: {},
+    skills: {
+      psql,
+      nodejs,
+      html,
+      stylus,
+    },
   },
 
   {
@@ -745,7 +826,12 @@ export const talks: ShowCase[] = [
       'https://github.com/tamino-martinius/lets-talk-about---graphql',
     ],
     media: [],
-    skills: {},
+    skills: {
+      gql,
+      nodejs,
+      html,
+      stylus,
+    },
   },
 
   {
@@ -760,7 +846,12 @@ export const talks: ShowCase[] = [
       'https://github.com/tamino-martinius/lets-talk-about---typescript',
     ],
     media: [],
-    skills: {},
+    skills: {
+      typescript,
+      nodejs,
+      html,
+      stylus,
+    },
   },
 ];
 
@@ -788,7 +879,14 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/node-next-model-api-client-connector',
     ],
     media: [],
-    skills: {},
+    skills: {
+      nodejs,
+      typescript,
+      js,
+      psql,
+      gql,
+      api,
+    },
   },
 
   {
@@ -808,7 +906,12 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-smart-form-delete-button',
     ],
     media: [],
-    skills: {},
+    skills: {
+      meteor,
+      js,
+      coffeescript,
+      mongodb,
+    },
   },
 
   {
@@ -822,7 +925,10 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-ics',
     ],
     media: [],
-    skills: {},
+    skills: {
+      meteor,
+      js,
+    },
   },
 
   {
@@ -837,7 +943,10 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-lazy-analytics',
     ],
     media: [],
-    skills: {},
+    skills: {
+      meteor,
+      js,
+    },
   },
 
   {
@@ -852,7 +961,11 @@ export const packages: ShowCase[] = [
       'https://github.com/tamino-martinius/meteor-method-pagination',
     ],
     media: [],
-    skills: {},
+    skills: {
+      meteor,
+      js,
+      coffeescript,
+    },
   },
 ];
 
@@ -876,7 +989,9 @@ export const misc: ShowCase[] = [
       'https://github.com/tamino-martinius/docker-rvm',
     ],
     media: [],
-    skills: {},
+    skills: {
+      docker,
+    },
   },
 
   {
