@@ -16,11 +16,17 @@
 
 html,
 body {
-  margin: 0.3rem;;
   padding-top: 0.2rem;
   font-family: 'Fira Code', monospace;
   background-color: var(--color-background);
-  font-size: 1.5vw;
+  font-size: 2vw;
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+body {
+  margin: 0.3rem;
 }
 
 .line {
