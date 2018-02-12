@@ -573,24 +573,36 @@ export const projects: ShowCase[] = [
 
 export const talks: ShowCase[] = [
   {
-    name: 'Lets talk about TypeScript',
     description: '',
-    startsAt: new Date('2017'),
-    endsAt: new Date('2017'),
+    name: 'Lets talk about ... SQL Query Performance',
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
     urls: [
-      'https://github.com/tamino-martinius/lets-talk-about---typescript',
+      'https://github.com/tamino-martinius/lets-talk-about---sql-query-performance',
     ],
     media: [],
     skills: {},
   },
 
   {
-    name: 'Lets talk about GraphQL',
-    description: '',
+    name: 'Lets talk about ... GraphQL',
     startsAt: new Date('2017'),
     endsAt: new Date('2017'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about---graphql',
+    ],
+    media: [],
+    skills: {},
+  },
+
+  {
+    description: '',
+    name: 'Lets talk about ... TypeScript',
+    `,
+    startsAt: new Date('2017'),
+    endsAt: new Date('2017'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about---typescript',
     ],
     media: [],
     skills: {},
