@@ -5,5 +5,4 @@ set -x
 
 source config
 
-NODE_ENV="production"
-node_modules/.bin/webpack --progress --hide-modules
+NODE_ENV="production" node_modules/.bin/webpack --progress --hide-modules
