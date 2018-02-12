@@ -19,11 +19,11 @@
       <span class="expression">[</span>
     </CodeLine>
     <template v-for="(entry, index) in data">
-      <CodeLine v-if="index !== 0" :key="index"/>
       <component
         :is="entry.company ? 'Job' : 'Education'"
-        :key="index"
+        :key="`entry-${index}`"
         :data="entry"
+        :isLast="index === data.length - 1"
       />
     </template>
     <CodeLine>
