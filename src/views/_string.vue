@@ -3,15 +3,15 @@
 </template>
 
 <script lang="ts">
+  import { formatCode } from '../util';
+
   export default {
     props: [
       'value',
     ],
     computed: {
       content() {
-        return `'${this.value}'`
-          .replace(/ /g, '<span class="white-space space"></span>')
-        ;
+        return formatCode(`'${this.value}'`);
       },
     },
   };
