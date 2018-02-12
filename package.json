@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack --progress --hide-modules",
     "build:android": "npm run build && (cd cordova && cordova build android)",
     "start": "webpack-dev-server --hot --inline --open -d",
-    "start:android": "npm run build && (cd cordova && cordova run android --emulator)",
+    "start:android": "npm run build && (cd cordova && cordova run android --emulator)"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",
