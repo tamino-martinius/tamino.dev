@@ -10,6 +10,7 @@ export enum Section {
 };
 
 export interface Stage {
+  description?: string,
   startsAt: Date,
   endsAt?: Date,
   skills: { [key: string]: Skill },
@@ -28,7 +29,6 @@ export interface Education extends Stage {
 
 export interface ShowCase extends Stage {
   name: string,
-  description: string,
   urls: string[],
   media: string[],
 };
