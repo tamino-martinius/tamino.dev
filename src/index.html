@@ -74,7 +74,7 @@
     }
 
     .loader.hidden {
-      margin-top: -3.1rem;
+      margin-top: -3.5rem;
     }
   </style>
 
@@ -87,7 +87,7 @@
   <div class="loader hidden">
     <div class="line">
       <span>
-        Last login: Fri Feb 9 11:10:11 on ttys007
+        Last login: <span class="now"></span> on ttys007
       </span>
     </div>
     <div class="line">
@@ -98,6 +98,7 @@
     </div>
   </div>
   <script type="text/javascript">
+    document.querySelector('.now').innerHTML = new Date().toString();
     document.querySelector('.loader').classList.remove('hidden');
   </script>
 </body>
