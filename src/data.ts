@@ -105,10 +105,10 @@ export const stylus: Skill = { level: 1.0, name: 'Stylus' };
 export const svg: Skill = { level: 1.0, name: 'SVG / SVG Animations' };
 
 // Frontend / Design
-export const afterEffects: Skill = { level: 0.7, name: 'After Effects' };
-export const sketch: Skill = { level: 1.0, name: 'Sketch' };
-export const ui: Skill = { level: 0.8, name: 'User Interface' };
-export const ux: Skill = { level: 0.8, name: 'User Experience' };
+export const afterEffects: Skill = { level: 0.3, name: 'After Effects' };
+export const sketch: Skill = { level: 0.8, name: 'Sketch' };
+export const ui: Skill = { level: 0.7, name: 'User Interface' };
+export const ux: Skill = { level: 0.6, name: 'User Experience' };
 
 // Misc
 export const teamlead: Skill = { level: 0.9, name: 'Team Lead' };
@@ -258,8 +258,8 @@ export const curriculumVitae: (Job | Education)[] = [
     endsAt: new Date('2016-11-30'),
     remote: false,
     position: [
-      'Backend Developer',
       'Head of Mobile',
+      'Backend Developer',
     ],
     skills: {
       nodejs,
@@ -355,6 +355,21 @@ export const curriculumVitae: (Job | Education)[] = [
   },
 
   {
+    university: 'Philipps-Universität Marburg',
+    startsAt: new Date('2004'),
+    endsAt: new Date('2015'),
+    graduiation: 'Intermediate diploma',
+    skills: {
+      numeric,
+      logic,
+      math,
+      parallelExec,
+      neuronalNetwork,
+      distributedSys,
+    },
+  },
+
+  {
     company: 'Freelancer',
     startsAt: new Date('2002'),
     endsAt: undefined,
@@ -372,21 +387,6 @@ export const curriculumVitae: (Job | Education)[] = [
       less,
       sass,
       svg,
-    },
-  },
-
-  {
-    university: 'Philipps-Universität Marburg',
-    startsAt: new Date('2004'),
-    endsAt: new Date('2015'),
-    graduiation: 'Intermediate diploma',
-    skills: {
-      numeric,
-      logic,
-      math,
-      parallelExec,
-      neuronalNetwork,
-      distributedSys,
     },
   },
 ];
