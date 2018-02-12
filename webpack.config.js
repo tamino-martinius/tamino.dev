@@ -174,21 +174,21 @@ const config = {
 if (process.env.NODE_ENV === 'production') {
   config.plugins.push(new UglifyJsWebpackPlugin(minifyOptions));
   config.plugins.push(new OfflinePlugin({
-    publicPath: '/' + build.name + '/',
+    publicPath: '/',
     externals: [
-      '/' + build.name + '/',
+      '/',
     ],
     updateStrategy: 'changed',
     autoUpdate: 1000 * 60 * 2,
     caches: {
       main: [
         'index.html',
-        build.name + '.*.js',
+        'main.*.js',
       ],
     },
     ServiceWorker: {
       events: true,
-      navigateFallbackURL: '/' + build.name + '/',
+      navigateFallbackURL: '/',
     },
     AppCache: {
       events: true
