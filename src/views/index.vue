@@ -50,6 +50,7 @@
       name="misc"
       :data="data.misc"
     />
+    <Legal/>
   </div>
 </template>
 
@@ -59,8 +60,6 @@
     Section as SectionType,
   } from '../data_types';
 
-  console.log(data);
-
   import Job from './_job.vue';
   import SkillSet from './_skill_set.vue';
   import Section from './_section.vue';
@@ -69,6 +68,8 @@
   import String from './_string.vue';
   import CurriculumVitae from './_curriculum_vitae.vue';
   import ShowCaseSection from './_show_case_section.vue';
+  import Comment from './_comment.vue';
+  import Legal from './_legal.vue';
 
   export default {
     data() {
@@ -76,6 +77,11 @@
         Section: SectionType,
         data,
       };
+    },
+    computed: {
+      year() {
+        return new Date().getFullYear();
+      },
     },
     components: {
       Job,
@@ -86,6 +92,8 @@
       String,
       CurriculumVitae,
       ShowCaseSection,
+      Comment,
+      Legal,
     },
   };
 </script>
