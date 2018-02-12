@@ -5,7 +5,7 @@
     <span class="variable">level</span>
     <span class="expression">:</span>
     <span class="white-space space"></span>
-    <Number :value="skill.level.toFixed(1)" />
+    <Number :value="skill.level.toFixed(1)" class="progress" />
     <span class="expression">,</span>
     <span class="white-space space"></span>
     <span class="variable">name</span>
