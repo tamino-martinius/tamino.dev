@@ -219,7 +219,7 @@ export const curriculumVitae: (Job | Education)[] = [
     remote: false,
     position: [
       'Head of Development',
-      'Tech Lead',
+      'Lead Engineering',
     ],
     skills: {
       lambda,
