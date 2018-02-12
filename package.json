@@ -1,12 +1,6 @@
 {
   "name": "www.taminomartinius.de",
   "private": true,
-  "config": {
-    "awsBucketName": "squiont.nextco.de",
-    "awsRegion": "eu-central-1",
-    "awsProfile": "nextcode",
-    "awsCloudfrontId": "EV1P2UMY8K3I9"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch -d",
@@ -14,14 +8,6 @@
     "build:android": "npm run build && (cd cordova && cordova build android)",
     "start": "webpack-dev-server --hot --inline --open -d",
     "start:android": "npm run build && (cd cordova && cordova run android --emulator)",
-    "create-bucket": "aws s3 mb s3://$npm_package_config_awsBucketName --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile",
-    "delete-bucket": "aws s3 rb s3://$npm_package_config_awsBucketName --region $npm_package_config_awsRegion --force --profile $npm_package_config_awsProfile",
-    "upload": "npm run s3-sync && npm run s3-cp-html && npm run s3-cp-service-worker",
-    "s3-sync": "aws s3 sync ./dist s3://$npm_package_config_awsBucketName --cache-control \"max-age=31536000,public\" --acl public-read --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile",
-    "s3-cp-html": "aws s3 cp ./dist s3://$npm_package_config_awsBucketName --exclude \"*\" --include \"*.html\" --cache-control \"max-age=0,no-cache,no-store,must-revalidate\" --recursive --acl public-read --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile",
-    "s3-cp-service-worker": "aws s3 cp ./dist s3://$npm_package_config_awsBucketName --exclude \"*\" --include \"*/sw.js\" --cache-control \"max-age=0,no-cache,no-store,must-revalidate\" --recursive --acl public-read --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile",
-    "deploy": "npm run build && npm run upload && npm run invalidate",
-    "invalidate": "aws cloudfront create-invalidation --distribution-id $npm_package_config_awsCloudfrontId --region $npm_package_config_awsRegion --profile $npm_package_config_awsProfile --paths '/*'"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",
