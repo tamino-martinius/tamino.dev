@@ -1,18 +1,20 @@
 <template>
   <div class="comment-block">
     <CodeLine>
-      <span class="comment">{{commentHeader}}</span>
+      <span class="comment">{{header}}</span>
+    </CodeLine>
+    <CodeLine v-for="(comment, index) in comments" :key="index">
+      <span class="comment" v-html="comment"></span>
     </CodeLine>
     <CodeLine>
-      <span class="comment" v-html="commentBody"></span>
-    </CodeLine>
-    <CodeLine>
-      <span class="comment">{{commentFooter}}</span>
+      <span class="comment">{{footer}}</span>
     </CodeLine>
   </div>
 </template>
 
 <script lang="ts">
+  import { formatCode, center } from '../util';
+
   import CodeLine from './_code_line.vue';
 
   export default {
@@ -20,16 +22,26 @@
       'comment',
     ],
     computed: {
-      commentBody() {
-        return `* ${this.comment} *`
-          .replace(/ /g, '<span class="white-space space"></span>')
+      comments() {
+        const len = this.longestLine;
+
+        return this.lines
+          .map((str: string) => center(str, len))
+          .map(formatCode)
+          .map((str: string) => `* ${str} *`)
         ;
       },
-      commentHeader() {
-        return '/' + new Array(this.comment.length + 4).join('*');
+      lines() {
+        return this.comment.split('\n');
       },
-      commentFooter() {
-        return new Array(this.comment.length + 4).join('*') + '/';
+      longestLine() {
+        return Math.max(...this.lines.map((str: string) => str.length));
+      },
+      header() {
+        return '/' + new Array(this.longestLine + 4).join('*');
+      },
+      footer() {
+        return new Array(this.longestLine + 4).join('*') + '/';
       },
     },
     components: {
