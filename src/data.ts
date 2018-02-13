@@ -29,20 +29,20 @@ export const lambda: Skill = { level: 1.0, name: 'Lambda' };
 // AWS / Data
 export const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
 export const dynamodb: Skill = { level: 0.8, name: 'DynamoDB' };
-export const rds: Skill = { level: 1.0, name: 'Relational Database Service' };
+export const rds: Skill = { level: 1.0, name: 'Relational DB Service' };
 export const s3: Skill = { level: 1.0, name: 'Simple Storage Service' };
 
 // AWS / Flow
 export const apigateway: Skill = { level: 0.9, name: 'API Gateway' };
 export const cloudfront: Skill = { level: 1.0, name: 'CloudFront' };
 export const r53: Skill = { level: 1.0, name: 'Route 53' };
-export const sns: Skill = { level: 0.9, name: 'Simple Notification Service' };
+export const sns: Skill = { level: 0.9, name: 'Simple Notification Srv.' };
 
 // AWS / Management
 export const cloudformation: Skill = { level: 0.9, name: 'CloudFormation' };
 export const cloudtrail: Skill = { level: 0.8, name: 'CloudTrail' };
 export const cloudwatch: Skill = { level: 1.0, name: 'CloudWatch' };
-export const iam: Skill = { level: 0.9, name: 'Identity and Access Management' };
+export const iam: Skill = { level: 0.9, name: 'Identity and Access Mgmt.' };
 
 // Backend
 // Backend / CI
