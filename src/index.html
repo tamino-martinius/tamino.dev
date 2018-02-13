@@ -94,11 +94,11 @@
       <span class="path">~/taminomartinius.de</span>
       <span class="branch"> master</span>
       <span class="command">cat</span>
-      <span class="args">index.html</span>
+      <span class="args">main.ts</span>
     </div>
   </div>
   <script type="text/javascript">
-    document.querySelector('.now').innerHTML = new Date().toString();
+    document.querySelector('.now').innerHTML = ` ${new Date().toString().substr(0, 24)} `;
     document.querySelector('.loader').classList.remove('hidden');
   </script>
 </body>
