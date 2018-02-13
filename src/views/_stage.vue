@@ -96,7 +96,7 @@
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
-        track((this.collapsed ? 'Open' : 'Close') + 'Stage', this.abbreviation);
+        track((this.collapsed ? 'Close' : 'Open') + 'Stage', this.abbreviation);
       },
     },
     components: {

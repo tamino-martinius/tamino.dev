@@ -44,7 +44,7 @@
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
-        track((this.collapsed ? 'Open' : 'Close') + 'SkillSet', this.title);
+        track((this.collapsed ? 'Close' : 'Open') + 'SkillSet', this.title);
       },
     },
     components: {
