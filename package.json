@@ -2,12 +2,10 @@
   "name": "www.taminomartinius.de",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch -d",
-    "build": "NODE_ENV=production webpack --progress --hide-modules",
-    "build:android": "npm run build && (cd cordova && cordova build android)",
-    "start": "webpack-dev-server --hot --inline --open -d",
-    "start:android": "npm run build && (cd cordova && cordova run android --emulator)"
+    "watch": "scripts/watch.sh",
+    "build": "scripts/build.sh",
+    "start": "scripts/start.sh",
+    "deploy": "scripts/deploy.sh"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",
