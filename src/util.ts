@@ -13,6 +13,12 @@ export function center(str: string, len: number) {
   }
 };
 
+export function track(action: string, value: string){
+  try {
+    (<any>window)._gaq.push(['_trackEvent', action, value]);
+  } catch (error) { }
+}
+
 export enum Easing {
   Linear,
   EaseIn,

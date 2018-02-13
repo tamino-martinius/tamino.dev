@@ -72,6 +72,8 @@
 </template>
 
 <script lang="ts">
+  import { track } from '../util';
+
   import CodeLine from './_code_line.vue';
   import Comment from './_comment.vue';
   import Tab from './_tab.vue';
@@ -94,6 +96,7 @@
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
+        track((this.collapsed ? 'Open' : 'Close') + 'Stage', this.abbreviation);
       },
     },
     components: {

@@ -23,6 +23,8 @@
 </template>
 
 <script lang="ts">
+  import { track } from '../util';
+
   import CodeLine from './_code_line.vue';
   import Skill from './_skill.vue';
   import Comment from './_comment.vue';
@@ -42,6 +44,7 @@
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
+        track((this.collapsed ? 'Open' : 'Close') + 'SkillSet', this.title);
       },
     },
     components: {
