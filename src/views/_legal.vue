@@ -8,13 +8,15 @@
     </Comment>
     <CommentBlock
       v-else
-      :comment="`(c) ${year}\n\nTamino Martinius\nLehdenstr.  21\n06847 Dessau\n\nhi@zaku.eu`"
+      :comment="`(c) ${year}\n\nTamino Martinius\nLehdenstr.  21\n06847 Dessau\n\nlawyer@zaku.eu`"
     />
   </div>
 </template>
 
 <script lang="ts">
-  import Comment from './_comment.vue';
+  import { track } from '../util';
+
+import Comment from './_comment.vue';
   import CommentBlock from './_comment_block.vue';
   import Collapsed from './_collapsed.vue';
 
@@ -27,6 +29,7 @@
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
+        track((this.collapsed ? 'Close' : 'Open') + 'Legal', 'none');
       },
     },
     computed: {
