@@ -13,7 +13,7 @@ let theme = 0;
 const themeCount = 3;
 
 document.addEventListener('keydown', function (e) {
-  if (e.which === 31) {
+  if (e.which === 32) {
     e.preventDefault();
     theme += 1;
     for (var i = 0; i < themeCount; i++) {
