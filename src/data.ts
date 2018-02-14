@@ -11,8 +11,16 @@ import {
 * Header *
 *********/
 
-export const myName = "Tamino Martinius";
-export const profession = "I speak Code";
+export const myName = 'Tamino Martinius';
+export const profession = 'I speak Code';
+export const street = 'Lehdenstr. 21';
+export const postalCode = '06847';
+export const city = 'Dessau';
+export const emails: string[] = [
+  'hi@zaku.eu',
+  'hello@zaku.eu',
+  'im-not-a-recruiter@zaku.eu',
+];
 
 
 /*********
