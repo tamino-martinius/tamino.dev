@@ -23,7 +23,19 @@
   <meta name="keywords" content="Tamino, Martinius, Developer, Backend, Frontend, Head of Development, Lead Engineering">
 
   <style>
-    :root {
+    html, body {
+      padding-top: 0.2rem;
+      font-family: 'Fira Code', monospace;
+      font-size: 2vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+      body {
+        font-size: 20px;
+      }
+    }
+
+    body {
       --color-background: #272822;
       --color-white-space: #464741;
       --color-collapsed: #464741;
@@ -47,23 +59,9 @@
       --color-zsh-command-invalid: #C14C22;
       --color-zsh-args: #cdd;
       --color-zsh-args-autocomplete: #566;
-    }
 
-    html, body {
-      padding-top: 0.2rem;
-      font-family: 'Fira Code', monospace;
-      background-color: var(--color-background);
-      font-size: 2vw;
-    }
-
-    @media screen and (min-width: 1024px) {
-      body {
-        font-size: 20px;
-      }
-    }
-
-    body {
       margin: 0.3rem;
+      background-color: var(--color-background);
     }
 
     .hidden {

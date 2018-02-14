@@ -8,3 +8,15 @@ new Vue({
   el: '#view',
   render: display => display(View),
 });
+
+let theme = 0;
+const themeCount = 3;
+
+document.addEventListener('keydown', function (e) {
+  e.preventDefault();
+  theme += 1;
+  for (var i = 0; i < themeCount; i++) {
+    document.body.classList.remove(`theme-${i}`);
+  }
+  document.body.classList.add(`theme-${theme % themeCount}`);
+});
