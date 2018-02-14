@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="view" class="hidden">
     <Section :section="Section.Header"></Section>
     <CodeLine/>
     <Variable name="myName">
@@ -7,6 +7,9 @@
     </Variable>
     <Variable name="profession">
       <String :value="data.profession"></String>
+    </Variable>
+    <Variable name="email">
+      <String :value="email"></String>
     </Variable>
     <CodeLine/>
     <CodeLine/>
@@ -81,6 +84,10 @@
     computed: {
       year() {
         return new Date().getFullYear();
+      },
+      email() {
+        const emails = this.data.emails;
+        return emails[Math.floor(Math.random() * emails.length)];
       },
     },
     components: {
