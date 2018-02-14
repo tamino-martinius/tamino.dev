@@ -58,7 +58,7 @@
   import {
     Section,
   } from '../data_types';
-  import { animate, Easing } from '../util';
+  import { animate, Easing, track } from '../util';
 
   import CodeLine from './_code_line.vue';
 
@@ -72,6 +72,7 @@
       },
       scrollToSection(name: string) {
         if (name !== this.title) {
+          track('navigateTo', name);
           const target = document.querySelector(`.section[data-value=${name}]`);
           animate({
             target: document.querySelector('html'),
