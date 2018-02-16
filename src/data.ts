@@ -29,28 +29,28 @@ export const emails: string[] = [
 
 // AWS
 // AWS / Compute
-export const beanstalk: Skill = { level: 0.9, name: 'Elastic Beanstalk' };
-export const ec2: Skill = { level: 0.9, name: 'Elastic Compute Cloud' };
-export const ecs: Skill = { level: 0.8, name: 'Elastic Container Service' };
+export const beanstalk: Skill = { level: 0.9, name: 'Beanstalk' };
+export const ec2: Skill = { level: 0.9, name: 'EC2' };
+export const ecs: Skill = { level: 0.8, name: 'ECS' };
 export const lambda: Skill = { level: 1.0, name: 'Lambda' };
 
 // AWS / Data
 export const aurora: Skill = { level: 1.0, name: 'RDS Aurora' };
 export const dynamodb: Skill = { level: 0.8, name: 'DynamoDB' };
-export const rds: Skill = { level: 1.0, name: 'Relational DB Service' };
-export const s3: Skill = { level: 1.0, name: 'Simple Storage Service' };
+export const rds: Skill = { level: 1.0, name: 'DB Service' };
+export const s3: Skill = { level: 1.0, name: 'S3' };
 
 // AWS / Flow
 export const apigateway: Skill = { level: 0.9, name: 'API Gateway' };
 export const cloudfront: Skill = { level: 1.0, name: 'CloudFront' };
 export const r53: Skill = { level: 1.0, name: 'Route 53' };
-export const sns: Skill = { level: 0.9, name: 'Simple Notification Srv.' };
+export const sns: Skill = { level: 0.9, name: 'SNS' };
 
 // AWS / Management
 export const cloudformation: Skill = { level: 0.9, name: 'CloudFormation' };
 export const cloudtrail: Skill = { level: 0.8, name: 'CloudTrail' };
 export const cloudwatch: Skill = { level: 1.0, name: 'CloudWatch' };
-export const iam: Skill = { level: 0.9, name: 'Identity and Access Mgmt.' };
+export const iam: Skill = { level: 0.9, name: 'IAM' };
 
 // Backend
 // Backend / CI
@@ -102,18 +102,18 @@ export const websockets: Skill = { level: 0.8, name: 'WebSockets' };
 // Frontend / Markup
 export const haml: Skill = { level: 0.9, name: 'Haml' };
 export const handlebars: Skill = { level: 1.0, name: 'Handlebars' };
-export const html: Skill = { level: 1.0, name: 'HyperText Markup Language' };
+export const html: Skill = { level: 1.0, name: 'HTML' };
 export const php: Skill = { level: 0.7, name: 'PHP' };
 export const markdown: Skill = { level: 0.9, name: 'Markdown' };
 export const react: Skill = { level: 0.8, name: 'React' };
 export const vuejs: Skill = { level: 1.0, name: 'Vue.js' };
 
 // Frontend / Style
-export const css: Skill = { level: 1.0, name: 'Cascading Style Sheets' };
+export const css: Skill = { level: 1.0, name: 'CSS' };
 export const less: Skill = { level: 0.9, name: 'less' };
 export const sass: Skill = { level: 0.9, name: 'Sass' };
 export const stylus: Skill = { level: 1.0, name: 'Stylus' };
-export const svg: Skill = { level: 1.0, name: 'SVG / SVG Animations' };
+export const svg: Skill = { level: 1.0, name: 'SVG (Animations)' };
 
 // Frontend / Design
 export const afterEffects: Skill = { level: 0.3, name: 'After Effects' };
@@ -128,12 +128,12 @@ export const security: Skill = { level: 0.9, name: 'Security' };
 
 // Study
 export const logic: Skill = { level: 0.9, name: 'Logic' };
-export const distributedSys: Skill = { level: 0.7, name: 'Distributed Systems' };
-export const imageProcessing: Skill = { level: 0.7, name: 'Image Processing' };
+export const distributedSys: Skill = { level: 0.7, name: 'Distrib. Sys.' };
+export const imageProcessing: Skill = { level: 0.7, name: 'Image Proces.' };
 export const math: Skill = { level: 0.8, name: 'Math' };
-export const neuronalNetwork: Skill = { level: 0.7, name: 'Neuronal Networks' };
+export const neuronalNetwork: Skill = { level: 0.7, name: 'Neuronal Netw.' };
 export const numeric: Skill = { level: 0.7, name: 'Numeric' };
-export const parallelExec: Skill = { level: 0.7, name: 'Parallel Execution' };
+export const parallelExec: Skill = { level: 0.7, name: 'Parallel Exec.' };
 
 export const skills: SkillSet[] = [
   {
