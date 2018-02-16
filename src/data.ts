@@ -28,6 +28,13 @@ export const emails: string[] = [
   'hello@zaku.eu',
   'im-not-a-recruiter@zaku.eu',
 ];
+export const socialNetworks: { [key: string]: string } = {
+  github: 'https://github.com/tamino-martinius',
+  codepen: 'https://codepen.io/Zaku/',
+  dribbble: 'https://dribbble.com/TaminoMartinius',
+  twitter: 'https://twitter.com/TaminoMartinius',
+  linkedin: 'https://www.linkedin.com/in/tamino-martinius',
+};
 
 
 /*********
