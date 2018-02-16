@@ -5,7 +5,7 @@ require('./style.styl');
 import Vue from 'vue';
 import { state } from './data';
 import { snakeCase } from './util';
-import { Language, languages } from './data_types';
+import { Section, Language, languages } from './data_types';
 
 let theme = 0;
 const themeCount = 3;
@@ -43,6 +43,7 @@ document.addEventListener('keydown', function (e) {
 Vue.mixin({
   data() {
     return {
+      Section,
       state,
     };
   },
