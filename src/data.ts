@@ -5,7 +5,14 @@ import {
   ShowCase,
   Skill,
   SkillSet,
+  State,
 } from './data_types';
+
+/********
+* State *
+********/
+
+export const state = new State();
 
 /*********
 * Header *
