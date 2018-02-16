@@ -1,5 +1,7 @@
 <template>
-  <a class="string" :href="value" target="_blank">'{{display}}'</a>
+  <span class="string">
+    '<a :href="value" target="_blank">{{display}}</a>'
+  </span>
 </template>
 
 <script lang="ts">
