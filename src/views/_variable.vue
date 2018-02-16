@@ -17,7 +17,7 @@
     <span class="white-space space"></span>
     <slot>
       <span class="constant">
-        {{currentLanguageHelper.undefined}}
+        {{state.currentLanguageHelper.undefined}}
       </span>
     </slot>
     <span class="expression" v-if="isJs">;</span>

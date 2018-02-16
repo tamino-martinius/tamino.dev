@@ -11,7 +11,7 @@
       <span class="expression">)</span>
     </template>
     <span v-else class="constant">
-      {{currentLanguageHelper.undefined}}
+      {{state.currentLanguageHelper.undefined}}
     </span>
   </div>
 </template>

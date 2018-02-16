@@ -1,7 +1,7 @@
 <template>
   <div class="section" :data-value="title">
     <CodeLine>
-      <span class="comment">{{currentLanguageHelper.commentEnd}}</span>
+      <span class="comment">{{state.currentLanguageHelper.commentEnd}}</span>
       <template v-for="section in sections">
         <span
           class="comment"
@@ -13,11 +13,11 @@
         >{{stars(section)}}</span>
       </template>
       <span class="comment">
-        {{currentLanguageHelper.commentChar}}{{currentLanguageHelper.commentChar}}
+        {{state.currentLanguageHelper.commentChar}}{{state.currentLanguageHelper.commentChar}}
       </span>
     </CodeLine>
     <CodeLine>
-      <span class="comment">{{currentLanguageHelper.commentChar}}</span>
+      <span class="comment">{{state.currentLanguageHelper.commentChar}}</span>
       <template v-for="section in sections">
         <span
           class="white-space space"
@@ -37,10 +37,10 @@
         >{{section}}</span>
       </template>
       <span class="white-space space" :key="`space-${section}`"></span>
-      <span class="comment">{{currentLanguageHelper.commentChar}}</span>
+      <span class="comment">{{state.currentLanguageHelper.commentChar}}</span>
     </CodeLine>
     <CodeLine>
-      <span class="comment">{{currentLanguageHelper.commentChar}}</span>
+      <span class="comment">{{state.currentLanguageHelper.commentChar}}</span>
       <template v-for="section in sections">
         <span
           class="comment"
@@ -52,7 +52,7 @@
         >{{stars(section)}}</span>
       </template>
       <span class="comment">
-        {{currentLanguageHelper.commentChar}}{{currentLanguageHelper.commentEnd}}
+        {{state.currentLanguageHelper.commentChar}}{{state.currentLanguageHelper.commentEnd}}
       </span>
     </CodeLine>
   </div>
@@ -71,7 +71,7 @@
     methods: {
       stars(str: string) {
         return new Array(str.length + 2)
-          .join(this.currentLanguageHelper.commentChar);
+          .join(this.state.currentLanguageHelper.commentChar);
       },
       scrollToSection(name: string) {
         if (name !== this.title) {

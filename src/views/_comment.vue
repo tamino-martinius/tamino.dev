@@ -23,7 +23,7 @@
     },
     computed: {
       commentBody() {
-        return formatCode(`${this.currentLanguageHelper.comment} ${this.comment}`);
+        return formatCode(`${this.state.currentLanguageHelper.comment} ${this.comment}`);
       },
     },
   };

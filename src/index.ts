@@ -42,7 +42,9 @@ document.addEventListener('keydown', function (e) {
 
 Vue.mixin({
   data() {
-    return state;
+    return {
+      state,
+    };
   },
   methods: {
     snakeCase(str: string) {
@@ -51,16 +53,16 @@ Vue.mixin({
   },
   computed: {
     isJs() {
-      return this.currentLanguage === Language.javascript
-        || this.currentLanguage === Language.typescript;
+      return this.state.currentLanguage === Language.javascript
+        || this.state.currentLanguage === Language.typescript;
       ;
     },
     isTs() {
-      return this.currentLanguage === Language.typescript;
+      return this.state.currentLanguage === Language.typescript;
       ;
     },
     isRuby() {
-      return this.currentLanguage === Language.ruby;
+      return this.state.currentLanguage === Language.ruby;
     },
   },
 });

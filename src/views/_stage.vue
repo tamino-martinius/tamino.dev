@@ -19,8 +19,8 @@
           <span class="variable">description</span>
           <span class="expression">:</span>
           <span class="white-space space"></span>
-          <span class="string" v-html="currentLanguageHelper.multilineString">
-            {{currentLanguageHelper.multilineString}}
+          <span class="string">
+            {{state.currentLanguageHelper.multilineString}}
           </span>
         </CodeLine>
         <MultiLineString
@@ -30,7 +30,7 @@
         <CodeLine>
           <Tab/><Tab/>
           <span class="string">
-            {{currentLanguageHelper.multilineString}}
+            {{state.currentLanguageHelper.multilineString}}
           </span>
           <span class="expression">,</span>
         </CodeLine>
