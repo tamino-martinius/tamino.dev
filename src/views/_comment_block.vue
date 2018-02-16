@@ -14,10 +14,15 @@
 
 <script lang="ts">
   import { formatCode, center } from '../util';
+  import { state } from '../data';
+  import { Language } from '../data_types';
 
   import CodeLine from './_code_line.vue';
 
   export default {
+    data() {
+      return state;
+    },
     props: [
       'comment',
     ],
@@ -28,7 +33,11 @@
         return this.lines
           .map((str: string) => center(str, len))
           .map(formatCode)
-          .map((str: string) => `* ${str} *`)
+          .map((str: string) =>
+            this.currentLanguageHelper.commentChar +
+            ' ' + str + ' ' +
+            this.currentLanguageHelper.commentChar
+          )
         ;
       },
       lines() {
@@ -38,10 +47,14 @@
         return Math.max(...this.lines.map((str: string) => str.length));
       },
       header() {
-        return '/' + new Array(this.longestLine + 4).join('*');
+        return this.currentLanguageHelper.commentEnd +
+          new Array(this.longestLine + 4)
+            .join(this.currentLanguageHelper.commentChar);
       },
       footer() {
-        return new Array(this.longestLine + 4).join('*') + '/';
+        return new Array(this.longestLine + 4)
+          .join(this.currentLanguageHelper.commentChar) +
+            this.currentLanguageHelper.commentEnd;
       },
     },
     components: {

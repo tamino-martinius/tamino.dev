@@ -1,7 +1,7 @@
 <template>
   <div class="section" :data-value="title">
     <CodeLine>
-      <span class="comment">/</span>
+      <span class="comment">{{currentLanguageHelper.commentEnd}}</span>
       <template v-for="section in sections">
         <span
           class="comment"
@@ -12,10 +12,12 @@
           :key="`comment-${section}`"
         >{{stars(section)}}</span>
       </template>
-      <span class="comment">**</span>
+      <span class="comment">
+        {{currentLanguageHelper.commentChar}}{{currentLanguageHelper.commentChar}}
+      </span>
     </CodeLine>
     <CodeLine>
-      <span class="comment">*</span>
+      <span class="comment">{{currentLanguageHelper.commentChar}}</span>
       <template v-for="section in sections">
         <span
           class="white-space space"
@@ -35,10 +37,10 @@
         >{{section}}</span>
       </template>
       <span class="white-space space" :key="`space-${section}`"></span>
-      <span class="comment">*</span>
+      <span class="comment">{{currentLanguageHelper.commentChar}}</span>
     </CodeLine>
     <CodeLine>
-      <span class="comment">*</span>
+      <span class="comment">{{currentLanguageHelper.commentChar}}</span>
       <template v-for="section in sections">
         <span
           class="comment"
@@ -49,7 +51,9 @@
           :key="`comment-${section}`"
         >{{stars(section)}}</span>
       </template>
-      <span class="comment">*/</span>
+      <span class="comment">
+        {{currentLanguageHelper.commentChar}}{{currentLanguageHelper.commentEnd}}
+      </span>
     </CodeLine>
   </div>
 </template>
@@ -57,18 +61,24 @@
 <script lang="ts">
   import {
     Section,
+    Language,
   } from '../data_types';
   import { animate, Easing, track } from '../util';
+  import { state } from '../data';
 
   import CodeLine from './_code_line.vue';
 
   export default {
+    data() {
+      return state;
+    },
     props: [
       'section',
     ],
     methods: {
       stars(str: string) {
-        return new Array(str.length + 2).join('*');
+        return new Array(str.length + 2)
+          .join(this.currentLanguageHelper.commentChar);
       },
       scrollToSection(name: string) {
         if (name !== this.title) {

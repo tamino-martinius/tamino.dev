@@ -19,7 +19,8 @@
           <span class="variable">description</span>
           <span class="expression">:</span>
           <span class="white-space space"></span>
-          <span class="string">&#96;</span>
+          <span class="string" v-if="isJs">&#96;</span>
+          <span class="string" v-if="isRuby">&lt;&lt;-eos</span>
         </CodeLine>
         <MultiLineString
           :value="data.description.trim()"
@@ -27,7 +28,8 @@
         />
         <CodeLine>
           <Tab/><Tab/>
-          <span class="string">&#96;</span>
+          <span class="string" v-if="isJs">&#96;</span>
+          <span class="string" v-if="isRuby">eos</span>
           <span class="expression">,</span>
         </CodeLine>
       </template>
@@ -64,7 +66,10 @@
         <span class="expression">],</span>
       </CodeLine>
       <CodeLine>
-        <Tab/><span class="expression">},</span>
+        <Tab/>
+        <span class="expression">}</span>
+        <span class="expression" v-if="isRuby">.with_indifferent_access</span>
+        <span class="expression">,</span>
       </CodeLine>
       <CodeLine v-if="!isLast"/>
     </template>
@@ -73,6 +78,8 @@
 
 <script lang="ts">
   import { track } from '../util';
+  import { state } from '../data';
+  import { Language } from '../data_types';
 
   import CodeLine from './_code_line.vue';
   import Comment from './_comment.vue';
@@ -83,20 +90,35 @@
   import Collapsed from './_collapsed.vue';
 
   export default {
+    data() {
+      return {
+        collapsed: true,
+        state,
+      };
+    },
     props: [
       'isLast',
       'data',
       'abbreviation',
     ],
-    data() {
-      return {
-        collapsed: true,
-      };
-    },
     methods: {
       toggle() {
         this.collapsed = !this.collapsed;
         track((this.collapsed ? 'Close' : 'Open') + 'Stage', this.abbreviation);
+      },
+    },
+    computed: {
+      isJs() {
+        return this.state.currentLanguage === Language.javascript
+          || this.state.currentLanguage === Language.typescript;
+        ;
+      },
+      isTs() {
+        return this.state.currentLanguage === Language.typescript;
+        ;
+      },
+      isRuby() {
+        return this.state.currentLanguage === Language.ruby;
       },
     },
     components: {
