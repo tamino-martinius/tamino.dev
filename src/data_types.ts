@@ -1,5 +1,5 @@
 export enum Section {
-  Header,
+  Profile,
   Skills,
   CurriculumVitae,
   Experiments,
