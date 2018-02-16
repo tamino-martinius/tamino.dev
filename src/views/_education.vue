@@ -7,7 +7,7 @@
   >
     <CodeLine>
       <Tab/><Tab/>
-      <span class="variable">university</span>
+      <VariableName name="university"/>
       <span class="expression">:</span>
       <span class="white-space space"></span>
       <String :value="data.university"></String>
@@ -15,7 +15,7 @@
     </CodeLine>
     <CodeLine>
       <Tab/><Tab/>
-      <span class="variable">graduiation</span>
+      <VariableName name="graduiation"/>
       <span class="expression">:</span>
       <span class="white-space space"></span>
       <String :value="data.graduiation"></String>
@@ -29,6 +29,7 @@
   import Tab from './_tab.vue';
   import String from './_string.vue';
   import Stage from './_stage.vue';
+  import VariableName from './_variable_name.vue';
 
   export default {
     props: [
@@ -45,6 +46,7 @@
       Tab,
       String,
       Stage,
+      VariableName,
     },
   };
 </script>

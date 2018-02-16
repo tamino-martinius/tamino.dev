@@ -16,7 +16,7 @@
 <script lang="ts">
   import { track } from '../util';
 
-import Comment from './_comment.vue';
+  import Comment from './_comment.vue';
   import CommentBlock from './_comment_block.vue';
   import Collapsed from './_collapsed.vue';
 

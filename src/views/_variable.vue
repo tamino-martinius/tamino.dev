@@ -2,7 +2,8 @@
   <CodeLine>
     <span class="storage-type" v-if="isJs">const</span>
     <span class="white-space space" v-if="isJs"></span>
-    <span class="variable">{{name}}</span>
+    <VariableName :name="name" :length="length"/>
+    <span class="variable">{{displayName}}</span>
     <template v-if="padLeft">
       <span v-for="i in padLeft" :key="i" class="white-space space"></span>
     </template>
@@ -24,42 +25,18 @@
 </template>
 
 <script lang="ts">
-  import { state } from '../data';
-  import { Language } from '../data_types';
-
   import CodeLine from './_code_line.vue';
+  import VariableName from './_variable_name.vue';
 
   export default {
-    data() {
-      return state;
-    },
     props: [
       'name',
       'length',
       'type',
     ],
-    computed: {
-      padLeft() {
-        if (this.length !== undefined && this.name.length < this.length) {
-          return this.length - this.name.length;
-        }
-        return false;
-      },
-      isJs() {
-        return this.currentLanguage === Language.javascript
-          || this.currentLanguage === Language.typescript;
-        ;
-      },
-      isTs() {
-        return this.currentLanguage === Language.typescript;
-        ;
-      },
-      isRuby() {
-        return this.currentLanguage === Language.ruby;
-      },
-    },
     components: {
       CodeLine,
+      VariableName,
     },
   };
 </script>

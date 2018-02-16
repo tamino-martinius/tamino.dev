@@ -90,6 +90,10 @@ export class LanguageHelper {
     return this.language === Language.ruby ? '#' : '/';
   }
 
+  get multilineString() {
+    return this.language === Language.ruby ? '\'' : '`';
+  }
+
   get comment() {
     return this.language === Language.ruby ? '#' : '//';
   }

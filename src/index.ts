@@ -46,7 +46,7 @@ Vue.mixin({
   },
   methods: {
     snakeCase(str: string) {
-      return snakeCase(str);
+      return (<any>this).isRuby ? snakeCase(str) : str;
     }
   },
   computed: {

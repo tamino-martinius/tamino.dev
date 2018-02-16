@@ -8,16 +8,11 @@
 
 <script lang="ts">
   import { formatCode } from '../util';
-  import { state } from '../data';
-  import { Language } from '../data_types';
 
   import CodeLine from './_code_line.vue';
   import Tab from './_tab.vue';
 
   export default {
-    data() {
-      return state;
-    },
     props: [
       'indentation',
       'comment',

@@ -15,7 +15,7 @@
     </CodeLine>
     <CodeLine>
       <Tab/><Tab/>
-      <span class="variable">remote</span>
+      <VariableName name="remote"/>
       <span class="expression">:</span>
       <span class="white-space space"></span>
       <Boolean :value="data.remote"></Boolean>
@@ -24,7 +24,7 @@
     <template v-if="Array.isArray(data.position)">
       <CodeLine>
         <Tab/><Tab/>
-        <span class="variable">position</span>
+      <VariableName name="position"/>
         <span class="expression">:</span>
         <span class="white-space space"></span>
         <span class="expression">[</span>
@@ -42,7 +42,7 @@
     <template v-else>
       <CodeLine>
         <Tab/><Tab/>
-        <span class="variable">position</span>
+        <VariableName name="position"/>
         <span class="expression">:</span>
         <span class="white-space space"></span>
         <String :value="data.position"></String>
@@ -58,6 +58,7 @@
   import String from './_string.vue';
   import Boolean from './_boolean.vue';
   import Stage from './_stage.vue';
+  import VariableName from './_variable_name.vue';
 
   export default {
     props: [
@@ -70,6 +71,7 @@
       String,
       Boolean,
       Stage,
+      VariableName,
     },
     computed: {
       year() {
