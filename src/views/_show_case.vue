@@ -29,7 +29,7 @@
       <Tab/><Tab/>
       <span class="expression">],</span>
     </CodeLine>
-    <CodeLine>
+    <!-- <CodeLine>
       <Tab/><Tab/>
       <VariableName name="media"/>
       <span class="expression">:</span>
@@ -44,7 +44,7 @@
     <CodeLine>
       <Tab/><Tab/>
       <span class="expression">],</span>
-    </CodeLine>
+    </CodeLine> -->
   </Stage>
 </template>
 
