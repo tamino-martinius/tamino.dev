@@ -74,6 +74,12 @@ export class State {
       document.body.classList.remove(this.getLanguageClass(language));
     }
     document.body.classList.add(this.getLanguageClass(lang));
+    const title = document.title.substr(0, document.title.length - 2);
+    switch (lang) {
+      case Language.ruby: { document.title = title + 'rb'; break; }
+      case Language.typescript: { document.title = title + 'ts'; break; }
+      case Language.javascript: { document.title = title + 'js'; break; }
+    }
   }
 };
 
