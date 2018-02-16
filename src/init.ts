@@ -1,5 +1,4 @@
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
-OfflinePluginRuntime.install();
 
 OfflinePluginRuntime.install({
   onUpdateReady: function () {
