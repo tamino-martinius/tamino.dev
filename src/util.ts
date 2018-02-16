@@ -19,6 +19,10 @@ export function track(action: string, value: string){
   } catch (error) { }
 }
 
+export function snakeCase(str: string): string {
+  return str.replace(/([A-Z])/g, (x, y) => '_' + y.toLowerCase());
+}
+
 export enum Easing {
   Linear,
   EaseIn,

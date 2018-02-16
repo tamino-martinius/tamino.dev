@@ -4,6 +4,7 @@ const View = require('./views/index.vue').default;
 require('./style.styl');
 import Vue from 'vue';
 import { state } from './data';
+import { snakeCase } from './util';
 import { Language, languages } from './data_types';
 
 let theme = 0;
@@ -37,6 +38,31 @@ document.addEventListener('keydown', function (e) {
       break;
     }
   }
+});
+
+Vue.mixin({
+  data() {
+    return state;
+  },
+  methods: {
+    snakeCase(str: string) {
+      return snakeCase(str);
+    }
+  },
+  computed: {
+    isJs() {
+      return this.currentLanguage === Language.javascript
+        || this.currentLanguage === Language.typescript;
+      ;
+    },
+    isTs() {
+      return this.currentLanguage === Language.typescript;
+      ;
+    },
+    isRuby() {
+      return this.currentLanguage === Language.ruby;
+    },
+  },
 });
 
 new Vue({

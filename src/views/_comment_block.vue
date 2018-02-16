@@ -14,15 +14,10 @@
 
 <script lang="ts">
   import { formatCode, center } from '../util';
-  import { state } from '../data';
-  import { Language } from '../data_types';
 
   import CodeLine from './_code_line.vue';
 
   export default {
-    data() {
-      return state;
-    },
     props: [
       'comment',
     ],

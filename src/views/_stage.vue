@@ -30,6 +30,10 @@
           <Tab/><Tab/>
           <span class="string" v-if="isJs">&#96;</span>
           <span class="string" v-if="isRuby">eos</span>
+          <span class="expression" v-if="isJs">,</span>
+        </CodeLine>
+        <CodeLine v-if="isRuby">
+          <Tab/><Tab/>
           <span class="expression">,</span>
         </CodeLine>
       </template>
