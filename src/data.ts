@@ -814,6 +814,25 @@ export const projects: ShowCase[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'Lets talk about ... API (of shyftplan)',
+    description: `
+      TBD
+    `,
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--api',
+    ],
+    media: [],
+    skills: {
+      api,
+      nodejs,
+      html,
+      stylus,
+    },
+  },
+
+  {
     name: 'Lets talk about ... SQL Query Performance',
     description: `
       A small guide in writing good and performant SQL Queries which give very
