@@ -824,7 +824,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
     urls: [
-      'https://github.com/tamino-martinius/lets-talk-about---sql-query-performance',
+      'https://github.com/tamino-martinius/lets-talk-about--sql-query-performance',
     ],
     media: [],
     skills: {
@@ -845,7 +845,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2017'),
     endsAt: new Date('2017'),
     urls: [
-      'https://github.com/tamino-martinius/lets-talk-about---graphql',
+      'https://github.com/tamino-martinius/lets-talk-about--graphql',
     ],
     media: [],
     skills: {
@@ -865,7 +865,7 @@ export const talks: ShowCase[] = [
     startsAt: new Date('2017'),
     endsAt: new Date('2017'),
     urls: [
-      'https://github.com/tamino-martinius/lets-talk-about---typescript',
+      'https://github.com/tamino-martinius/lets-talk-about--typescript',
     ],
     media: [],
     skills: {
