@@ -816,7 +816,8 @@ export const talks: ShowCase[] = [
   {
     name: 'Lets talk about ... API (of shyftplan)',
     description: `
-      TBD
+      A short introduction of APIs in general and the models of shyftplan in
+      specific. This Talk was a internal presentation for shyftplan.
     `,
     startsAt: new Date('2018'),
     endsAt: new Date('2018'),
