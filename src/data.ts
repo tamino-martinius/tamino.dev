@@ -823,6 +823,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2018'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--api',
+      'http://lets-talk-about--api.tamino-martinius.de',
     ],
     media: [],
     skills: {
@@ -845,6 +846,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2018'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--sql-query-performance',
+      'http://lets-talk-about--sql-query-performance.tamino-martinius.de',
     ],
     media: [],
     skills: {
@@ -866,6 +868,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2017'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--graphql',
+      'http://lets-talk-about--graphql.tamino-martinius.de',
     ],
     media: [],
     skills: {
@@ -886,6 +889,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2017'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--typescript',
+      'http://lets-talk-about--typescript.tamino-martinius.de',
     ],
     media: [],
     skills: {
