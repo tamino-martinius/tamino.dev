@@ -929,6 +929,27 @@ export const talks: ShowCase[] = [
 
 export const packages: ShowCase[] = [
   {
+    name: 'Lets talk about ... Template',
+    description: `
+      A template with example slides. Thats my base branch with which i create
+      my slides for presentations.
+    `,
+    startsAt: new Date('2017'),
+    endsAt: undefined,
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--template',
+      'https://github.com/tamino-martinius/lets-talk-about--example',
+    ],
+    media: [],
+    skills: {
+      api,
+      nodejs,
+      html,
+      stylus,
+    },
+  },
+
+  {
     name: 'Next Model',
     description: `
       Next Model is the evolution of Meteor Smart Record. With this package
