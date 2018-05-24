@@ -1,5 +1,6 @@
 <template>
   <div id="view" class="hidden">
+    <CookieInfo/>
     <CodeLine/>
     <Profile :data="data"/>
     <Section :section="Section.Skills"></Section>
@@ -56,6 +57,7 @@
   import ShowCaseSection from './_show_case_section.vue';
   import Legal from './_legal.vue';
   import Profile from "./_profile.vue";
+  import CookieInfo from "./_cookie_info.vue";
 
   export default {
     data() {
@@ -76,6 +78,7 @@
       ShowCaseSection,
       Legal,
       Profile,
+      CookieInfo,
     },
   };
 </script>
