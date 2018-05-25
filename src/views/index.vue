@@ -44,6 +44,8 @@
       :data="data.misc"
     />
     <Legal/>
+    <CodeLine/>
+    <Privacy/>
   </div>
 </template>
 
@@ -56,6 +58,7 @@
   import CurriculumVitae from './_curriculum_vitae.vue';
   import ShowCaseSection from './_show_case_section.vue';
   import Legal from './_legal.vue';
+  import Privacy from './_privacy.vue';
   import Profile from "./_profile.vue";
   import CookieInfo from "./_cookie_info.vue";
 
@@ -77,6 +80,7 @@
       CurriculumVitae,
       ShowCaseSection,
       Legal,
+      Privacy,
       Profile,
       CookieInfo,
     },
