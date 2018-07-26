@@ -20,10 +20,12 @@
   import CommentBlock from './_comment_block.vue';
   import Collapsed from './_collapsed.vue';
 
+  const openOnStart = window.location.hash === "#legal";
+
   export default {
     data() {
       return {
-        collapsed: true,
+        collapsed: !openOnStart,
         privacy: `
 Datenschutzerklärung für die Nutzung von Google Analytics
 
