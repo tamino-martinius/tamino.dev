@@ -1,10 +1,11 @@
 const resolve = require('path').resolve;
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 /// Rules
 
@@ -151,7 +152,8 @@ const config = {
     },
   },
   plugins: [
-    new CleanWebpackPlugin(cleanPaths, cleanOptions),
+    new VueLoaderPlugin(),
+    new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       { transform, from: 'public' },
     ]),
