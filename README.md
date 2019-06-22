@@ -1,2 +1,2 @@
-# www.taminomartinius.de
+# tamino.dev
 

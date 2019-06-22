@@ -67,7 +67,7 @@ Vue.mixin({
 });
 
 console.log(
-  '%c~/taminomartinius.de %c%c  master %c cat %cREADME.md\n\n%c# www.taminomartinius.de\n\nCheck out the source on [GitHub](https://github.com/tamino-martinius/www.taminomartinius.de)',
+  '%c~/tamino.dev %c%c  master %c cat %cREADME.md\n\n%c# tamino.dev\n\nCheck out the source on [GitHub](https://github.com/tamino-martinius/www.taminomartinius.de)',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #2E8CCF; color: #000000;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #2E8CCF;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #000000;',
