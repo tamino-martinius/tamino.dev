@@ -45,7 +45,8 @@ export const socialNetworks: { [key: string]: string } = {
 // AWS / Compute
 export const beanstalk: Skill = { level: 0.9, name: 'Beanstalk' };
 export const ec2: Skill = { level: 0.9, name: 'EC2' };
-export const ecs: Skill = { level: 0.8, name: 'ECS' };
+export const ecs: Skill = { level: 0.9, name: 'ECS' };
+export const fargate: Skill = { level: 0.7, name: 'Fargate' };
 export const lambda: Skill = { level: 1.0, name: 'Lambda' };
 
 // AWS / Data
@@ -155,7 +156,7 @@ export const skills: SkillSet[] = [
     data: [
       {
         title: 'Compute',
-        data: { beanstalk, ec2, ecs, lambda },
+        data: { beanstalk, ec2, ecs, fargate, lambda },
       },
       {
         title: 'Data',
@@ -291,6 +292,24 @@ export const curriculumVitae: (Job | Education)[] = [
   {
     company: 'shyftplan GmbH',
     description: `
+      I plan and build the Infrastructure pre and post launch for Germanys best
+      shift planning and accounting Web Application.
+    `,
+    startsAt: new Date('2015-02-01'),
+    endsAt: new Date('2015-07-01'),
+    remote: false,
+    position: 'Backend Developer',
+    skills: {
+      rails,
+      psql,
+      redis,
+      elasticsearch,
+    },
+  },
+
+  {
+    company: 'shyftplan GmbH',
+    description: `
       I plan and build the Mobile App and Infrastructure for Germanys best
       shift planning and accounting Web Application.
     `,
@@ -310,24 +329,6 @@ export const curriculumVitae: (Job | Education)[] = [
       rails,
       psql,
       redis,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
-      I plan and build the Infrastructure pre and post launch for Germanys best
-      shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2015-02-01'),
-    endsAt: new Date('2015-07-01'),
-    remote: false,
-    position: 'Backend Developer',
-    skills: {
-      rails,
-      psql,
-      redis,
-      elasticsearch,
     },
   },
 
@@ -471,6 +472,36 @@ export const curriculumVitae: (Job | Education)[] = [
 
 export const experiments: ShowCase[] = [
   {
+    name: 'Hamburder Icon Animations',
+    description: `
+      I created a couple of different hamburger menu icon animations to open
+      and close a menu. All icons are planned with sketch. The base svgs are all
+      hand written with basic svg path commands. The icons are previewed on
+      dribbble and the code is available Open Source at CodePen.
+    `,
+    startsAt: new Date('2014-08-05'),
+    endsAt: new Date('2018-08-06'),
+    urls: [
+      'https://dribbble.com/shots/4921561-Hamburger-Menu-Animation',
+      'https://dribbble.com/shots/3539398--version-3',
+      'https://dribbble.com/shots/3529235--version-2',
+      'https://dribbble.com/shots/1674602-Menu-open-back',
+      'https://dribbble.com/shots/1671182--version-1',
+    ],
+    media: [],
+    skills: {
+      svg,
+      ui,
+      ux,
+      css,
+      stylus,
+      html,
+      js,
+      sketch,
+    },
+  },
+
+  {
     name: 'Button Animations',
     description: `
       I created a couple of different Buttons which are planned to be the main
@@ -513,35 +544,6 @@ export const experiments: ShowCase[] = [
     skills: {
       html,
       js,
-    },
-  },
-
-  {
-    name: 'Hamburder Icon Animations',
-    description: `
-      I created a couple of different hamburger menu icon animations to open
-      and close a menu. All icons are planned with sketch. The base svgs are all
-      hand written with basic svg path commands. The icons are previewed on
-      dribbble and the code is available Open Source at CodePen.
-    `,
-    startsAt: new Date('2014-08-05'),
-    endsAt: new Date('2017-07-02'),
-    urls: [
-      'https://dribbble.com/shots/3539398--version-3',
-      'https://dribbble.com/shots/3529235--version-2',
-      'https://dribbble.com/shots/1674602-Menu-open-back',
-      'https://dribbble.com/shots/1671182--version-1',
-    ],
-    media: [],
-    skills: {
-      svg,
-      ui,
-      ux,
-      css,
-      stylus,
-      html,
-      js,
-      sketch,
     },
   },
 
@@ -604,6 +606,35 @@ export const experiments: ShowCase[] = [
 
 export const projects: ShowCase[] = [
   {
+    name: 'GitHub Commit Vizualization',
+    description: `
+      I build a lambda function wich regulary checks my GitHub account for new
+      commits and display them at [contributions.tamino.dev]. The data fetching
+      and the UI are both open source available at GitHub
+    `,
+    startsAt: new Date('2017'),
+    endsAt: undefined,
+    urls: [
+      'https://contributions.tamino.dev/',
+      'https://dribbble.com/shots/4884965-GitHub-Contribution-Visualization',
+      'https://github.com/tamino-martinius/contributions.taminomartinius.de',
+      'https://github.com/tamino-martinius/lambda-get-all-github-contributions',
+    ],
+    media: [],
+    skills: {
+      s3,
+      cloudfront,
+      nodejs,
+      lambda,
+      typescript,
+      stylus,
+      html,
+      vuejs,
+      git,
+    },
+  },
+
+  {
     name: 'Squoint',
     description: `
       Squoint is a puzzle game which is optimized for mobile devices and touch
@@ -611,7 +642,9 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2017'),
     endsAt: undefined,
-    urls: [],
+    urls: [
+      'https://squoint.com',
+    ],
     media: [],
     skills: {
       s3,
@@ -718,6 +751,7 @@ export const projects: ShowCase[] = [
     startsAt: new Date('2014'),
     endsAt: new Date('2017'),
     urls: [
+      'https://nextparticle.nextco.de/',
       'http://particleslider.de/',
     ],
     media: [],
@@ -739,9 +773,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2014'),
     endsAt: new Date('2017'),
-    urls: [
-      '',
-    ],
+    urls: [],
     media: [],
     skills: {
       ec2,
@@ -766,9 +798,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2013'),
     endsAt: new Date('2014'),
-    urls: [
-      '',
-    ],
+    urls: [],
     media: [],
     skills: {
       s3,
@@ -792,9 +822,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2012'),
     endsAt: new Date('2014'),
-    urls: [
-      '',
-    ],
+    urls: [],
     media: [],
     skills: {
       nodejs,
@@ -813,6 +841,44 @@ export const projects: ShowCase[] = [
 ********/
 
 export const talks: ShowCase[] = [
+
+  {
+    name: 'Lets talk about ... New JavaScript Features (2019 Editon)',
+    description: `
+      A yearly overview what happened in JavaScript and whats on the
+      early stages of ECMAScript. An small into to interesting new functions.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2019'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--new-js-features--2019',
+      'https://new-js-features--2019.lets-talk-about.tamino.dev',
+    ],
+    media: [],
+    skills: {
+      nodejs,
+    },
+  },
+
+  {
+    name: 'Lets talk about ... SAM (Serverless Access Model)',
+    description: `
+      An introduction to the Tooling and concept of Serverless
+      Applications within AWS.
+    `,
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--sam',
+      'https://sam.lets-talk-about.tamino.dev',
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      lambda,
+    },
+  },
+
   {
     name: 'Lets talk about ... API (of shyftplan)',
     description: `
@@ -823,7 +889,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2018'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--api',
-      'http://lets-talk-about--api.tamino-martinius.de',
+      'https://api.lets-talk-about.tamino.dev',
     ],
     media: [],
     skills: {
@@ -831,6 +897,24 @@ export const talks: ShowCase[] = [
       nodejs,
       html,
       stylus,
+    },
+  },
+
+  {
+    name: 'Lets talk about ... New JavaScript Features (2018 Editon)',
+    description: `
+      A yearly overview what happened in JavaScript and whats on the
+      early stages of ECMAScript. An small into to interesting new functions.
+    `,
+    startsAt: new Date('2018'),
+    endsAt: new Date('2018'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--new-js-features--2018',
+      'https://new-js-features--2018.lets-talk-about.tamino.dev',
+    ],
+    media: [],
+    skills: {
+      nodejs,
     },
   },
 
@@ -846,7 +930,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2018'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--sql-query-performance',
-      'http://lets-talk-about--sql-query-performance.tamino-martinius.de',
+      'https://sql-query-performance.lets-talk-about.tamino.dev',
     ],
     media: [],
     skills: {
@@ -868,7 +952,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2017'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--graphql',
-      'http://lets-talk-about--graphql.tamino-martinius.de',
+      'https://graphql.lets-talk-about.tamino.dev',
     ],
     media: [],
     skills: {
@@ -889,7 +973,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date('2017'),
     urls: [
       'https://github.com/tamino-martinius/lets-talk-about--typescript',
-      'http://lets-talk-about--typescript.tamino-martinius.de',
+      'https://typescript.lets-talk-about.tamino.dev',
     ],
     media: [],
     skills: {
