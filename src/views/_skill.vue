@@ -19,19 +19,16 @@
 </template>
 
 <script lang="ts">
-  import Variable from './_variable.vue';
-  import String from './_string.vue';
-  import Number from './_number.vue';
+import Variable from './_variable.vue';
+import String from './_string.vue';
+import Number from './_number.vue';
 
-  export default {
-    props: [
-      'name',
-      'skill',
-    ],
-    components: {
-      Variable,
-      String,
-      Number,
-    },
-  };
+export default {
+  props: ['name', 'skill'],
+  components: {
+    Variable,
+    String,
+    Number,
+  },
+};
 </script>

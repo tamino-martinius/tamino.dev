@@ -3,11 +3,11 @@
 </template>
 
 <script lang="ts">
-  import CodeLine from './_code_line.vue';
+import CodeLine from './_code_line.vue';
 
-  export default {
-    components: {
-      CodeLine,
-    },
-  };
+export default {
+  components: {
+    CodeLine,
+  },
+};
 </script>

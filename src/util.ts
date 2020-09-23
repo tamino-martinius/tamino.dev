@@ -1,6 +1,6 @@
 export function formatCode(str: string) {
   return str.replace(/ /g, '<span class="white-space space"></span>');
-};
+}
 
 export function center(str: string, len: number) {
   if (str.length >= len) {
@@ -11,12 +11,12 @@ export function center(str: string, len: number) {
     const padEnd = Math.ceil(padTotal / 2) + 1;
     return new Array(padStart).join(' ') + str + new Array(padEnd).join(' ');
   }
-};
+}
 
-export function track(action: string, value: string){
+export function track(action: string, value: string) {
   try {
     (<any>window)._gaq.push(['_trackEvent', action, value]);
-  } catch (error) { }
+  } catch (error) {}
 }
 
 export function snakeCase(str: string): string {
@@ -28,9 +28,9 @@ export enum Easing {
   EaseIn,
   EaseOut,
   EaseInOut,
-};
+}
 
-const easings: {[key: number]: (factor: number) => number } = {
+const easings: { [key: number]: (factor: number) => number } = {
   [Easing.Linear]: (factor: number) => factor,
   [Easing.EaseIn]: (factor: number) => Math.pow(factor, 2),
   [Easing.EaseOut]: (factor: number) => 1 - Math.abs(Math.pow(factor - 1, 2)),
@@ -44,12 +44,12 @@ const easings: {[key: number]: (factor: number) => number } = {
 };
 
 export interface AnimationOptions {
-  target: { [key: string]: any },
-  key: string,
-  value: number,
-  duration?: number,
-  ease?: Easing,
-};
+  target: { [key: string]: any };
+  key: string;
+  value: number;
+  duration?: number;
+  ease?: Easing;
+}
 
 export function animate(options: AnimationOptions) {
   options.duration = options.duration || 500;
@@ -70,4 +70,4 @@ export function animate(options: AnimationOptions) {
     }
   }
   window.requestAnimationFrame(step);
-};
+}

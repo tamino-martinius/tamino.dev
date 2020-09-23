@@ -1,212 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-<head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <title><%= htmlWebpackPlugin.options.title %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo@180x180.png" />
+    <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#272822" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/logo@180x180.png">
-  <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.title %>">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#272822">
+    <link rel="icon" type="image/png" href="/logo@32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/logo@16x16.png" sizes="16x16" />
 
-  <link rel="icon" type="image/png" href="/logo@32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/logo@16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#272822" />
+    <meta name="application-name" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#272822">
-  <meta name="application-name" content="<%= htmlWebpackPlugin.options.title %>">
-  <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta
+      name="description"
+      content="Portfolio of Tamino Martinius - Head of Development at shyftplan"
+    />
+    <meta
+      name="keywords"
+      content="Tamino, Martinius, Developer, Backend, Frontend, Head of Development, Lead Engineering"
+    />
 
-  <meta name="description" content="Portfolio of Tamino Martinius - Head of Development at shyftplan">
-  <meta name="keywords" content="Tamino, Martinius, Developer, Backend, Frontend, Head of Development, Lead Engineering">
-
-  <style>
-    html, body {
-      padding-top: 0.2rem;
-      font-family: 'Fira Code', monospace;
-      font-size: 2vw;
-    }
-
-    @media screen and (min-width: 1024px) {
-      html, body {
-        font-size: 20px;
+    <style>
+      html,
+      body {
+        padding-top: 0.2rem;
+        font-family: 'Fira Code', monospace;
+        font-size: 2vw;
       }
-    }
 
-    body {
-      --color-background: #272822;
-      --color-white-space: #464741;
-      --color-collapsed: #464741;
-      --color-comment: #75715E;
-      --color-variable: #F8F8F2;
-      --color-expression: #F8F8F2;
-      --color-storage-type: #66D9EF;
-      --color-keyword: #F92672;
-      --color-type: #A6E22E;
-      --color-class: #A6E22E;
-      --color-string: #E6DB74;
-      --color-constant: #AE81FF;
-      --color-number: #AE81FF;
+      @media screen and (min-width: 1024px) {
+        html,
+        body {
+          font-size: 20px;
+        }
+      }
 
-      --color-zsh-text: #899;
-      --color-zsh-path-background: #2E8CCF;
-      --color-zsh-path-foreground: #000;
-      --color-zsh-branch-background: #85981C;
-      --color-zsh-branch-foreground: #000;
-      --color-zsh-command-valid: #85981C;
-      --color-zsh-command-invalid: #C14C22;
-      --color-zsh-args: #cdd;
-      --color-zsh-args-autocomplete: #566;
+      body {
+        --color-background: #272822;
+        --color-white-space: #464741;
+        --color-collapsed: #464741;
+        --color-comment: #75715e;
+        --color-variable: #f8f8f2;
+        --color-expression: #f8f8f2;
+        --color-storage-type: #66d9ef;
+        --color-keyword: #f92672;
+        --color-type: #a6e22e;
+        --color-class: #a6e22e;
+        --color-string: #e6db74;
+        --color-constant: #ae81ff;
+        --color-number: #ae81ff;
 
-      margin: 0.3rem;
-      background-color: var(--color-background);
-    }
+        --color-zsh-text: #899;
+        --color-zsh-path-background: #2e8ccf;
+        --color-zsh-path-foreground: #000;
+        --color-zsh-branch-background: #85981c;
+        --color-zsh-branch-foreground: #000;
+        --color-zsh-command-valid: #85981c;
+        --color-zsh-command-invalid: #c14c22;
+        --color-zsh-args: #cdd;
+        --color-zsh-args-autocomplete: #566;
 
-    .hidden {
-      display: none;
-    }
+        margin: 0.3rem;
+        background-color: var(--color-background);
+      }
 
-    .loader {
-      color: var(--color-zsh-text);
-      font-size: 0;
-      padding-bottom: 0.5rem;
-    }
+      .hidden {
+        display: none;
+      }
 
-    .loader .now {
-      display: inline;
-    }
+      .loader {
+        color: var(--color-zsh-text);
+        font-size: 0;
+        padding-bottom: 0.5rem;
+      }
 
-    .loader span {
-      font-size: 1rem;
-    }
+      .loader .now {
+        display: inline;
+      }
 
-    .loader .branch:before,
-    .loader .command:before {
-      content: '';
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border: 0.6rem solid transparent;
-      vertical-align: -0.25rem;
-    }
+      .loader span {
+        font-size: 1rem;
+      }
 
-    .loader .path {
-      background-color: var(--color-zsh-path-background);
-      color: var(--color-zsh-path-foreground);
-      padding-right: 1rem;
-    }
+      .loader .branch:before,
+      .loader .command:before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 0.6rem solid transparent;
+        vertical-align: -0.25rem;
+      }
 
-    .loader .branch {
-      background-color: var(--color-zsh-branch-background);
-      color: var(--color-zsh-branch-foreground);
-      padding-right: 1rem;
-    }
+      .loader .path {
+        background-color: var(--color-zsh-path-background);
+        color: var(--color-zsh-path-foreground);
+        padding-right: 1rem;
+      }
 
-    .loader .branch:before {
-      border-left-color: var(--color-zsh-path-background);
-    }
+      .loader .branch {
+        background-color: var(--color-zsh-branch-background);
+        color: var(--color-zsh-branch-foreground);
+        padding-right: 1rem;
+      }
 
-    .loader .command:after {
-      color: var(--color-zsh-command-valid);
-    }
+      .loader .branch:before {
+        border-left-color: var(--color-zsh-path-background);
+      }
 
-    .loader .command:before {
-      border-left-color: var(--color-zsh-branch-background);
-    }
+      .loader .command:after {
+        color: var(--color-zsh-command-valid);
+      }
 
-    .loader .args:before {
-      padding-left: 1rem;
-      color: var(--color-zsh-args);
-    }
+      .loader .command:before {
+        border-left-color: var(--color-zsh-branch-background);
+      }
 
-    .loader .args:after {
-      color: var(--color-zsh-args-autocomplete);
-    }
+      .loader .args:before {
+        padding-left: 1rem;
+        color: var(--color-zsh-args);
+      }
 
-    .step-1 .loader .command:after {
-      content: 'c';
-      color: var(--color-zsh-command-invalid);
-    }
-    .step-2 .loader .command:after {
-      content: 'ca';
-      color: var(--color-zsh-command-invalid);
-    }
-    .step-3 .loader .command:after { content: 'cat'; }
+      .loader .args:after {
+        color: var(--color-zsh-args-autocomplete);
+      }
 
-    .step-4 .loader .command:after { content: 'cat'; }
-    .step-4 .loader .args:before { content: 'm'; }
-    .step-4 .loader .args:after { content: 'ain.ts'; }
+      .step-1 .loader .command:after {
+        content: 'c';
+        color: var(--color-zsh-command-invalid);
+      }
+      .step-2 .loader .command:after {
+        content: 'ca';
+        color: var(--color-zsh-command-invalid);
+      }
+      .step-3 .loader .command:after {
+        content: 'cat';
+      }
 
-    .step-5 .loader .command:after { content: 'cat'; }
-    .step-5 .loader .args:before { content: 'ma'; }
-    .step-5 .loader .args:after { content: 'in.ts'; }
+      .step-4 .loader .command:after {
+        content: 'cat';
+      }
+      .step-4 .loader .args:before {
+        content: 'm';
+      }
+      .step-4 .loader .args:after {
+        content: 'ain.ts';
+      }
 
-    .step-6 .loader .command:after { content: 'cat'; }
-    .step-6 .loader .args:before { content: 'main.ts'; }
+      .step-5 .loader .command:after {
+        content: 'cat';
+      }
+      .step-5 .loader .args:before {
+        content: 'ma';
+      }
+      .step-5 .loader .args:after {
+        content: 'in.ts';
+      }
 
-    .step-7 .loader .command:after { content: 'cat'; }
-    .step-7 .loader .args:before { content: 'main.ts'; }
-    .step-7 #view { display: block; }
+      .step-6 .loader .command:after {
+        content: 'cat';
+      }
+      .step-6 .loader .args:before {
+        content: 'main.ts';
+      }
 
-    .lang-ruby.step-4 .loader .args:after { content: 'ain.rb'; }
-    .lang-ruby.step-5 .loader .args:after { content: 'in.rb'; }
-    .lang-ruby.step-6 .loader .args:before { content: 'main.rb'; }
-    .lang-ruby.step-7 .loader .args:before { content: 'main.rb'; }
+      .step-7 .loader .command:after {
+        content: 'cat';
+      }
+      .step-7 .loader .args:before {
+        content: 'main.ts';
+      }
+      .step-7 #view {
+        display: block;
+      }
 
-    .lang-javascript.step-4 .loader .args:after { content: 'ain.js'; }
-    .lang-javascript.step-5 .loader .args:after { content: 'in.js'; }
-    .lang-javascript.step-6 .loader .args:before { content: 'main.js'; }
-    .lang-javascript.step-7 .loader .args:before { content: 'main.js'; }
-  </style>
-</head>
-<body>
-  <noscript>
-    Please enable JavaScript to see this page!
-  </noscript>
-  <div class="loader hidden">
-    <div class="line">
-      <span>
-        Last login: <span class="now"></span> on ttys007
-      </span>
+      .lang-ruby.step-4 .loader .args:after {
+        content: 'ain.rb';
+      }
+      .lang-ruby.step-5 .loader .args:after {
+        content: 'in.rb';
+      }
+      .lang-ruby.step-6 .loader .args:before {
+        content: 'main.rb';
+      }
+      .lang-ruby.step-7 .loader .args:before {
+        content: 'main.rb';
+      }
+
+      .lang-javascript.step-4 .loader .args:after {
+        content: 'ain.js';
+      }
+      .lang-javascript.step-5 .loader .args:after {
+        content: 'in.js';
+      }
+      .lang-javascript.step-6 .loader .args:before {
+        content: 'main.js';
+      }
+      .lang-javascript.step-7 .loader .args:before {
+        content: 'main.js';
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      Please enable JavaScript to see this page!
+    </noscript>
+    <div class="loader hidden">
+      <div class="line">
+        <span> Last login: <span class="now"></span> on ttys007 </span>
+      </div>
+      <div class="line">
+        <span class="path">~/tamino.dev</span>
+        <span class="branch"> master</span>
+        <span class="command"></span>
+        <span class="args"></span>
+      </div>
     </div>
-    <div class="line">
-      <span class="path">~/tamino.dev</span>
-      <span class="branch"> master</span>
-      <span class="command"></span>
-      <span class="args"></span>
-    </div>
-  </div>
-  <script type="text/javascript">
-    var $loader = document.querySelector('.loader');
-    var $now = document.querySelector('.now');
-    var $body = document.body;
-    $now.innerHTML = ' ' + new Date().toString().substr(0, 24) + ' ';
-    $loader.classList.remove('hidden');
-    for (var i = 1; i <= 7; i++) {
-      (function(i){
-        setTimeout(function() {
-          $body.classList.remove('step-' + (i - 1));
-          $body.classList.add('step-' + i);
-        }, i * 250 + ~~(Math.random() * 50));
-      })(i);
-    }
-  </script>
-  <div id="view" class="hidden"></div>
-  <script>
-    (function (t, a, m, i, n, o, _) {
-      t['GoogleAnalyticsObject'] = n; t[n] = t[n] || function () {
-        (t[n].q = t[n].q || []).push(arguments)
-      }, t[n].l = 1 * new Date(); o = a.createElement(m),
-        _ = a.getElementsByTagName(m)[0]; o.async = 1; o.src = i; _.parentNode.insertBefore(o, _)
-    })(window, document, 'script', 'https://ssl.google-analytics.com/ga.js', 'ga');
+    <script type="text/javascript">
+      var $loader = document.querySelector('.loader');
+      var $now = document.querySelector('.now');
+      var $body = document.body;
+      $now.innerHTML = ' ' + new Date().toString().substr(0, 24) + ' ';
+      $loader.classList.remove('hidden');
+      for (var i = 1; i <= 7; i++) {
+        (function(i) {
+          setTimeout(function() {
+            $body.classList.remove('step-' + (i - 1));
+            $body.classList.add('step-' + i);
+          }, i * 250 + ~~(Math.random() * 50));
+        })(i);
+      }
+    </script>
+    <div id="view" class="hidden"></div>
+    <script>
+      (function(t, a, m, i, n, o, _) {
+        t['GoogleAnalyticsObject'] = n;
+        (t[n] =
+          t[n] ||
+          function() {
+            (t[n].q = t[n].q || []).push(arguments);
+          }),
+          (t[n].l = 1 * new Date());
+        (o = a.createElement(m)), (_ = a.getElementsByTagName(m)[0]);
+        o.async = 1;
+        o.src = i;
+        _.parentNode.insertBefore(o, _);
+      })(window, document, 'script', 'https://ssl.google-analytics.com/ga.js', 'ga');
 
-    window._gaq = []
-    _gaq.push(['_setAccount', 'UA-29865051-1'])
-    _gaq.push(['_setDomainName', 'tamino.dev'])
-    _gaq.push(['_trackPageview'])
-  </script>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"/>
-</body>
+      window._gaq = [];
+      _gaq.push(['_setAccount', 'UA-29865051-1']);
+      _gaq.push(['_setDomainName', 'tamino.dev']);
+      _gaq.push(['_trackPageview']);
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+    />
+  </body>
 </html>

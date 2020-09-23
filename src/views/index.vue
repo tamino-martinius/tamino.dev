@@ -1,88 +1,64 @@
 <template>
   <div id="view" class="hidden">
-    <CookieInfo/>
-    <CodeLine/>
-    <Profile :data="data"/>
+    <CookieInfo />
+    <CodeLine />
+    <Profile :data="data" />
     <Section :section="Section.Skills"></Section>
-    <CodeLine/>
+    <CodeLine />
     <template v-for="skillset in data.skills">
-      <SkillSet
-        :title="skillset.title"
-        :skillset="skillset"
-        :key="skillset.title"
-      />
+      <SkillSet :title="skillset.title" :skillset="skillset" :key="skillset.title" />
     </template>
-    <CodeLine/>
+    <CodeLine />
     <Section :section="Section.CurriculumVitae"></Section>
-    <CodeLine/>
-    <CurriculumVitae :data="data.curriculumVitae"/>
-    <CodeLine/>
-    <CodeLine/>
-    <ShowCaseSection
-      :section="Section.Experiments"
-      name="experiments"
-      :data="data.experiments"
-    />
-    <ShowCaseSection
-      :section="Section.Projects"
-      name="projects"
-      :data="data.projects"
-    />
-    <ShowCaseSection
-      :section="Section.Talks"
-      name="talks"
-      :data="data.talks"
-    />
-    <ShowCaseSection
-      :section="Section.Packages"
-      name="packages"
-      :data="data.packages"
-    />
-    <ShowCaseSection
-      :section="Section.Misc"
-      name="misc"
-      :data="data.misc"
-    />
-    <Legal/>
-    <CodeLine/>
-    <Privacy/>
+    <CodeLine />
+    <CurriculumVitae :data="data.curriculumVitae" />
+    <CodeLine />
+    <CodeLine />
+    <ShowCaseSection :section="Section.Experiments" name="experiments" :data="data.experiments" />
+    <ShowCaseSection :section="Section.Projects" name="projects" :data="data.projects" />
+    <ShowCaseSection :section="Section.Talks" name="talks" :data="data.talks" />
+    <ShowCaseSection :section="Section.Packages" name="packages" :data="data.packages" />
+    <ShowCaseSection :section="Section.Misc" name="misc" :data="data.misc" />
+    <Legal />
+    <CodeLine />
+    <Privacy />
   </div>
 </template>
 
 <script lang="ts">
-  import * as data from '../data';
+import * as data from '../data';
 
-  import SkillSet from './_skill_set.vue';
-  import Section from './_section.vue';
-  import CodeLine from './_code_line.vue';
-  import CurriculumVitae from './_curriculum_vitae.vue';
-  import ShowCaseSection from './_show_case_section.vue';
-  import Legal from './_legal.vue';
-  import Privacy from './_privacy.vue';
-  import Profile from "./_profile.vue";
-  import CookieInfo from "./_cookie_info.vue";
+import SkillSet from './_skill_set.vue';
+import Section from './_section.vue';
+import CodeLine from './_code_line.vue';
+import CurriculumVitae from './_curriculum_vitae.vue';
+import ShowCaseSection from './_show_case_section.vue';
+import Legal from './_legal.vue';
+import Privacy from './_privacy.vue';
+import Profile from './_profile.vue';
+import CookieInfo from './_cookie_info.vue';
 
-  export default {
-    data() {
-      return {
-        data,
-      };
+export default {
+  data() {
+    return {
+      data,
+    };
+  },
+  computed: {
+    year() {
+      return new Date().getFullYear();
     },
-    computed: {
-      year() {
-        return new Date().getFullYear();
-      },
-    },
-    components: {
-      SkillSet,
-      Section,
-      CodeLine,
-      CurriculumVitae,
-      ShowCaseSection,
-      Legal,
-      Privacy,
-      Profile,
-      CookieInfo,
-    },
-  };
+  },
+  components: {
+    SkillSet,
+    Section,
+    CodeLine,
+    CurriculumVitae,
+    ShowCaseSection,
+    Legal,
+    Privacy,
+    Profile,
+    CookieInfo,
+  },
+};
 </script>

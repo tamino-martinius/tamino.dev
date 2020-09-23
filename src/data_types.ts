@@ -7,53 +7,49 @@ export enum Section {
   Talks,
   Packages,
   Misc,
-};
+}
 
 export enum Language {
   ruby,
   typescript,
   javascript,
-};
+}
 
-export const languages: Language[] = [
-  Language.ruby,
-  Language.typescript,
-  Language.javascript,
-];
+export const languages: Language[] = [Language.ruby, Language.typescript, Language.javascript];
 
 export interface Stage {
-  description?: string,
-  startsAt: Date,
-  endsAt?: Date,
-  skills: { [key: string]: Skill },
-};
+  description?: string;
+  startsAt: Date;
+  endsAt?: Date;
+  skills: { [key: string]: Skill };
+}
 
 export interface Job extends Stage {
-  company: string,
-  remote: boolean,
-  position: string | string[],
-};
+  company: string;
+  remote: boolean;
+  position: string | string[];
+}
 
 export interface Education extends Stage {
-  university: string,
-  graduiation: string,
-};
+  university: string;
+  graduiation: string;
+}
 
 export interface ShowCase extends Stage {
-  name: string,
-  urls: string[],
-  media: string[],
-};
+  name: string;
+  urls: string[];
+  media: string[];
+}
 
 export interface Skill {
-  level: number,
-  name: string,
-};
+  level: number;
+  name: string;
+}
 
 export interface SkillSet {
-  title: string,
-  data: SkillSet[] | { [key: string]: Skill },
-};
+  title: string;
+  data: SkillSet[] | { [key: string]: Skill };
+}
 
 export class State {
   currentLanguage: Language;
@@ -76,17 +72,24 @@ export class State {
     document.body.classList.add(this.getLanguageClass(lang));
     const title = document.title.substr(0, document.title.length - 2);
     switch (lang) {
-      case Language.ruby: { document.title = title + 'rb'; break; }
-      case Language.typescript: { document.title = title + 'ts'; break; }
-      case Language.javascript: { document.title = title + 'js'; break; }
+      case Language.ruby: {
+        document.title = title + 'rb';
+        break;
+      }
+      case Language.typescript: {
+        document.title = title + 'ts';
+        break;
+      }
+      case Language.javascript: {
+        document.title = title + 'js';
+        break;
+      }
     }
   }
-};
-
+}
 
 export class LanguageHelper {
-  constructor(private language: Language) {
-  }
+  constructor(private language: Language) {}
 
   get commentChar() {
     return this.language === Language.ruby ? '#' : '*';
@@ -97,7 +100,7 @@ export class LanguageHelper {
   }
 
   get multilineString() {
-    return this.language === Language.ruby ? '\'' : '`';
+    return this.language === Language.ruby ? "'" : '`';
   }
 
   get comment() {
@@ -107,4 +110,4 @@ export class LanguageHelper {
   get undefined() {
     return this.language === Language.ruby ? 'nil' : 'undefined';
   }
-};
+}

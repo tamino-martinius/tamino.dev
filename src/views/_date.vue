@@ -11,29 +11,27 @@
       <span class="expression">)</span>
     </template>
     <span v-else class="constant">
-      {{state.currentLanguageHelper.undefined}}
+      {{ state.currentLanguageHelper.undefined }}
     </span>
   </div>
 </template>
 
 <script lang="ts">
-  import String from './_string.vue';
+import String from './_string.vue';
 
-  export default {
-    props: [
-      'value',
-    ],
-    computed: {
-      date() {
-        if (this.value.getDate() === 1 && this.value.getMonth() === 0 && this.isJs) {
-          return this.value.getFullYear();
-        } else {
-          return this.value.toISOString().substr(0,10);
-        }
-      },
+export default {
+  props: ['value'],
+  computed: {
+    date() {
+      if (this.value.getDate() === 1 && this.value.getMonth() === 0 && this.isJs) {
+        return this.value.getFullYear();
+      } else {
+        return this.value.toISOString().substr(0, 10);
+      }
     },
-    components: {
-      String,
-    },
-  };
+  },
+  components: {
+    String,
+  },
+};
 </script>

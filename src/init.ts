@@ -12,7 +12,7 @@ if (state.language === undefined) {
   state.language = languages[Math.floor(Math.random() * languages.length)];
 }
 
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', function(e) {
   switch (e.which) {
     case 32: {
       e.preventDefault();
@@ -48,17 +48,17 @@ Vue.mixin({
   methods: {
     snakeCase(str: string) {
       return (<any>this).isRuby ? snakeCase(str) : str;
-    }
+    },
   },
   computed: {
     isJs() {
-      return this.state.currentLanguage === Language.javascript
-        || this.state.currentLanguage === Language.typescript;
-      ;
+      return (
+        this.state.currentLanguage === Language.javascript ||
+        this.state.currentLanguage === Language.typescript
+      );
     },
     isTs() {
       return this.state.currentLanguage === Language.typescript;
-      ;
     },
     isRuby() {
       return this.state.currentLanguage === Language.ruby;
@@ -67,7 +67,7 @@ Vue.mixin({
 });
 
 console.log(
-  '%c~/tamino.dev %c%c  master %c cat %cREADME.md\n\n%c# tamino.dev\n\nCheck out the source on [GitHub](https://github.com/tamino-martinius/www.taminomartinius.de)',
+  '%c~/tamino.dev %c%c  master %c cat %cREADME.md\n\n%c# tamino.dev\n\nCheck out the source on [GitHub](https://github.com/tamino-martinius/tamino.dev)',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #2E8CCF; color: #000000;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #2E8CCF;',
   'font-family: "Fira Code", monospace; padding: 2px 0; background-color: #85981C; color: #000000;',
@@ -77,10 +77,10 @@ console.log(
 );
 
 OfflinePluginRuntime.install({
-  onUpdateReady: function () {
+  onUpdateReady: function() {
     OfflinePluginRuntime.applyUpdate();
   },
-  onUpdated: function () {
+  onUpdated: function() {
     window.location.reload();
-  }
+  },
 });

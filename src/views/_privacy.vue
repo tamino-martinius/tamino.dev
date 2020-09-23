@@ -1,32 +1,26 @@
 <template>
   <div class="privacy" @click.stop="toggle" :class="{ collapsed: collapsed }">
-    <Comment
-      v-if="collapsed"
-      comment="Privacy"
-    >
-      <Collapsed/>
+    <Comment v-if="collapsed" comment="Privacy">
+      <Collapsed />
     </Comment>
-    <CommentBlock
-      v-else
-      :comment="privacy"
-    />
+    <CommentBlock v-else :comment="privacy" />
   </div>
 </template>
 
 <script lang="ts">
-  import { track } from '../util';
+import { track } from '../util';
 
-  import Comment from './_comment.vue';
-  import CommentBlock from './_comment_block.vue';
-  import Collapsed from './_collapsed.vue';
+import Comment from './_comment.vue';
+import CommentBlock from './_comment_block.vue';
+import Collapsed from './_collapsed.vue';
 
-  const openOnStart = window.location.hash === "#legal";
+const openOnStart = window.location.hash === '#legal';
 
-  export default {
-    data() {
-      return {
-        collapsed: !openOnStart,
-        privacy: `
+export default {
+  data() {
+    return {
+      collapsed: !openOnStart,
+      privacy: `
 Datenschutzerklärung für die Nutzung von Google Analytics
 
 Diese Website benutzt Google Analytics, einen Webanalysedienst
@@ -59,23 +53,23 @@ durch Google verhindern, indem sie das unter dem folgenden Link verfügbare
 Browser-Plugin herunterladen und installieren
 http://tools.google.com/dlpage/gaoptout?hl=de
         `,
-      };
+    };
+  },
+  methods: {
+    toggle() {
+      this.collapsed = !this.collapsed;
+      track((this.collapsed ? 'Close' : 'Open') + 'Legal', 'none');
     },
-    methods: {
-      toggle() {
-        this.collapsed = !this.collapsed;
-        track((this.collapsed ? 'Close' : 'Open') + 'Legal', 'none');
-      },
+  },
+  computed: {
+    year() {
+      return new Date().getFullYear();
     },
-    computed: {
-      year() {
-        return new Date().getFullYear();
-      },
-    },
-    components: {
-      Comment,
-      CommentBlock,
-      Collapsed,
-    },
-  };
+  },
+  components: {
+    Comment,
+    CommentBlock,
+    Collapsed,
+  },
+};
 </script>

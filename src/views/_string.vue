@@ -3,16 +3,14 @@
 </template>
 
 <script lang="ts">
-  import { formatCode } from '../util';
+import { formatCode } from '../util';
 
-  export default {
-    props: [
-      'value',
-    ],
-    computed: {
-      content() {
-        return formatCode(`'${this.value}'`);
-      },
+export default {
+  props: ['value'],
+  computed: {
+    content() {
+      return formatCode(`'${this.value}'`);
     },
-  };
+  },
+};
 </script>

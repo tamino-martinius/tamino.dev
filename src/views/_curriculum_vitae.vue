@@ -3,8 +3,8 @@
     <CodeLine>
       <span class="storage-type" v-if="isJs">const</span>
       <span class="white-space space" v-if="isJs"></span>
-      <VariableName name="curriculumVitae"/>
-      <span class="variable">{{title}}</span>
+      <VariableName name="curriculumVitae" />
+      <span class="variable">{{ title }}</span>
       <span class="keyword" v-if="isTs">:</span>
       <span class="white-space space"></span>
       <span class="expression" v-if="isTs">(</span>
@@ -35,20 +35,18 @@
 </template>
 
 <script lang="ts">
-  import VariableName from './_variable_name.vue';
-  import CodeLine from './_code_line.vue';
-  import Job from './_job.vue';
-  import Education from './_education.vue';
+import VariableName from './_variable_name.vue';
+import CodeLine from './_code_line.vue';
+import Job from './_job.vue';
+import Education from './_education.vue';
 
-  export default {
-    props: [
-      'data',
-    ],
-    components: {
-      CodeLine,
-      Job,
-      Education,
-      VariableName,
-    },
-  };
+export default {
+  props: ['data'],
+  components: {
+    CodeLine,
+    Job,
+    Education,
+    VariableName,
+  },
+};
 </script>

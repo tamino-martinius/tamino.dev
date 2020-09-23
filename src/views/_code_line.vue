@@ -1,9 +1,9 @@
 <template>
   <div class="line">
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <script lang="ts">
-  export default {};
+export default {};
 </script>

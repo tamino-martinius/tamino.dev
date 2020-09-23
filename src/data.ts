@@ -1,33 +1,21 @@
-import {
-  Stage,
-  Job,
-  Education,
-  ShowCase,
-  Skill,
-  SkillSet,
-  State,
-} from './data_types';
+import { Education, Job, ShowCase, Skill, SkillSet, Stage, State } from './data_types';
 
 /********
-* State *
-********/
+ * State *
+ ********/
 
 export const state = new State();
 
 /*********
-* Header *
-*********/
+ * Header *
+ *********/
 
 export const myName = 'Tamino Martinius';
 export const profession = 'I speak Code';
 export const street = 'Lehdenstr. 21';
 export const postalCode = '06847';
 export const city = 'Dessau';
-export const emails: string[] = [
-  'hi@zaku.eu',
-  'hello@zaku.eu',
-  'im-not-a-recruiter@zaku.eu',
-];
+export const emails: string[] = ['hi@zaku.eu', 'hello@zaku.eu', 'im-not-a-recruiter@zaku.eu'];
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/tamino-martinius',
   codepen: 'https://codepen.io/Zaku/',
@@ -36,10 +24,9 @@ export const socialNetworks: { [key: string]: string } = {
   linkedin: 'https://www.linkedin.com/in/tamino-martinius',
 };
 
-
 /*********
-* Skills *
-*********/
+ * Skills *
+ *********/
 
 // AWS
 // AWS / Compute
@@ -224,10 +211,9 @@ export const skills: SkillSet[] = [
   },
 ];
 
-
 /*******************
-* Curriculum Vitae *
-*******************/
+ * Curriculum Vitae *
+ *******************/
 
 export const curriculumVitae: (Job | Education)[] = [
   {
@@ -240,10 +226,7 @@ export const curriculumVitae: (Job | Education)[] = [
     startsAt: new Date('2017-07-01'),
     endsAt: undefined,
     remote: false,
-    position: [
-      'Head of Development',
-      'Lead Engineering',
-    ],
+    position: ['Head of Development', 'Lead Engineering'],
     skills: {
       lambda,
       beanstalk,
@@ -270,10 +253,7 @@ export const curriculumVitae: (Job | Education)[] = [
     startsAt: new Date('2016-12-01'),
     endsAt: new Date('2017-06-30'),
     remote: false,
-    position: [
-      'Head of Code',
-      'Head of Mobile',
-    ],
+    position: ['Head of Code', 'Head of Mobile'],
     skills: {
       lambda,
       beanstalk,
@@ -316,10 +296,7 @@ export const curriculumVitae: (Job | Education)[] = [
     startsAt: new Date('2014-12-01'),
     endsAt: new Date('2016-11-30'),
     remote: false,
-    position: [
-      'Head of Mobile',
-      'Backend Developer',
-    ],
+    position: ['Head of Mobile', 'Backend Developer'],
     skills: {
       nodejs,
       mongodb,
@@ -465,10 +442,9 @@ export const curriculumVitae: (Job | Education)[] = [
   },
 ];
 
-
 /**************
-* Experiments *
-**************/
+ * Experiments *
+ **************/
 
 export const experiments: ShowCase[] = [
   {
@@ -537,9 +513,7 @@ export const experiments: ShowCase[] = [
     `,
     startsAt: new Date('2014-08-05'),
     endsAt: new Date('2017-07-02'),
-    urls: [
-      'https://dribbble.com/shots/2649284-Dusty-Particle-Sphere',
-    ],
+    urls: ['https://dribbble.com/shots/2649284-Dusty-Particle-Sphere'],
     media: [],
     skills: {
       html,
@@ -599,10 +573,9 @@ export const experiments: ShowCase[] = [
   },
 ];
 
-
 /***********
-* Projects *
-***********/
+ * Projects *
+ ***********/
 
 export const projects: ShowCase[] = [
   {
@@ -642,9 +615,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2017'),
     endsAt: undefined,
-    urls: [
-      'https://squoint.com',
-    ],
+    urls: ['https://squoint.com'],
     media: [],
     skills: {
       s3,
@@ -668,10 +639,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2013'),
     endsAt: undefined,
-    urls: [
-      'https://colourco.de/',
-      'https://github.com/tamino-martinius/colourco.de',
-    ],
+    urls: ['https://colourco.de/', 'https://github.com/tamino-martinius/colourco.de'],
     media: [],
     skills: {
       s3,
@@ -696,9 +664,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2017'),
     endsAt: undefined,
-    urls: [
-      'https://nextparticle.nextco.de/',
-    ],
+    urls: ['https://nextparticle.nextco.de/'],
     media: [],
     skills: {
       s3,
@@ -750,10 +716,7 @@ export const projects: ShowCase[] = [
     `,
     startsAt: new Date('2014'),
     endsAt: new Date('2017'),
-    urls: [
-      'https://nextparticle.nextco.de/',
-      'http://particleslider.de/',
-    ],
+    urls: ['https://nextparticle.nextco.de/', 'http://particleslider.de/'],
     media: [],
     skills: {
       ec2,
@@ -835,13 +798,11 @@ export const projects: ShowCase[] = [
   },
 ];
 
-
 /********
-* Talks *
-********/
+ * Talks *
+ ********/
 
 export const talks: ShowCase[] = [
-
   {
     name: 'Lets talk about ... New JavaScript Features (2019 Editon)',
     description: `
@@ -1006,10 +967,9 @@ export const talks: ShowCase[] = [
   },
 ];
 
-
 /***********
-* Packages *
-***********/
+ * Packages *
+ ***********/
 
 export const packages: ShowCase[] = [
   {
@@ -1093,9 +1053,7 @@ export const packages: ShowCase[] = [
     `,
     startsAt: new Date('2015'),
     endsAt: new Date('2015'),
-    urls: [
-      'https://github.com/tamino-martinius/meteor-ics',
-    ],
+    urls: ['https://github.com/tamino-martinius/meteor-ics'],
     media: [],
     skills: {
       meteor,
@@ -1111,9 +1069,7 @@ export const packages: ShowCase[] = [
     `,
     startsAt: new Date('2015'),
     endsAt: new Date('2015'),
-    urls: [
-      'https://github.com/tamino-martinius/meteor-lazy-analytics',
-    ],
+    urls: ['https://github.com/tamino-martinius/meteor-lazy-analytics'],
     media: [],
     skills: {
       meteor,
@@ -1129,9 +1085,7 @@ export const packages: ShowCase[] = [
     `,
     startsAt: new Date('2014'),
     endsAt: new Date('2014'),
-    urls: [
-      'https://github.com/tamino-martinius/meteor-method-pagination',
-    ],
+    urls: ['https://github.com/tamino-martinius/meteor-method-pagination'],
     media: [],
     skills: {
       meteor,
@@ -1141,10 +1095,9 @@ export const packages: ShowCase[] = [
   },
 ];
 
-
 /*******
-* Misc *
-*******/
+ * Misc *
+ *******/
 
 export const misc: ShowCase[] = [
   {
@@ -1174,9 +1127,7 @@ export const misc: ShowCase[] = [
     `,
     startsAt: new Date('2016'),
     endsAt: new Date('2016'),
-    urls: [
-      'https://github.com/tamino-martinius/atom-language-spacebars',
-    ],
+    urls: ['https://github.com/tamino-martinius/atom-language-spacebars'],
     media: [],
     skills: {},
   },
