@@ -15,7 +15,7 @@ export const profession = 'I speak Code';
 export const street = 'Lehdenstr. 21';
 export const postalCode = '06847';
 export const city = 'Dessau';
-export const emails: string[] = ['hi@zaku.eu', 'hello@zaku.eu', 'im-not-a-recruiter@zaku.eu'];
+export const emails: string[] = ['io@tamino.dev', 'dev@tamino.io', 'im-not-a-recruiter@tamino.dev'];
 export const socialNetworks: { [key: string]: string } = {
   github: 'https://github.com/tamino-martinius',
   codepen: 'https://codepen.io/Zaku/',
@@ -107,14 +107,14 @@ export const handlebars: Skill = { level: 1.0, name: 'Handlebars' };
 export const html: Skill = { level: 1.0, name: 'HTML' };
 export const php: Skill = { level: 0.7, name: 'PHP' };
 export const markdown: Skill = { level: 0.9, name: 'Markdown' };
-export const react: Skill = { level: 0.8, name: 'React' };
-export const vuejs: Skill = { level: 1.0, name: 'Vue.js' };
+export const react: Skill = { level: 1.0, name: 'React' };
+export const vuejs: Skill = { level: 0.9, name: 'Vue.js' };
 
 // Frontend / Style
 export const css: Skill = { level: 1.0, name: 'CSS' };
-export const less: Skill = { level: 0.9, name: 'less' };
-export const sass: Skill = { level: 0.9, name: 'Sass' };
-export const stylus: Skill = { level: 1.0, name: 'Stylus' };
+export const less: Skill = { level: 0.7, name: 'less' };
+export const scss: Skill = { level: 1.0, name: 'Scss' };
+export const stylus: Skill = { level: 0.8, name: 'Stylus' };
 export const svg: Skill = { level: 1.0, name: 'SVG (Animations)' };
 
 // Frontend / Design
@@ -193,7 +193,7 @@ export const skills: SkillSet[] = [
       },
       {
         title: 'Style',
-        data: { css, less, sass, stylus, svg },
+        data: { css, less, scss, stylus, svg },
       },
       {
         title: 'Design',
@@ -219,14 +219,41 @@ export const curriculumVitae: (Job | Education)[] = [
   {
     company: 'shyftplan GmbH',
     description: `
+      I lead shyftplans Development, Tech and Automation. I'm responsible to
+      design, manage and build the Infrastructure for thousands of concurrent
+      Users at Germanys best shift planning and accounting Web Application.
+    `,
+    startsAt: new Date('2020-03-01'),
+    endsAt: undefined,
+    remote: false,
+    position: ['Chief Technology Officer', 'Co-Founder'],
+    skills: {
+      lambda,
+      beanstalk,
+      rds,
+      aurora,
+      nodejs,
+      mongodb,
+      android,
+      ios,
+      api,
+      rails,
+      psql,
+      redis,
+    },
+  },
+
+  {
+    company: 'shyftplan GmbH',
+    description: `
       I lead shyftplans Front- and Backend Developers. I'm responsible to
       design, manage and build the Infrastructure for thousands of concurrent
       Users at Germanys best shift planning and accounting Web Application.
     `,
     startsAt: new Date('2017-07-01'),
-    endsAt: undefined,
+    endsAt: new Date('2020-02-28'),
     remote: false,
-    position: ['Head of Development', 'Lead Engineering'],
+    position: ['Head of Development', 'Lead Engineering', 'Co-Founder'],
     skills: {
       lambda,
       beanstalk,
@@ -253,7 +280,7 @@ export const curriculumVitae: (Job | Education)[] = [
     startsAt: new Date('2016-12-01'),
     endsAt: new Date('2017-06-30'),
     remote: false,
-    position: ['Head of Code', 'Head of Mobile'],
+    position: ['Head of Code', 'Head of Mobile', 'Co-Founder'],
     skills: {
       lambda,
       beanstalk,
@@ -272,31 +299,13 @@ export const curriculumVitae: (Job | Education)[] = [
   {
     company: 'shyftplan GmbH',
     description: `
-      I plan and build the Infrastructure pre and post launch for Germanys best
-      shift planning and accounting Web Application.
-    `,
-    startsAt: new Date('2015-02-01'),
-    endsAt: new Date('2015-07-01'),
-    remote: false,
-    position: 'Backend Developer',
-    skills: {
-      rails,
-      psql,
-      redis,
-      elasticsearch,
-    },
-  },
-
-  {
-    company: 'shyftplan GmbH',
-    description: `
       I plan and build the Mobile App and Infrastructure for Germanys best
       shift planning and accounting Web Application.
     `,
     startsAt: new Date('2014-12-01'),
     endsAt: new Date('2016-11-30'),
     remote: false,
-    position: ['Head of Mobile', 'Backend Developer'],
+    position: ['Head of Mobile', 'Backend Developer', 'Co-Founder'],
     skills: {
       nodejs,
       mongodb,
@@ -310,7 +319,7 @@ export const curriculumVitae: (Job | Education)[] = [
   },
 
   {
-    company: 'shyftplan GmbH',
+    company: 'pijajo UG (shyftplan GmbH)',
     description: `
       I remotely plan and build the Infrastructure pre and post launch for
       Germanys best shift planning and accounting Web Application.
@@ -436,7 +445,7 @@ export const curriculumVitae: (Job | Education)[] = [
       mariadb,
       stylus,
       less,
-      sass,
+      scss,
       svg,
     },
   },
@@ -578,6 +587,54 @@ export const experiments: ShowCase[] = [
  ***********/
 
 export const projects: ShowCase[] = [
+  {
+    name: 'Hashflag Gallery',
+    description: `
+      I created the website hashflaggallery.com together with Andreas Storm.
+      This site collects all static and animated Hashflags from Twitter and
+      displayes them in a unique library. I'm responsibe for the whole
+      Teach-Stack and Coding. Andreas is responsible for Design & Marketing.
+    `,
+    startsAt: new Date('2020-09-01'),
+    endsAt: undefined,
+    urls: [
+      'https://hashflaggallery.com',
+      'https://codepen.io/collection/DoJqWO',
+      'https://twitter.com/HashflagGallery',
+    ],
+    media: [],
+    skills: {
+      beanstalk,
+      redis,
+      nodejs,
+      react,
+      scss,
+    },
+  },
+
+  {
+    name: 'Check it done',
+    description: `
+      As a developer I created a lot of To-Do Apps (basically whenever i tried
+      a new technology). I'm not completely happy with any To-Do app i tested
+      and finally during Covid I started this project together with Andreas,
+      Martin and Aaron. Andreas and Martin are the most talented designers i
+      know and Aaron is a genius in user interaction and animation design.
+      I'm responsible for the complete Tech-Stack including the UI basics.
+    `,
+    startsAt: new Date('2020-08-01'),
+    endsAt: undefined,
+    urls: ['https://usecheck.com', 'https://twitter.com/joincheck'],
+    media: [],
+    skills: {
+      beanstalk,
+      redis,
+      nodejs,
+      react,
+      scss,
+    },
+  },
+
   {
     name: 'GitHub Commit Vizualization',
     description: `
