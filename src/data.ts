@@ -861,6 +861,42 @@ export const projects: ShowCase[] = [
 
 export const talks: ShowCase[] = [
   {
+    name: 'Lets talk about ... New JavaScript Features (2020 Editon)',
+    description: `
+      A yearly overview what happened in JavaScript and whats on the
+      early stages of ECMAScript. An small into to interesting new functions.
+    `,
+    startsAt: new Date('2020'),
+    endsAt: new Date('2020'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--new-js-features--2020',
+      'https://new-js-features--2020.lets-talk-about.tamino.dev',
+    ],
+    media: [],
+    skills: {
+      nodejs,
+    },
+  },
+
+  {
+    name: 'Lets talk about ... AWS CDK (Cloud Development Kit)',
+    description: `
+      An introduction in the alternative to CloudFormation templates.
+      Create your infrastructure stacks with code.
+    `,
+    startsAt: new Date('2019'),
+    endsAt: new Date('2019'),
+    urls: [
+      'https://github.com/tamino-martinius/lets-talk-about--cdk',
+      'https://cdk.lets-talk-about.tamino.dev',
+    ],
+    media: [],
+    skills: {
+      nodejs,
+    },
+  },
+
+  {
     name: 'Lets talk about ... New JavaScript Features (2019 Editon)',
     description: `
       A yearly overview what happened in JavaScript and whats on the
