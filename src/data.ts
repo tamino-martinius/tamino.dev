@@ -25,7 +25,7 @@ export const city = "Dessau";
 export const emails: string[] = ["io@tamino.dev", "dev@tamino.io", "im-not-a-recruiter@tamino.dev"];
 export const socialNetworks: { [key: string]: string } = {
   github: "https://github.com/tamino-martinius",
-  codepen: "https://codepen.io/Zaku/",
+  codepen: "https://codepen.io/TaminoMartinius/",
   dribbble: "https://dribbble.com/TaminoMartinius",
   twitter: "https://twitter.com/TaminoMartinius",
   linkedin: "https://www.linkedin.com/in/tamino-martinius",
@@ -35,46 +35,25 @@ export const socialNetworks: { [key: string]: string } = {
  * Skills *
  *********/
 
-// AWS
-// AWS / Compute
-export const beanstalk: Skill = { level: 0.9, name: "Beanstalk" };
-export const ec2: Skill = { level: 0.9, name: "EC2" };
-export const ecs: Skill = { level: 0.9, name: "ECS" };
-export const fargate: Skill = { level: 0.7, name: "Fargate" };
-export const lambda: Skill = { level: 1.0, name: "Lambda" };
-
-// AWS / Data
-export const aurora: Skill = { level: 1.0, name: "RDS Aurora" };
-export const dynamodb: Skill = { level: 0.8, name: "DynamoDB" };
-export const rds: Skill = { level: 1.0, name: "DB Service" };
-export const s3: Skill = { level: 1.0, name: "S3" };
-
-// AWS / Flow
-export const apigateway: Skill = { level: 0.9, name: "API Gateway" };
-export const cloudfront: Skill = { level: 1.0, name: "CloudFront" };
-export const r53: Skill = { level: 1.0, name: "Route 53" };
-export const sns: Skill = { level: 0.9, name: "SNS" };
-
-// AWS / Management
-export const cloudformation: Skill = { level: 0.9, name: "CloudFormation" };
-export const cloudtrail: Skill = { level: 0.8, name: "CloudTrail" };
-export const cloudwatch: Skill = { level: 1.0, name: "CloudWatch" };
-export const iam: Skill = { level: 0.9, name: "IAM" };
-
 // Backend
 // Backend / CI
+export const biome: Skill = { level: 1.0, name: "Biome" };
 export const circleCI: Skill = { level: 0.8, name: "CircleCI" };
+export const cypress: Skill = { level: 0.9, name: "Cypress" };
+export const eslint: Skill = { level: 1.0, name: "ESLint" };
 export const jasmine: Skill = { level: 0.9, name: "Jasmine" };
 export const jenkins: Skill = { level: 0.9, name: "Jenkins" };
 export const jest: Skill = { level: 1.0, name: "Jest" };
 export const mocha: Skill = { level: 1.0, name: "Mocha" };
+export const playwright: Skill = { level: 1.0, name: "Playwright" };
 export const rspec: Skill = { level: 1.0, name: "RSpec" };
 export const travis: Skill = { level: 0.9, name: "Travis CI" };
+export const vitest: Skill = { level: 1.0, name: "Vitest" };
 
 // Backend / Code
-export const asp: Skill = { level: 0.8, name: "ASP.net" };
-export const coffeescript: Skill = { level: 0.9, name: "CoffeeScript" };
-export const meteor: Skill = { level: 1.0, name: "Meteor" };
+export const asp: Skill = { level: 0.6, name: "ASP.net" };
+export const coffeescript: Skill = { level: 0.7, name: "CoffeeScript" };
+export const meteor: Skill = { level: 0.8, name: "Meteor" };
 export const nodejs: Skill = { level: 1.0, name: "Node.js" };
 export const rails: Skill = { level: 1.0, name: "Ruby on Rails" };
 export const ruby: Skill = { level: 1.0, name: "Ruby" };
@@ -83,22 +62,54 @@ export const typescript: Skill = { level: 1.0, name: "TypeScript" };
 // Backend / Data
 export const api: Skill = { level: 1.0, name: "API" };
 export const apollo: Skill = { level: 1.0, name: "Apollo GraphQL" };
-export const elasticsearch: Skill = { level: 0.7, name: "elasticsearch" };
+export const elasticsearch: Skill = { level: 0.6, name: "elasticsearch" };
 export const gql: Skill = { level: 1.0, name: "GraphQL" };
-export const mariadb: Skill = { level: 0.8, name: "MariaDB" };
-export const mysql: Skill = { level: 0.8, name: "MySQL" };
-export const mongodb: Skill = { level: 0.9, name: "MongoDB" };
-export const mssql: Skill = { level: 0.9, name: "Microsoft SQL" };
+export const mariadb: Skill = { level: 0.9, name: "MariaDB" };
+export const mongodb: Skill = { level: 0.8, name: "MongoDB" };
+export const mssql: Skill = { level: 0.8, name: "Microsoft SQL" };
+export const mysql: Skill = { level: 0.9, name: "MySQL" };
 export const psql: Skill = { level: 1.0, name: "PostgreSQL" };
 export const redis: Skill = { level: 0.8, name: "Redis" };
+export const supabase: Skill = { level: 1.0, name: "Supabase" };
+export const valkey: Skill = { level: 0.8, name: "Valkey" };
 
 // Backend / Deploy
 export const android: Skill = { level: 0.8, name: "Android" };
+export const capacitor: Skill = { level: 0.9, name: "Capacitor" };
 export const cordova: Skill = { level: 0.9, name: "Apache Cordova" };
 export const docker: Skill = { level: 0.9, name: "Docker" };
 export const git: Skill = { level: 1.0, name: "Git" };
 export const heroku: Skill = { level: 0.9, name: "Heroku" };
 export const ios: Skill = { level: 0.9, name: "iOS" };
+export const vercel: Skill = { level: 1.0, name: "Vercel" };
+
+// DevOps
+// DevOps / Compute
+export const beanstalk: Skill = { level: 0.9, name: "Beanstalk" };
+export const ec2: Skill = { level: 0.9, name: "EC2" };
+export const ecs: Skill = { level: 0.9, name: "ECS" };
+export const eks: Skill = { level: 1.0, name: "EKS" };
+export const fargate: Skill = { level: 0.6, name: "Fargate" };
+export const lambda: Skill = { level: 1.0, name: "Lambda" };
+
+// DevOps / Data
+export const aurora: Skill = { level: 1.0, name: "RDS Aurora" };
+export const dynamodb: Skill = { level: 0.8, name: "DynamoDB" };
+export const rds: Skill = { level: 1.0, name: "DB Service" };
+export const s3: Skill = { level: 1.0, name: "S3" };
+
+// DevOps / Flow
+export const apigateway: Skill = { level: 0.9, name: "API Gateway" };
+export const cloudfront: Skill = { level: 1.0, name: "CloudFront" };
+export const r53: Skill = { level: 1.0, name: "Route 53" };
+export const sns: Skill = { level: 0.9, name: "SNS" };
+export const kubernetes: Skill = { level: 1.0, name: "Kubernetes" };
+
+// DevOps / Management
+export const cloudformation: Skill = { level: 0.9, name: "CloudFormation" };
+export const cloudtrail: Skill = { level: 0.8, name: "CloudTrail" };
+export const cloudwatch: Skill = { level: 1.0, name: "CloudWatch" };
+export const iam: Skill = { level: 0.9, name: "IAM" };
 
 // Frontend
 // Frontend / Logic
@@ -107,32 +118,39 @@ export const browserify: Skill = { level: 0.8, name: "Browserify" };
 export const jquery: Skill = { level: 1.0, name: "jQuery" };
 export const js: Skill = { level: 1.0, name: "JavaScript" };
 export const websockets: Skill = { level: 0.8, name: "WebSockets" };
+export const nextjs: Skill = { level: 1.0, name: "Next.js" };
+export const reactQuery: Skill = { level: 1.0, name: "React Query" };
 
 // Frontend / Markup
 export const haml: Skill = { level: 0.9, name: "Haml" };
 export const handlebars: Skill = { level: 1.0, name: "Handlebars" };
 export const html: Skill = { level: 1.0, name: "HTML" };
-export const php: Skill = { level: 0.7, name: "PHP" };
 export const markdown: Skill = { level: 0.9, name: "Markdown" };
+export const php: Skill = { level: 0.7, name: "PHP" };
 export const react: Skill = { level: 1.0, name: "React" };
+export const svelte: Skill = { level: 0.8, name: "Svelte" };
 export const vuejs: Skill = { level: 0.9, name: "Vue.js" };
 
 // Frontend / Style
 export const css: Skill = { level: 1.0, name: "CSS" };
 export const less: Skill = { level: 0.7, name: "less" };
+export const pandaCSS: Skill = { level: 0.9, name: "PandaCSS" };
 export const scss: Skill = { level: 1.0, name: "Scss" };
+export const styledComponents: Skill = { level: 1.0, name: "Styled Components" };
 export const stylus: Skill = { level: 0.8, name: "Stylus" };
 export const svg: Skill = { level: 1.0, name: "SVG (Animations)" };
 
 // Frontend / Design
 export const afterEffects: Skill = { level: 0.3, name: "After Effects" };
 export const blender: Skill = { level: 0.5, name: "Blender" };
+export const figma: Skill = { level: 1.0, name: "Figma" };
 export const sketch: Skill = { level: 0.8, name: "Sketch" };
 export const ui: Skill = { level: 0.7, name: "User Interface" };
 export const ux: Skill = { level: 0.6, name: "User Experience" };
 
 // Misc
 export const teamlead: Skill = { level: 0.9, name: "Team Lead" };
+export const technicalLead: Skill = { level: 0.9, name: "Technical Lead" };
 export const security: Skill = { level: 0.9, name: "Security" };
 
 // Study
@@ -146,44 +164,70 @@ export const parallelExec: Skill = { level: 0.7, name: "Parallel Exec." };
 
 export const skills: SkillSet[] = [
   {
-    title: "AWS",
-    data: [
-      {
-        title: "Compute",
-        data: { beanstalk, ec2, ecs, fargate, lambda },
-      },
-      {
-        title: "Data",
-        data: { aurora, dynamodb, rds, s3 },
-      },
-      {
-        title: "Flow",
-        data: { apigateway, cloudfront, r53, sns },
-      },
-      {
-        title: "Management",
-        data: { cloudformation, cloudtrail, cloudwatch, iam },
-      },
-    ],
-  },
-  {
     title: "Backend",
     data: [
       {
         title: "CI",
-        data: { circleCI, jasmine, jenkins, jest, mocha, rspec, travis },
+        data: {
+          biome,
+          circleCI,
+          eslint,
+          jasmine,
+          jenkins,
+          jest,
+          cypress,
+          mocha,
+          playwright,
+          rspec,
+          travis,
+          vitest,
+        },
       },
       {
         title: "Code",
-        data: { asp, meteor, nodejs, rails, ruby, typescript },
+        data: { asp, coffeescript, meteor, nodejs, rails, ruby, typescript },
       },
       {
         title: "Data",
-        data: { api, apollo, elasticsearch, gql, mariadb, mysql, mongodb, mssql, psql, redis },
+        data: {
+          api,
+          apollo,
+          elasticsearch,
+          gql,
+          mariadb,
+          mysql,
+          mongodb,
+          mssql,
+          psql,
+          redis,
+          supabase,
+          valkey,
+        },
       },
       {
         title: "Deploy",
-        data: { android, cordova, docker, git, heroku, ios },
+        data: { android, capacitor, cordova, docker, git, heroku, ios, vercel },
+      },
+    ],
+  },
+  {
+    title: "DevOps",
+    data: [
+      {
+        title: "Compute",
+        data: { beanstalk, ec2, ecs, eks, fargate, lambda },
+      },
+      {
+        title: "Data",
+        data: { aurora, dynamodb, rds, s3, supabase },
+      },
+      {
+        title: "Flow",
+        data: { apigateway, cloudfront, r53, sns, supabase, kubernetes },
+      },
+      {
+        title: "Management",
+        data: { cloudformation, cloudtrail, cloudwatch, iam, supabase },
       },
     ],
   },
@@ -192,25 +236,25 @@ export const skills: SkillSet[] = [
     data: [
       {
         title: "Logic",
-        data: { backbone, browserify, jquery, js, websockets },
+        data: { backbone, browserify, jquery, js, nextjs, reactQuery, websockets },
       },
       {
         title: "Markup",
-        data: { haml, handlebars, html, php, markdown, react, vuejs },
+        data: { haml, handlebars, html, php, markdown, react, svelte, vuejs },
       },
       {
         title: "Style",
-        data: { css, less, scss, stylus, svg },
+        data: { css, less, pandaCSS, scss, styledComponents, stylus, svg },
       },
       {
         title: "Design",
-        data: { afterEffects, blender, sketch, ui, ux },
+        data: { afterEffects, blender, figma, sketch, ui, ux },
       },
     ],
   },
   {
     title: "Misc",
-    data: { teamlead, security },
+    data: { teamlead, technicalLead, security },
   },
   {
     title: "Study",
@@ -224,6 +268,80 @@ export const skills: SkillSet[] = [
 
 export const curriculumVitae: (Job | Education)[] = [
   {
+    company: "ServiceNow",
+    description: `
+      I joined ServiceNow as a Staff Software Engineer to build the next generation of the ServiceNow platform.
+      My core responsibility is to step up the software for the 21st century making it AI-powered and cloud-native.
+    `,
+    startsAt: new Date("2026-03-01"),
+    endsAt: undefined,
+    remote: false,
+    position: ["Staff Software Engineer"],
+    skills: {
+      typescript,
+      react,
+      styledComponents,
+      reactQuery,
+      figma,
+      playwright,
+      vitest,
+      eslint,
+      cypress,
+    },
+  },
+
+  {
+    company: "shyftplan GmbH",
+    description: `
+      After 10 years at shyftplan, I changed my role from people manager to technical lead.
+      I'm responsible for the technical direction of the company and the development of the products.
+    `,
+    startsAt: new Date("2024-06-01"),
+    endsAt: new Date("2026-02-28"),
+    remote: false,
+    position: ["Technical Lead", "Co-Founder"],
+    skills: {
+      typescript,
+      rds,
+      aurora,
+      nodejs,
+      eks,
+      android,
+      ios,
+      api,
+      rails,
+      psql,
+      redis,
+      supabase,
+    },
+  },
+
+  {
+    company: "Veza Technologies",
+    description: `
+      While covid hit the world, I started working as a remote software engineer at Veza Technologies.
+      I joined the company while it was in stealth just after the company was founded.
+      I was responsible for building the Access Graph - the heart of the product.
+      As for shyftplan, Nutanix and Novotrend, I was building the foundation to bootstrap the company.
+    `,
+    startsAt: new Date("2020-10-01"),
+    endsAt: new Date("2026-02-28"),
+    remote: false,
+    position: ["Staff Software Engineer"],
+    skills: {
+      typescript,
+      react,
+      styledComponents,
+      reactQuery,
+      figma,
+      playwright,
+      eslint,
+      jest,
+      cypress,
+    },
+  },
+
+  {
     company: "shyftplan GmbH",
     description: `
       I lead shyftplans Development, Tech and Automation. I'm responsible to
@@ -231,7 +349,7 @@ export const curriculumVitae: (Job | Education)[] = [
       Users at Germanys best shift planning and accounting Web Application.
     `,
     startsAt: new Date("2020-03-01"),
-    endsAt: undefined,
+    endsAt: new Date("2024-05-31"),
     remote: false,
     position: ["Chief Technology Officer", "Co-Founder"],
     skills: {
@@ -595,6 +713,62 @@ export const experiments: ShowCase[] = [
 
 export const projects: ShowCase[] = [
   {
+    name: "Easemate",
+    description: `
+      Together with Aaron and Jakub we are building Easemate.
+      A new and intuitive to generate complex and beautiful web animations.
+      My core responsibility is to build the advanced packages like Particle, Physics and Metrics.
+    `,
+    startsAt: new Date("2025"),
+    endsAt: undefined,
+    urls: ["https://ease.dev/"],
+    media: [],
+    skills: {
+      react,
+      typescript,
+      nodejs,
+      css,
+    },
+  },
+
+  {
+    name: "Lets Talk About",
+    description: `
+      I created the website lets-talk-about.io to quickly generate slides for presentations.
+      The website is open source and available at GitHub [https://github.com/tamino-martinius/lets-talk-about].
+      The website is built with React, TypeScript and is hosted as using Github pages.
+    `,
+    startsAt: new Date("2026"),
+    endsAt: undefined,
+    urls: ["https://www.lets-talk-about.io/", "https://npmjs.com/package/lets-talk-about"],
+    media: [],
+    skills: {
+      react,
+      typescript,
+      nodejs,
+      css,
+    },
+  },
+
+  {
+    name: "Central Icons",
+    description: `
+      Together with the iconists I build the Central Icons library and react packages.
+    `,
+    startsAt: new Date("2025"),
+    endsAt: undefined,
+    urls: ["https://centralicons.com/"],
+    media: [],
+    skills: {
+      react,
+      typescript,
+      nodejs,
+      css,
+      figma,
+    },
+  },
+
+  {
     name: "Hashflag Gallery",
     description: `
       I created the website hashflaggallery.com together with Andreas Storm.
@@ -603,7 +777,7 @@ export const projects: ShowCase[] = [
       Teach-Stack and Coding. Andreas is responsible for Design & Marketing.
     `,
     startsAt: new Date("2020-09-01"),
-    endsAt: undefined,
+    endsAt: new Date("2025"),
     urls: [
       "https://hashflaggallery.com",
       "https://codepen.io/collection/DoJqWO",
@@ -643,19 +817,26 @@ export const projects: ShowCase[] = [
   },
 
   {
-    name: "GitHub Commit Vizualization",
+    name: "GitHub & NPM Metrics",
     description: `
-      I build a lambda function wich regulary checks my GitHub account for new
-      commits and display them at [contributions.tamino.dev]. The data fetching
-      and the UI are both open source available at GitHub
+      I published packages for github [https://github.com/tamino-martinius/node-get-all-github-contributions]
+      and npm [https://github.com/tamino-martinius/node-get-all-npm-contributions]
+      to get all my GitHub and npm contributions.
+      Additional there are github repositories which have a cron and an encrypred
+      storage to regularly fetch the data and store it in a database.
+      Finally there is a website which displays the metrics in a beautiful way.
+      All data can be watched at [metrics.tamino.dev].
     `,
     startsAt: new Date("2017"),
     endsAt: undefined,
     urls: [
-      "https://contributions.tamino.dev/",
+      "https://metrics.tamino.dev/",
       "https://dribbble.com/shots/4884965-GitHub-Contribution-Visualization",
-      "https://github.com/tamino-martinius/contributions.taminomartinius.de",
-      "https://github.com/tamino-martinius/lambda-get-all-github-contributions",
+      "https://github.com/tamino-martinius/metrics.tamino.dev",
+      "https://github.com/tamino-martinius/node-get-all-github-contributions",
+      "https://github.com/tamino-martinius/node-get-all-npm-contributions",
+      "https://github.com/tamino-martinius/github-stats",
+      "https://github.com/tamino-martinius/npm-stats",
     ],
     media: [],
     skills: {
@@ -675,10 +856,10 @@ export const projects: ShowCase[] = [
     name: "Squoint",
     description: `
       Squoint is a puzzle game which is optimized for mobile devices and touch
-      gestures. The game is currently in closed beta and will be launched soon.
+      gestures.
     `,
     startsAt: new Date("2017"),
-    endsAt: undefined,
+    endsAt: new Date("2020"),
     urls: ["https://squoint.com"],
     media: [],
     skills: {
@@ -700,9 +881,10 @@ export const projects: ShowCase[] = [
       Colourcode was created to make my life easier to create Websites for my
       customers. With colourcode i was able to find quickly new color schemes
       which match to the corporate identity of my clients.
+      This project got aquired by TopTal in 2020.
     `,
     startsAt: new Date("2013"),
-    endsAt: undefined,
+    endsAt: new Date("2020"),
     urls: ["https://colourco.de/", "https://github.com/tamino-martinius/colourco.de"],
     media: [],
     skills: {
@@ -727,7 +909,7 @@ export const projects: ShowCase[] = [
       a wordpress plugin.
     `,
     startsAt: new Date("2017"),
-    endsAt: undefined,
+    endsAt: new Date("2025"),
     urls: ["https://nextparticle.nextco.de/"],
     media: [],
     skills: {
