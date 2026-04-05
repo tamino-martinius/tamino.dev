@@ -52,8 +52,8 @@ export interface SkillSet {
 }
 
 export class State {
-  currentLanguage: Language;
-  currentLanguageHelper: LanguageHelper;
+  currentLanguage!: Language;
+  currentLanguageHelper!: LanguageHelper;
 
   private getLanguageClass(lang: Language): string {
     return `lang-${Language[lang]}`;
@@ -73,15 +73,15 @@ export class State {
     const title = document.title.substr(0, document.title.length - 2);
     switch (lang) {
       case Language.ruby: {
-        document.title = title + 'rb';
+        document.title = `${title}rb`;
         break;
       }
       case Language.typescript: {
-        document.title = title + 'ts';
+        document.title = `${title}ts`;
         break;
       }
       case Language.javascript: {
-        document.title = title + 'js';
+        document.title = `${title}js`;
         break;
       }
     }
@@ -92,22 +92,22 @@ export class LanguageHelper {
   constructor(private language: Language) {}
 
   get commentChar() {
-    return this.language === Language.ruby ? '#' : '*';
+    return this.language === Language.ruby ? "#" : "*";
   }
 
   get commentEnd() {
-    return this.language === Language.ruby ? '#' : '/';
+    return this.language === Language.ruby ? "#" : "/";
   }
 
   get multilineString() {
-    return this.language === Language.ruby ? "'" : '`';
+    return this.language === Language.ruby ? "'" : "`";
   }
 
   get comment() {
-    return this.language === Language.ruby ? '#' : '//';
+    return this.language === Language.ruby ? "#" : "//";
   }
 
   get undefined() {
-    return this.language === Language.ruby ? 'nil' : 'undefined';
+    return this.language === Language.ruby ? "nil" : "undefined";
   }
 }

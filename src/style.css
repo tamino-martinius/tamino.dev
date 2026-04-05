@@ -1,0 +1,140 @@
+body.theme-1 {
+  --color-background: #282C34;
+  --color-white-space: #3C4049;
+  --color-collapsed: #3C4049;
+  --color-comment: #5C6370;
+  --color-variable: #ABB2BF;
+  --color-expression: #ABB2BF;
+  --color-storage-type: #C678DD;
+  --color-keyword: #61AFEF;
+  --color-type: #E5C07B;
+  --color-class: #E5C07B;
+  --color-string: #98C379;
+  --color-constant: #D19A66;
+  --color-number: #D19A66;
+}
+
+body.theme-2 {
+  --color-background: #FAFAFA;
+  --color-white-space: #D3D4D5;
+  --color-collapsed: #D3D4D5;
+  --color-comment: #A0A1A7;
+  --color-variable: #383A42;
+  --color-expression: #383A42;
+  --color-storage-type: #A626A4;
+  --color-keyword: #4078F2;
+  --color-type: #C18401;
+  --color-class: #C18401;
+  --color-string: #50A14F;
+  --color-constant: #986801;
+  --color-number: #986801;
+
+  --color-zsh-text: #909197;
+  --color-zsh-path-background: #2E8CCF;
+  --color-zsh-path-foreground: #000;
+  --color-zsh-branch-background: #85981C;
+  --color-zsh-branch-foreground: #000;
+  --color-zsh-command-valid: #75880C;
+  --color-zsh-command-invalid: #C14C22;
+  --color-zsh-args: #383A42;
+  --color-zsh-args-autocomplete: #606167;
+}
+
+.line {
+  font-size: 0;
+  height: 1.3rem;
+}
+.line a,
+.line span {
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+}
+.line div {
+  display: inline-block;
+}
+
+.space:before {
+  content: '·';
+}
+.white-space { color: var(--color-white-space); }
+.comment { color: var(--color-comment); }
+.variable { color: var(--color-variable); }
+.expression { color: var(--color-expression); }
+.storage-type { color: var(--color-storage-type); }
+.keyword { color: var(--color-keyword); }
+.type { color: var(--color-type); }
+.class { color: var(--color-class); }
+.string { color: var(--color-string); }
+.string a { color: var(--color-string); }
+.constant { color: var(--color-constant); }
+.number { color: var(--color-number); }
+.collapsed { color: var(--color-collapsed); }
+
+.tab { box-shadow: -1px 0 0 var(--color-white-space); }
+
+.storage-type {
+  font-style: italic;
+}
+
+.progress {
+  display: inline-block;
+  position: relative;
+}
+.progress:before,
+.progress:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: #abb;
+}
+.progress:after {
+  width: calc(var(--value) * 100%);
+  background: red;
+  filter: hue-rotate(calc(120deg * var(--value)));
+}
+
+.legal,
+.skillset,
+.stage {
+  cursor: n-resize;
+}
+.legal.collapsed,
+.skillset.collapsed,
+.stage.collapsed {
+  cursor: s-resize;
+}
+
+.section .collapsible {
+  max-width: 0;
+  opacity: 0;
+}
+.section .selectable:not(.active) {
+  color: var(--color-white-space);
+}
+.section .selectable:not(.active):hover {
+  color: var(--color-comment);
+  cursor: pointer;
+}
+.section .selectable:not(.active):hover:before,
+.section .selectable:not(.active):hover:after {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--color-background);
+  color: var(--color-expression);
+}
+.section .selectable:not(.active):hover:before {
+  content: '[';
+  transform: translateX(-100%);
+}
+.section .selectable:not(.active):hover:after {
+  content: ']';
+  left: 100%;
+}
+.section:hover .collapsible {
+  max-width: 100%;
+  opacity: 1;
+}
