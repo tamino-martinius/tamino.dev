@@ -24,11 +24,14 @@ export const postalCode = "06847";
 export const city = "Dessau";
 export const emails: string[] = ["io@tamino.dev", "dev@tamino.io", "im-not-a-recruiter@tamino.dev"];
 export const socialNetworks: { [key: string]: string } = {
-  github: "https://github.com/tamino-martinius",
   codepen: "https://codepen.io/TaminoMartinius/",
   dribbble: "https://dribbble.com/TaminoMartinius",
   twitter: "https://twitter.com/TaminoMartinius",
   linkedin: "https://www.linkedin.com/in/tamino-martinius",
+};
+export const links: { [key: string]: string } = {
+  github: "https://github.com/tamino-martinius",
+  metrics: "https://metrics.tamino.dev/",
 };
 
 /*********
@@ -738,7 +741,7 @@ export const projects: ShowCase[] = [
       The website is open source and available at GitHub [https://github.com/tamino-martinius/lets-talk-about].
       The website is built with React, TypeScript and is hosted as using Github pages.
     `,
-    startsAt: new Date("2026"),
+    startsAt: new Date("2025"),
     endsAt: undefined,
     urls: ["https://www.lets-talk-about.io/", "https://npmjs.com/package/lets-talk-about"],
     media: [],
@@ -765,6 +768,25 @@ export const projects: ShowCase[] = [
       nodejs,
       css,
       figma,
+    },
+  },
+
+  {
+    name: "Shorticons",
+    description: `
+      I created the website shorticons.com together with Andreas Storm and Martin David.
+      This site contains a collection of icons which can be used for shortcuts on iOS and Android.
+      The website is built with React, TypeScript. The icon collection later evolved to centralicons.com.
+    `,
+    startsAt: new Date("2020"),
+    endsAt: new Date("2022"),
+    urls: ["https://shorticons.com/", "https://x.com/shorticons"],
+    media: [],
+    skills: {
+      react,
+      typescript,
+      nodejs,
+      css,
     },
   },
 
@@ -1059,7 +1081,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2020"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--new-js-features--2020",
-      "https://new-js-features--2020.lets-talk-about.tamino.dev",
+      "https://new-js-features--2020-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1077,7 +1099,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2019"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--cdk",
-      "https://cdk.lets-talk-about.tamino.dev",
+      "https://cdk-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1095,7 +1117,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2019"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--new-js-features--2019",
-      "https://new-js-features--2019.lets-talk-about.tamino.dev",
+      "https://new-js-features--2019-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1113,7 +1135,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2018"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--sam",
-      "https://sam.lets-talk-about.tamino.dev",
+      "https://sam-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1132,7 +1154,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2018"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--api",
-      "https://api.lets-talk-about.tamino.dev",
+      "https://api-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1153,7 +1175,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2018"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--new-js-features--2018",
-      "https://new-js-features--2018.lets-talk-about.tamino.dev",
+      "https://new-js-features--2018-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1173,11 +1195,52 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2018"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--sql-query-performance",
-      "https://sql-query-performance.lets-talk-about.tamino.dev",
+      "https://sql-query-performance-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
       psql,
+      nodejs,
+      html,
+      stylus,
+    },
+  },
+
+  {
+    name: "Lets talk about ... Never Change a Running System",
+    description: `
+      A talk about the importance of not changing a running system.
+      The talk is about introducing scrum and agile development to the team.
+      This Talk was a internal presentation for shyftplan.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: new Date("2018"),
+    urls: [
+      "https://github.com/tamino-martinius/lets-talk-about--never-change-a-running-system",
+      "https://never-change-a-running-system-lets-talk-about.tamino.dev",
+    ],
+    media: [],
+    skills: {
+      teamlead,
+      technicalLead,
+    },
+  },
+
+  {
+    name: "Lets talk about ... API Workshop",
+    description: `
+      A workshop in building an API with AWS API Gateway and Lambda.
+      This Talk was a internal presentation for shyftplan.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: new Date("2018"),
+    urls: [
+      "https://github.com/tamino-martinius/lets-talk-about--api-workshop-1",
+      "https://api-workshop-1-lets-talk-about.tamino.dev",
+    ],
+    media: [],
+    skills: {
+      api,
       nodejs,
       html,
       stylus,
@@ -1195,7 +1258,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2017"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--graphql",
-      "https://graphql.lets-talk-about.tamino.dev",
+      "https://graphql-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1216,7 +1279,7 @@ export const talks: ShowCase[] = [
     endsAt: new Date("2017"),
     urls: [
       "https://github.com/tamino-martinius/lets-talk-about--typescript",
-      "https://typescript.lets-talk-about.tamino.dev",
+      "https://typescript-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1228,16 +1291,16 @@ export const talks: ShowCase[] = [
   },
 
   {
-    name: "Lets talk about ... Template",
+    name: "Lets talk about ... Example",
     description: `
-      A template with example slides. Thats my base branch with which i create
+      A example slides. Thats my base branch with which i create
       my slides for presentations.
     `,
     startsAt: new Date("2017"),
     endsAt: undefined,
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--template",
       "https://github.com/tamino-martinius/lets-talk-about--example",
+      "https://example-lets-talk-about.tamino.dev",
     ],
     media: [],
     skills: {
@@ -1254,6 +1317,196 @@ export const talks: ShowCase[] = [
  ***********/
 
 export const packages: ShowCase[] = [
+  {
+    name: "Get all npm Contributions",
+    description: `
+      Get all npm contributions and download statistics for a given user.
+    `,
+    startsAt: new Date("2026"),
+    endsAt: undefined,
+    urls: [
+      "https://github.com/tamino-martinius/node-get-all-npm-contributions",
+      "https://www.npmjs.com/package/get-all-npm-contributions",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      api,
+    },
+  },
+
+  {
+    name: "Get all GitHub Contributions",
+    description: `
+      Get all GitHub contributions for a given user using the GitHub GraphQL API.
+    `,
+    startsAt: new Date("2026"),
+    endsAt: undefined,
+    urls: [
+      "https://github.com/tamino-martinius/node-get-all-github-contributions",
+      "https://www.npmjs.com/package/get-all-github-contributions",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      gql,
+      api,
+    },
+  },
+
+  {
+    name: "Lets talk about",
+    description: `
+      Easily create slides from Markdown. Customize your slides with HTML and CSS.
+      Host your slides for free on GitHub Pages.
+    `,
+    startsAt: new Date("2026"),
+    endsAt: undefined,
+    urls: [
+      "https://github.com/tamino-martinius/lets-talk-about",
+      "https://www.npmjs.com/package/lets-talk-about",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      markdown,
+      html,
+      css,
+    },
+  },
+
+  {
+    name: "Central Icons React",
+    description: `
+      A comprehensive collection of professionally designed React icons featuring
+      customizable styles including round and square shapes, filled and outlined
+      variants, multiple stroke widths, and corner radius options.
+    `,
+    startsAt: new Date("2025"),
+    endsAt: undefined,
+    urls: ["https://www.npmjs.com/package/@central-icons-react/all", "https://iconists.co/central"],
+    media: [],
+    skills: {
+      react,
+      typescript,
+      nodejs,
+      svg,
+    },
+  },
+
+  {
+    name: "Central Icons React Native",
+    description: `
+      A collection of professionally designed React Native / Expo icons with
+      customizable styles including round and square shapes, filled and outlined
+      variants, multiple stroke widths, and corner radius options.
+    `,
+    startsAt: new Date("2025"),
+    endsAt: undefined,
+    urls: [
+      "https://www.npmjs.com/package/@central-icons-react-native/square-outlined-radius-0-stroke-1",
+      "https://iconists.co/central",
+    ],
+    media: [],
+    skills: {
+      react,
+      typescript,
+      nodejs,
+      svg,
+    },
+  },
+
+  {
+    name: "Nextcode Postgres Migrator",
+    description: `
+      Postgres migration packages with zero dependencies. Includes a base migrator,
+      a PostgreSQL specific migrator, and a CLI for running migrations.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: new Date("2020"),
+    urls: [
+      "https://github.com/tamino-martinius/node-migrator",
+      "https://github.com/tamino-martinius/node-pg-migrator",
+      "https://www.npmjs.com/package/@nextcode/migrator",
+      "https://www.npmjs.com/package/@nextcode/pg-migrator",
+      "https://www.npmjs.com/package/@nextcode/postgres-migrator",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      psql,
+    },
+  },
+
+  {
+    name: "CDK Lambda Layers",
+    description: `
+      AWS CDK Lambda Layer constructs for Node.js. Provides pre-built layers
+      for aws-sdk, postgres, and JWT packages.
+    `,
+    startsAt: new Date("2019"),
+    endsAt: new Date("2020"),
+    urls: [
+      "https://github.com/tamino-martinius/cdk-lambda-layers--node-aws-sdk",
+      "https://github.com/tamino-martinius/cdk-lambda-layers--node-postgres",
+      "https://github.com/tamino-martinius/cdk-lambda-layers--node-jwt",
+      "https://www.npmjs.com/package/@cdk-lambda-layers/node-aws-sdk",
+      "https://www.npmjs.com/package/@cdk-lambda-layers/node-postgres",
+      "https://www.npmjs.com/package/@cdk-lambda-layers/node-jwt",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      lambda,
+      psql,
+    },
+  },
+
+  {
+    name: "ts-dedent",
+    description: `
+      TypeScript package which smartly trims and strips indentation from
+      multi-line strings.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: undefined,
+    urls: [
+      "https://github.com/tamino-martinius/node-ts-dedent",
+      "https://www.npmjs.com/package/ts-dedent",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+    },
+  },
+
+  {
+    name: "GitHub GraphQL API",
+    description: `
+      A node client for the GitHub GraphQL API with minimal dependencies
+      created with TypeScript.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: new Date("2018"),
+    urls: [
+      "https://github.com/tamino-martinius/node-github-graphql-api",
+      "https://www.npmjs.com/package/github-graphql-api",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      gql,
+      api,
+    },
+  },
+
   {
     name: "Lets talk about ... Template",
     description: `

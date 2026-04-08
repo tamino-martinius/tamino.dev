@@ -1,11 +1,11 @@
 export enum Section {
   Profile,
-  Skills,
   CurriculumVitae,
-  Experiments,
   Projects,
   Talks,
   Packages,
+  Skills,
+  Experiments,
   Misc,
 }
 

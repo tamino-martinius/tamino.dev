@@ -5,12 +5,14 @@ import Section from "./Section";
 import StringValue from "./StringValue";
 import Url from "./Url";
 import Variable from "./Variable";
+import Comment from "./Comment";
 
 interface ProfileData {
   myName: string;
   profession: string;
   emails: string[];
   socialNetworks: { [key: string]: string };
+  links: { [key: string]: string };
 }
 
 export default function Profile({ data }: { data: ProfileData }) {
@@ -32,13 +34,19 @@ export default function Profile({ data }: { data: ProfileData }) {
         <StringValue value={email} />
       </Variable>
       <CodeLine />
-      {Object.entries(data.socialNetworks).map(([name, url]) => (
+      <Comment comment="Links" />
+      {Object.entries(data.links).map(([name, url]) => (
         <Variable key={name} name={name}>
           <Url value={url} />
         </Variable>
       ))}
       <CodeLine />
-      <CodeLine />
+      <Comment comment="Social Networks" />
+      {Object.entries(data.socialNetworks).map(([name, url]) => (
+        <Variable key={name} name={name}>
+          <Url value={url} />
+        </Variable>
+      ))}
     </div>
   );
 }
