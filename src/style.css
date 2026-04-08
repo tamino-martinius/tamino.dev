@@ -108,6 +108,79 @@ body.theme-2 {
   cursor: s-resize;
 }
 
+.command-line {
+  color: var(--color-zsh-text);
+  padding-bottom: 0.5rem;
+}
+
+.command-line .path {
+  background-color: var(--color-zsh-path-background);
+  color: var(--color-zsh-path-foreground);
+  padding-right: 1rem;
+}
+
+.command-line .branch {
+  background-color: var(--color-zsh-branch-background);
+  color: var(--color-zsh-branch-foreground);
+  padding-right: 1rem;
+}
+
+.command-line .branch:before,
+.command-line .command:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 0.6rem solid transparent;
+  vertical-align: -0.25rem;
+}
+
+.command-line .branch:before {
+  border-left-color: var(--color-zsh-path-background);
+}
+
+.command-line .command:before {
+  border-left-color: var(--color-zsh-branch-background);
+}
+
+.command-line .command {
+  color: var(--color-zsh-command-valid);
+}
+
+.lang-select .collapsible {
+  max-width: 0;
+  opacity: 0;
+}
+.lang-select .selectable.active {
+  color: var(--color-zsh-args);
+}
+.lang-select .selectable:not(.active) {
+  color: var(--color-white-space);
+}
+.lang-select .selectable:not(.active):hover {
+  color: var(--color-zsh-args);
+  cursor: pointer;
+}
+.lang-select .selectable:not(.active):hover:before,
+.lang-select .selectable:not(.active):hover:after {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--color-background);
+  color: var(--color-expression);
+}
+.lang-select .selectable:not(.active):hover:before {
+  content: '[';
+  transform: translateX(-100%);
+}
+.lang-select .selectable:not(.active):hover:after {
+  content: ']';
+  left: 100%;
+}
+.lang-select:hover .collapsible {
+  max-width: 100%;
+  opacity: 1;
+}
+
 .section .collapsible {
   max-width: 0;
   opacity: 0;

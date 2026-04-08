@@ -1,4 +1,5 @@
 import CodeLine from "./components/CodeLine";
+import CommandLine from "./components/CommandLine";
 import CurriculumVitae from "./components/CurriculumVitae";
 import Legal from "./components/Legal";
 import Profile from "./components/Profile";
@@ -11,6 +12,7 @@ import { Section } from "./data_types";
 export default function App() {
   return (
     <>
+      <CommandLine />
       <CodeLine />
       <Profile data={data} />
       <CodeLine />
