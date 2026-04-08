@@ -123,6 +123,7 @@ export const js: Skill = { level: 1.0, name: "JavaScript" };
 export const websockets: Skill = { level: 0.8, name: "WebSockets" };
 export const nextjs: Skill = { level: 1.0, name: "Next.js" };
 export const reactQuery: Skill = { level: 1.0, name: "React Query" };
+export const vite: Skill = { level: 1.0, name: "Vite" };
 
 // Frontend / Markup
 export const haml: Skill = { level: 0.9, name: "Haml" };
@@ -239,7 +240,7 @@ export const skills: SkillSet[] = [
     data: [
       {
         title: "Logic",
-        data: { backbone, browserify, jquery, js, nextjs, reactQuery, websockets },
+        data: { backbone, browserify, jquery, js, nextjs, reactQuery, vite, websockets },
       },
       {
         title: "Markup",
@@ -688,6 +689,98 @@ export const experiments: ShowCase[] = [
   },
 
   {
+    name: "ASCII Art Generator",
+    description: `
+      Create ASCII Art from any Image and play around with the different settings.
+      Uses CSS background-clip to place a layer of characters on top of images.
+    `,
+    startsAt: new Date("2018-08-13"),
+    endsAt: new Date("2018-08-17"),
+    urls: [
+      "https://github.com/tamino-martinius/ui-snippets-ascii-generator",
+    ],
+    media: [],
+    skills: {
+      css,
+      html,
+      typescript,
+    },
+  },
+
+  {
+    name: "Starfield",
+    description: `
+      A starfield effect experiment rendered on canvas.
+    `,
+    startsAt: new Date("2018-08-20"),
+    endsAt: new Date("2018-08-30"),
+    urls: [
+      "https://github.com/tamino-martinius/ui-snippets-starfield",
+    ],
+    media: [],
+    skills: {
+      html,
+      js,
+    },
+  },
+
+  {
+    name: "Git Loading Animation",
+    description: `
+      A git-themed loading animation experiment.
+    `,
+    startsAt: new Date("2018-07-27"),
+    endsAt: new Date("2018-07-27"),
+    urls: [
+      "https://github.com/tamino-martinius/ui-snippets-git-loading",
+    ],
+    media: [],
+    skills: {
+      svg,
+      css,
+      html,
+    },
+  },
+
+  {
+    name: "Checkbox Animations",
+    description: `
+      Custom animated checkbox designs.
+    `,
+    startsAt: new Date("2018-05-15"),
+    endsAt: new Date("2018-05-18"),
+    urls: [
+      "https://github.com/tamino-martinius/ui-snippets-checkboxes",
+    ],
+    media: [],
+    skills: {
+      svg,
+      ui,
+      css,
+      html,
+    },
+  },
+
+  {
+    name: "Radiobutton Animations",
+    description: `
+      Custom animated radiobutton designs.
+    `,
+    startsAt: new Date("2018-05-18"),
+    endsAt: new Date("2018-05-18"),
+    urls: [
+      "https://github.com/tamino-martinius/ui-snippets-radiobuttons",
+    ],
+    media: [],
+    skills: {
+      svg,
+      ui,
+      css,
+      html,
+    },
+  },
+
+  {
     name: "After Effects/Blender Render",
     description: `
       Some of my dribbble shots are rendered with Blender and After Effects.
@@ -731,6 +824,7 @@ export const projects: ShowCase[] = [
       typescript,
       nodejs,
       css,
+      svg,
     },
   },
 
@@ -750,6 +844,8 @@ export const projects: ShowCase[] = [
       typescript,
       nodejs,
       css,
+      markdown,
+      git,
     },
   },
 
@@ -767,6 +863,7 @@ export const projects: ShowCase[] = [
       typescript,
       nodejs,
       css,
+      svg,
       figma,
     },
   },
@@ -787,6 +884,9 @@ export const projects: ShowCase[] = [
       typescript,
       nodejs,
       css,
+      svg,
+      ios,
+      android,
     },
   },
 
@@ -867,9 +967,8 @@ export const projects: ShowCase[] = [
       nodejs,
       lambda,
       typescript,
-      stylus,
-      html,
-      vuejs,
+      react,
+      vite,
       git,
     },
   },
@@ -941,6 +1040,7 @@ export const projects: ShowCase[] = [
       nodejs,
       psql,
       typescript,
+      php,
       html,
       stylus,
       vuejs,
@@ -1015,6 +1115,7 @@ export const projects: ShowCase[] = [
       nodejs,
       handlebars,
       meteor,
+      mongodb,
       stylus,
       websockets,
     },
@@ -1085,7 +1186,9 @@ export const talks: ShowCase[] = [
     ],
     media: [],
     skills: {
+      js,
       nodejs,
+      markdown,
     },
   },
 
@@ -1104,6 +1207,10 @@ export const talks: ShowCase[] = [
     media: [],
     skills: {
       nodejs,
+      typescript,
+      cloudformation,
+      lambda,
+      markdown,
     },
   },
 
@@ -1121,7 +1228,9 @@ export const talks: ShowCase[] = [
     ],
     media: [],
     skills: {
+      js,
       nodejs,
+      markdown,
     },
   },
 
@@ -1141,6 +1250,9 @@ export const talks: ShowCase[] = [
     skills: {
       nodejs,
       lambda,
+      apigateway,
+      cloudformation,
+      markdown,
     },
   },
 
@@ -1160,8 +1272,7 @@ export const talks: ShowCase[] = [
     skills: {
       api,
       nodejs,
-      html,
-      stylus,
+      markdown,
     },
   },
 
@@ -1179,7 +1290,9 @@ export const talks: ShowCase[] = [
     ],
     media: [],
     skills: {
+      js,
       nodejs,
+      markdown,
     },
   },
 
@@ -1201,8 +1314,7 @@ export const talks: ShowCase[] = [
     skills: {
       psql,
       nodejs,
-      html,
-      stylus,
+      markdown,
     },
   },
 
@@ -1223,6 +1335,7 @@ export const talks: ShowCase[] = [
     skills: {
       teamlead,
       technicalLead,
+      markdown,
     },
   },
 
@@ -1241,9 +1354,10 @@ export const talks: ShowCase[] = [
     media: [],
     skills: {
       api,
+      apigateway,
+      lambda,
       nodejs,
-      html,
-      stylus,
+      markdown,
     },
   },
 
@@ -1264,8 +1378,7 @@ export const talks: ShowCase[] = [
     skills: {
       gql,
       nodejs,
-      html,
-      stylus,
+      markdown,
     },
   },
 
@@ -1285,8 +1398,7 @@ export const talks: ShowCase[] = [
     skills: {
       typescript,
       nodejs,
-      html,
-      stylus,
+      markdown,
     },
   },
 
@@ -1304,10 +1416,8 @@ export const talks: ShowCase[] = [
     ],
     media: [],
     skills: {
-      api,
       nodejs,
-      html,
-      stylus,
+      markdown,
     },
   },
 ];
@@ -1416,6 +1526,27 @@ export const packages: ShowCase[] = [
       typescript,
       nodejs,
       svg,
+      ios,
+      android,
+    },
+  },
+
+  {
+    name: "Nextcode Postgres Model",
+    description: `
+      Postgres model layer package with zero dependencies.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: new Date("2018"),
+    urls: [
+      "https://github.com/tamino-martinius/node-pg-model",
+      "https://www.npmjs.com/package/@nextcode/pg-model",
+    ],
+    media: [],
+    skills: {
+      nodejs,
+      typescript,
+      psql,
     },
   },
 
@@ -1544,6 +1675,7 @@ export const packages: ShowCase[] = [
       "https://github.com/tamino-martinius/node-next-model-api-server-express",
       "https://github.com/tamino-martinius/node-next-model-local-storage-connector",
       "https://github.com/tamino-martinius/node-next-model-api-client-connector",
+      "https://github.com/tamino-martinius/node-next-model-data-api-connector",
     ],
     media: [],
     skills: {
@@ -1652,6 +1784,19 @@ export const misc: ShowCase[] = [
     skills: {
       docker,
     },
+  },
+
+  {
+    name: "VS Code Spacebars language",
+    description: `
+      This VS Code extension enables syntax highlighting of Meteors Spacebars
+      language. Successor to the Atom package.
+    `,
+    startsAt: new Date("2018"),
+    endsAt: new Date("2020"),
+    urls: ["https://github.com/tamino-martinius/vscode-language-spacebars"],
+    media: [],
+    skills: {},
   },
 
   {
