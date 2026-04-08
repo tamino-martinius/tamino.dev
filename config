@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-export AWS_BUCKET_NAME="taminomartinius.de"
-export AWS_REGION="eu-central-1"
-export AWS_PROFILE="nextcode"
-export AWS_CLOUDFRONT_ID="EK18IV2AZQKUM"
