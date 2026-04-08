@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 import { Section as SectionEnum } from "../data_types";
 import CodeLine from "./CodeLine";
+import Comment from "./Comment";
 import Section from "./Section";
 import StringValue from "./StringValue";
 import Url from "./Url";
 import Variable from "./Variable";
-import Comment from "./Comment";
 
 interface ProfileData {
   myName: string;

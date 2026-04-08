@@ -696,9 +696,7 @@ export const experiments: ShowCase[] = [
     `,
     startsAt: new Date("2018-08-13"),
     endsAt: new Date("2018-08-17"),
-    urls: [
-      "https://github.com/tamino-martinius/ui-snippets-ascii-generator",
-    ],
+    urls: ["https://github.com/tamino-martinius/ui-snippets-ascii-generator"],
     media: [],
     skills: {
       css,
@@ -714,9 +712,7 @@ export const experiments: ShowCase[] = [
     `,
     startsAt: new Date("2018-08-20"),
     endsAt: new Date("2018-08-30"),
-    urls: [
-      "https://github.com/tamino-martinius/ui-snippets-starfield",
-    ],
+    urls: ["https://github.com/tamino-martinius/ui-snippets-starfield"],
     media: [],
     skills: {
       html,
@@ -731,9 +727,7 @@ export const experiments: ShowCase[] = [
     `,
     startsAt: new Date("2018-07-27"),
     endsAt: new Date("2018-07-27"),
-    urls: [
-      "https://github.com/tamino-martinius/ui-snippets-git-loading",
-    ],
+    urls: ["https://github.com/tamino-martinius/ui-snippets-git-loading"],
     media: [],
     skills: {
       svg,
@@ -749,9 +743,7 @@ export const experiments: ShowCase[] = [
     `,
     startsAt: new Date("2018-05-15"),
     endsAt: new Date("2018-05-18"),
-    urls: [
-      "https://github.com/tamino-martinius/ui-snippets-checkboxes",
-    ],
+    urls: ["https://github.com/tamino-martinius/ui-snippets-checkboxes"],
     media: [],
     skills: {
       svg,
@@ -768,9 +760,7 @@ export const experiments: ShowCase[] = [
     `,
     startsAt: new Date("2018-05-18"),
     endsAt: new Date("2018-05-18"),
-    urls: [
-      "https://github.com/tamino-martinius/ui-snippets-radiobuttons",
-    ],
+    urls: ["https://github.com/tamino-martinius/ui-snippets-radiobuttons"],
     media: [],
     skills: {
       svg,
