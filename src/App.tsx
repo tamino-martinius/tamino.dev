@@ -18,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     // Wait for the loading animation to finish before setting up observers
-    function onAnimationDone() {
+    function onAnimationDone(): IntersectionObserver {
       const sections = document.querySelectorAll<HTMLElement>(".section[data-value]");
 
       // Scroll to hash target on deep link (section or entry)
@@ -44,7 +44,9 @@ export default function App() {
       // Update hash on scroll — pick the topmost section still visible
       let suppressHashUpdate = !!initialHash;
       if (suppressHashUpdate) {
-        setTimeout(() => { suppressHashUpdate = false; }, 500);
+        setTimeout(() => {
+          suppressHashUpdate = false;
+        }, 500);
       }
 
       const onScroll = () => {
@@ -63,7 +65,7 @@ export default function App() {
 
       window.addEventListener("scroll", onScroll, { passive: true });
 
-      return { disconnect: () => window.removeEventListener("scroll", onScroll) };
+      return new IntersectionObserver(onScroll);
     }
 
     if (document.body.classList.contains("step-7")) {
