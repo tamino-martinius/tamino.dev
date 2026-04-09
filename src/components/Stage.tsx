@@ -9,20 +9,24 @@ import MultiLineString from "./MultiLineString";
 import Tab from "./Tab";
 import VariableName from "./VariableName";
 
+const initialHash = decodeURIComponent(window.location.hash.slice(1));
+
 export default function Stage({
   data,
   abbreviation,
   isLast,
   className,
+  entryId,
   children,
 }: {
   data: StageType;
   abbreviation: string;
   isLast: boolean;
   className?: string;
+  entryId?: string;
   children?: ReactNode;
 }) {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(!entryId || initialHash !== entryId);
   const { isRuby, languageHelper } = useAppContext();
 
   const toggle = (e: React.MouseEvent) => {
@@ -33,6 +37,7 @@ export default function Stage({
   return (
     <div
       className={`stage${collapsed ? " collapsed" : ""}${className ? ` ${className}` : ""}`}
+      data-entry={entryId}
       onClick={toggle}
     >
       {collapsed ? (

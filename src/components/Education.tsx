@@ -15,6 +15,7 @@ export default function Education({ data, isLast }: { data: EducationType; isLas
       abbreviation={`${startYear}-${endYear} - ${data.university} - ${data.graduiation}`}
       data={data}
       isLast={isLast}
+      entryId={data.university}
     >
       <CodeLine>
         <Tab />

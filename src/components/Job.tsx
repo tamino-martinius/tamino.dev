@@ -23,6 +23,7 @@ export default function Job({ data, isLast }: { data: JobType; isLast: boolean }
       abbreviation={`${startYear}-${endYear} - ${data.company} - ${mainPosition}`}
       data={data}
       isLast={isLast}
+      entryId={data.company}
     >
       <CodeLine>
         <Tab />

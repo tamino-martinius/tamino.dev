@@ -8,7 +8,7 @@ import VariableName from "./VariableName";
 
 export default function ShowCase({ data, isLast }: { data: ShowCaseType; isLast: boolean }) {
   return (
-    <Stage className="show-case" abbreviation={data.name} data={data} isLast={isLast}>
+    <Stage className="show-case" abbreviation={data.name} data={data} isLast={isLast} entryId={data.name}>
       <CodeLine>
         <Tab />
         <Tab />

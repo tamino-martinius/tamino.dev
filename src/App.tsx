@@ -11,7 +11,7 @@ import * as data from "./data";
 import { Section } from "./data_types";
 import { animate, Easing } from "./util";
 
-const initialHash = window.location.hash.slice(1);
+const initialHash = decodeURIComponent(window.location.hash.slice(1));
 
 export default function App() {
   const scrolledToHash = useRef(false);
@@ -21,10 +21,12 @@ export default function App() {
     function onAnimationDone() {
       const sections = document.querySelectorAll<HTMLElement>(".section[data-value]");
 
-      // Scroll to hash target on deep link
+      // Scroll to hash target on deep link (section or entry)
       if (initialHash && !scrolledToHash.current) {
         scrolledToHash.current = true;
-        const target = document.querySelector<HTMLElement>(`.section[data-value=${initialHash}]`);
+        const target =
+          document.querySelector<HTMLElement>(`.section[data-value=${CSS.escape(initialHash)}]`) ||
+          document.querySelector<HTMLElement>(`[data-entry=${CSS.escape(initialHash)}]`);
         if (target) {
           const html = document.querySelector("html");
           if (html) {
