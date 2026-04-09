@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import CodeLine from "./components/CodeLine";
 import CommandLine from "./components/CommandLine";
 import CurriculumVitae from "./components/CurriculumVitae";
@@ -8,8 +9,81 @@ import ShowCaseSection from "./components/ShowCaseSection";
 import SkillSet from "./components/SkillSet";
 import * as data from "./data";
 import { Section } from "./data_types";
+import { animate, Easing } from "./util";
+
+const initialHash = window.location.hash.slice(1);
 
 export default function App() {
+  const scrolledToHash = useRef(false);
+
+  useEffect(() => {
+    // Wait for the loading animation to finish before setting up observers
+    function onAnimationDone() {
+      const sections = document.querySelectorAll<HTMLElement>(".section[data-value]");
+
+      // Scroll to hash target on deep link
+      if (initialHash && !scrolledToHash.current) {
+        scrolledToHash.current = true;
+        const target = document.querySelector<HTMLElement>(`.section[data-value=${initialHash}]`);
+        if (target) {
+          const html = document.querySelector("html");
+          if (html) {
+            animate({
+              target: html,
+              key: "scrollTop",
+              value: target.offsetTop,
+              duration: 300,
+              ease: Easing.EaseInOut,
+            });
+          }
+        }
+      }
+
+      // Update hash on scroll — pick the topmost section still visible
+      let suppressHashUpdate = !!initialHash;
+      if (suppressHashUpdate) {
+        setTimeout(() => { suppressHashUpdate = false; }, 500);
+      }
+
+      const onScroll = () => {
+        if (suppressHashUpdate) return;
+        const scrollY = window.scrollY;
+        let current: string | undefined;
+        for (const section of sections) {
+          if (section.offsetTop <= scrollY + 1) {
+            current = section.dataset.value;
+          }
+        }
+        if (current) {
+          history.replaceState(null, "", `#${current}`);
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      return { disconnect: () => window.removeEventListener("scroll", onScroll) };
+    }
+
+    if (document.body.classList.contains("step-7")) {
+      const observer = onAnimationDone();
+      return () => observer?.disconnect();
+    }
+
+    let observer: IntersectionObserver | undefined;
+    const mutationObserver = new MutationObserver(() => {
+      if (document.body.classList.contains("step-7")) {
+        observer = onAnimationDone();
+        mutationObserver.disconnect();
+      }
+    });
+    mutationObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+
+    return () => {
+      mutationObserver.disconnect();
+      observer?.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <CommandLine />

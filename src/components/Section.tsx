@@ -21,6 +21,7 @@ export default function Section({ section }: { section: SectionEnum }) {
       const target = document.querySelector(`.section[data-value=${name}]`);
       const html = document.querySelector("html");
       if (target && html) {
+        history.replaceState(null, "", `#${name}`);
         animate({
           target: html,
           key: "scrollTop",
