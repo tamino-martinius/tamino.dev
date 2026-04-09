@@ -279,7 +279,7 @@ export const curriculumVitae: (Job | Education)[] = [
     `,
     startsAt: new Date("2026-03-01"),
     endsAt: undefined,
-    remote: false,
+    remote: true,
     position: ["Staff Software Engineer"],
     skills: {
       typescript,
@@ -302,8 +302,8 @@ export const curriculumVitae: (Job | Education)[] = [
     `,
     startsAt: new Date("2024-06-01"),
     endsAt: new Date("2026-02-28"),
-    remote: false,
-    position: ["Technical Lead", "Co-Founder"],
+    remote: true,
+    position: ["Technical Lead", "DevOps Engineer", "Co-Founder"],
     skills: {
       typescript,
       rds,
@@ -330,9 +330,10 @@ export const curriculumVitae: (Job | Education)[] = [
     `,
     startsAt: new Date("2020-10-01"),
     endsAt: new Date("2026-02-28"),
-    remote: false,
-    position: ["Staff Software Engineer"],
+    remote: true,
+    position: ["Staff Software Engineer", "Frontend Lead"],
     skills: {
+      teamlead,
       typescript,
       react,
       styledComponents,
