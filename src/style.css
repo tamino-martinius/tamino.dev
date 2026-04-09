@@ -176,7 +176,7 @@ body.theme-2 {
   content: ']';
   left: 100%;
 }
-.lang-select:hover .collapsible {
+.command-line:hover .lang-select .collapsible {
   max-width: 100%;
   opacity: 1;
 }
