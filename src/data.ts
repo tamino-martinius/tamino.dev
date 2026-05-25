@@ -1172,8 +1172,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2020"),
     endsAt: new Date("2020"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--new-js-features--2020",
-      "https://new-js-features--2020-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/new-js-features-2020",
+      "https://talks.tamino.dev/new-js-features-2020/",
     ],
     media: [],
     skills: {
@@ -1192,8 +1192,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2019"),
     endsAt: new Date("2019"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--cdk",
-      "https://cdk-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/cdk",
+      "https://talks.tamino.dev/cdk/",
     ],
     media: [],
     skills: {
@@ -1214,8 +1214,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2019"),
     endsAt: new Date("2019"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--new-js-features--2019",
-      "https://new-js-features--2019-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/new-js-features-2019",
+      "https://talks.tamino.dev/new-js-features-2019/",
     ],
     media: [],
     skills: {
@@ -1234,8 +1234,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2018"),
     endsAt: new Date("2018"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--sam",
-      "https://sam-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/sam",
+      "https://talks.tamino.dev/sam/",
     ],
     media: [],
     skills: {
@@ -1256,8 +1256,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2018"),
     endsAt: new Date("2018"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--api",
-      "https://api-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/api",
+      "https://talks.tamino.dev/api/",
     ],
     media: [],
     skills: {
@@ -1276,8 +1276,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2018"),
     endsAt: new Date("2018"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--new-js-features--2018",
-      "https://new-js-features--2018-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/new-js-features-2018",
+      "https://talks.tamino.dev/new-js-features-2018/",
     ],
     media: [],
     skills: {
@@ -1298,8 +1298,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2018"),
     endsAt: new Date("2018"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--sql-query-performance",
-      "https://sql-query-performance-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/sql-query-performance",
+      "https://talks.tamino.dev/sql-query-performance/",
     ],
     media: [],
     skills: {
@@ -1319,8 +1319,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2018"),
     endsAt: new Date("2018"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--never-change-a-running-system",
-      "https://never-change-a-running-system-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/never-change-a-running-system",
+      "https://talks.tamino.dev/never-change-a-running-system/",
     ],
     media: [],
     skills: {
@@ -1339,8 +1339,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2018"),
     endsAt: new Date("2018"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--api-workshop-1",
-      "https://api-workshop-1-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/api-workshop-1",
+      "https://talks.tamino.dev/api-workshop-1/",
     ],
     media: [],
     skills: {
@@ -1362,8 +1362,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2017"),
     endsAt: new Date("2017"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--graphql",
-      "https://graphql-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/graphql",
+      "https://talks.tamino.dev/graphql/",
     ],
     media: [],
     skills: {
@@ -1382,8 +1382,8 @@ export const talks: ShowCase[] = [
     startsAt: new Date("2017"),
     endsAt: new Date("2017"),
     urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--typescript",
-      "https://typescript-lets-talk-about.tamino.dev",
+      "https://github.com/tamino-martinius/talks/tree/main/typescript",
+      "https://talks.tamino.dev/typescript/",
     ],
     media: [],
     skills: {
@@ -1401,10 +1401,7 @@ export const talks: ShowCase[] = [
     `,
     startsAt: new Date("2017"),
     endsAt: undefined,
-    urls: [
-      "https://github.com/tamino-martinius/lets-talk-about--example",
-      "https://example-lets-talk-about.tamino.dev",
-    ],
+    urls: ["https://github.com/tamino-martinius/lets-talk-about--example"],
     media: [],
     skills: {
       nodejs,
