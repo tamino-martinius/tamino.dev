@@ -1,23 +1,16 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import Collapsed from "./Collapsed";
 import Comment from "./Comment";
 import CommentBlock from "./CommentBlock";
 
-const openOnStart = window.location.hash === "#legal";
+// Auto-expand when deep-linked via tamino.dev/#legal. The scroll itself is
+// handled by App's shared deep-link logic, which keys off `data-entry`.
+const openOnStart = decodeURIComponent(window.location.hash.slice(1)) === "legal";
 
 export default function Legal() {
   const [collapsed, setCollapsed] = useState(!openOnStart);
-  const ref = useRef<HTMLDivElement>(null);
 
   const year = useMemo(() => new Date().getFullYear(), []);
-
-  useEffect(() => {
-    if (openOnStart && ref.current) {
-      setTimeout(() => {
-        window.scrollTo({ top: ref.current?.offsetTop });
-      }, 1750);
-    }
-  }, []);
 
   const toggle = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -25,7 +18,7 @@ export default function Legal() {
   };
 
   return (
-    <div ref={ref} className={`legal${collapsed ? " collapsed" : ""}`} onClick={toggle}>
+    <div className={`legal${collapsed ? " collapsed" : ""}`} data-entry="legal" onClick={toggle}>
       {collapsed ? (
         <Comment comment={`(c) ${year} Tamino Martinius`}>
           <Collapsed />
