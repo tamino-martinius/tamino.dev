@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { city, legalEmail, myName, postalCode, street } from "../data";
 import Collapsed from "./Collapsed";
 import Comment from "./Comment";
 import CommentBlock from "./CommentBlock";
@@ -20,12 +21,12 @@ export default function Legal() {
   return (
     <div className={`legal${collapsed ? " collapsed" : ""}`} data-entry="legal" onClick={toggle}>
       {collapsed ? (
-        <Comment comment={`(c) ${year} Tamino Martinius`}>
+        <Comment comment={`(c) ${year} ${myName}`}>
           <Collapsed />
         </Comment>
       ) : (
         <CommentBlock
-          comment={`(c) ${year}\n\nTamino Martinius\nLehdenstr.  21\n06847 Dessau\n\nlawyer@zaku.eu`}
+          comment={`(c) ${year}\n\n${myName}\n${street}\n${postalCode} ${city}\n\n${legalEmail}`}
         />
       )}
     </div>

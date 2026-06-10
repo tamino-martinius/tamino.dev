@@ -22,6 +22,7 @@ export const profession = "I speak Code";
 export const street = "Lehdenstr. 21";
 export const postalCode = "06847";
 export const city = "Dessau";
+export const legalEmail = "lawyer@zaku.eu";
 export const emails: string[] = ["io@tamino.dev", "dev@tamino.io", "im-not-a-recruiter@tamino.dev"];
 export const socialNetworks: { [key: string]: string } = {
   codepen: "https://codepen.io/TaminoMartinius/",
